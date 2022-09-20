@@ -1,23 +1,23 @@
-COSC499 Client Meeting 1
+### COSC499 Client Meeting 1
 
-Gabriel is the Client Liason for Group A, alongside the other liasons Mashad (Group B, wasn't there for much) and Akshaj (Group C)
+*Gabriel is the Client Liason for Group A, alongside the other liasons Mashad (Group B, wasn't there for much) and Akshaj (Group C)*
 
 Almost everybody showed up to the meeting of the 12 of us.
 
-1:00
+# 1:00
 -waiting for people to trickle in
 -Land Acknowledgement
 	-The Glohaven team all live work and play in the Okanagan,
 	-Focusing on that community aspect is core of Glohaven
 -Before everything, be sure to take risks, we're excited for people to tribute, and look forward to the learning we all get to do
 
-1:05
+# 1:05
 -Introductions from the Liasons
 	-Gabriel - Looking forward to working with them and their team on this project
 	-Johnathan - Introduced for B, not much to say
 	-Akshaj - Very excited for this project, sounds like interesting stuff
 	       
-1:08
+# 1:08
 -Introduction Glohaven
 	-Michael B.
 		-Project is being watched by a lot of people
@@ -37,7 +37,7 @@ Almost everybody showed up to the meeting of the 12 of us.
 		-Been with Glohaven for 2 years
 		-wont be meeting as much as George, but still involved and available for questions
 
-1:12
+# 1:12
 -The Glohaven Story
 	-Aiming to build a building a digital destination management ecosystem to support local community and tourism sectors
 	-Want to empower tourism with the tools and data to function better in this digital world
@@ -59,7 +59,7 @@ Almost everybody showed up to the meeting of the 12 of us.
 		-2014 said that if he made it through, then he'd devote his life to making meaningful and impactful change
 			-does it where he knows he can, in the tourism sector
 
-~1:23
+# 1:23
 The GEMS goal
 -Hard for community and tourism to be successful if it's not accessable
 	-last few years have had numerous issues plaguing the industry
@@ -79,7 +79,7 @@ The GEMS goal
 			-That's where GEMS, and us in the capstone project, comes in
 
 
-1:30
+# 1:30
 Where GEMS comes in
 -When there's emergencies or big events going on, there's usually software involved to try to coordinate everything
 -Issue is that it's not exactly suited to handle such big events
@@ -97,7 +97,7 @@ Where GEMS comes in
 	-idea is to divert consumer traffic away from the giants, to this centralized place
       	-gives each community the tools for buisiness and communications
 
-1:35
+# 1:35
 GEMS
 -Idea is to be kind of like a plugin to their main community based hub and project
 -Idea has potential to go beyond emergency management, to big events like the BC Winter Games and other things that need accomodation
@@ -115,7 +115,7 @@ GEMS
 -Project built on the values of collaboration and sustainability
 -All with the creative and inovative minds all around, as it's the minds of the community that give this project the best shot at success
 
-1:40
+# 1:40
 Wrap up to the Story
 -During treatment for health, everything tasted like cardboard,
 -One day in August, is handed a peach by in laws
@@ -128,7 +128,7 @@ Wrap up to the Story
 -That's the seed that planted the idea to call it Glohaven
 -Appreciates that we've taken the time to hear about the hopes and dreams for the future.
 
-1:45
+# 1:45
 The requirement for the project
 -Over to Adrian and George
 -Made a requirements document: https://docs.google.com/document/d/1QihJwHGf21KwdMD0RD1Cv3IDLi0mGxSd2uo_oKJF6tQ/edit?usp=sharing
@@ -172,39 +172,39 @@ The requirement for the project
 	-Mail hosting recomends Mailtrap.io
 -Final note: feel free to play around, the only hard requirement is Laravel.
 
-1:55
+# 1:55
 Question Period:
-Most of the agreed upon questions from the Liasons were answered in the information period, but a few weren't. Plus after hearing the scenario, a few people also chimed in with questions
--Question (Gabriel): "Client-side wise, what kinds of devices will we have to deal with. Is this going to be an app or solely a webapp?"
-	-Answer: We only have to worry about the web app side of it.
-		-As a bonus, if people are able to create or figure out the routing for and API that could be used by some future app that would be really cool, but for now, just working on the web app side of it
+	Most of the agreed upon questions from the Liasons were answered in the information period, but a few weren't. Plus after hearing the scenario, a few people 			also chimed in with questions
+	-Question (Gabriel): "Client-side wise, what kinds of devices will we have to deal with. Is this going to be an app or solely a webapp?"
+		-Answer: We only have to worry about the web app side of it.
+			-As a bonus, if people are able to create or figure out the routing for and API that could be used by some future app that would be really 			    cool, but for now, just working on the web app side of it
 
--Question: "Question about the search system, are we able to use things like tags to help with filtering"
-	-Answer: That's a great idea, and in general if you have any ideas feel free to try them out. All we're looking for is a rudimentary list, like the fuzzy finder system in Mac or like Ctrl+P in VSCode, but if you want to try this other ideas, a filtering either search results, or search results by options, then that's awesome.
+	-Question: "Question about the search system, are we able to use things like tags to help with filtering"
+		-Answer: That's a great idea, and in general if you have any ideas feel free to try them out. All we're looking for is a rudimentary list, like the 			fuzzy finder system in Mac or like Ctrl+P in VSCode, but if you want to try this other ideas, a filtering either search results, or search results 			by options, then that's awesome.
 
--Question: "Is the site more focused on pre-emergency planning, like pre-fire season, or is it more supposed to be a fluid quick and easy system for accomodation creation and booking."
-	-Answer: Aspects of both would be awesome. Municipalities have information that can be gotten from entities like hotels, and so to be able to enter that in beforehand would be useful, but it also needs to take into account makeshift accomodations like gym floors and booking for evacuees.
+	-Question: "Is the site more focused on pre-emergency planning, like pre-fire season, or is it more supposed to be a fluid quick and easy system for 				accomodation creation and booking."
+		-Answer: Aspects of both would be awesome. Municipalities have information that can be gotten from entities like hotels, and so to be able to enter 			      that in beforehand would be useful, but it also needs to take into account makeshift accomodations like gym floors and booking for evacuees.
 
--Question: "Is there supposed to be logins for Emergency Personel and Evacuees"
-	-Answer: "For now just deal with a single admin sign in, that would be used to create acommodations and connect bookings to groups.
-		-For a bonus round, there's the potential for public facing reservations and creating a temporary account but at this point just an administrator login is fine.
+	-Question: "Is there supposed to be logins for Emergency Personel and Evacuees"
+		-Answer: "For now just deal with a single admin sign in, that would be used to create acommodations and connect bookings to groups.
+			-For a bonus round, there's the potential for public facing reservations and creating a temporary account but at this point just an 				  administrator login is fine.
 			-That's a great idea for the future when it's not just emergency systems though
 
--Question:"Do we worry about payments?"
-	-Answer: No, just worry about making a CRUD application.
-	-The tourism sector itself is pretty foreign to the idea of subscriptions, so we don't need to worry about that
+	-Question:"Do we worry about payments?"
+		-Answer: No, just worry about making a CRUD application.
+		-The tourism sector itself is pretty foreign to the idea of subscriptions, so we don't need to worry about that
 
--Question (Gabriel): "What would be the preferred way of contacting you if we have any questions or issues that come up?"
-	-Answer:Being remote, Glohaven is accustomed to the online workspace, 
-	-There's a Discord that they have made that can be made that we can post questions. That's probably going to be much easier to get in contact with that way than via email, since they're on discord all day, but only check emails once per day. Plus, they've made a channel dedicated to capstone students.
-	-The discord in question: https://discord.gg/hCkerEqjJp
--Question (Gabriel): "With that, what times would likely work the best for future meetings."
-	-Answer: It's more on the student's schedule, as we've got classes to accomodate for, so it's whoever needs to join whenever we can make it work.
+	-Question (Gabriel): "What would be the preferred way of contacting you if we have any questions or issues that come up?"
+		-Answer:Being remote, Glohaven is accustomed to the online workspace, 
+		-There's a Discord that they have made that can be made that we can post questions. That's probably going to be much easier to get in contact with 		    that way than via email, since they're on discord all day, but only check emails once per day. Plus, they've made a channel dedicated to capstone 			 students.
+		-The discord in question: https://discord.gg/hCkerEqjJp
+	-Question (Gabriel): "With that, what times would likely work the best for future meetings."
+		-Answer: It's more on the student's schedule, as we've got classes to accomodate for, so it's whoever needs to join whenever we can make it work.
 
-~2:10
-Farewells
--We all seem very excited for the opportunity, sounds like an awesome project.
--The Glohaven team also look forward to supporting and learning along side us all the way. 
+# 2:10
+	Farewells
+	-We all seem very excited for the opportunity, sounds like an awesome project.
+	-The Glohaven team also look forward to supporting and learning along side us all the way. 
 
-~2:10
-Meeting Ajourned
+# 2:10
+	Meeting Ajourned
