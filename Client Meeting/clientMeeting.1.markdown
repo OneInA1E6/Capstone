@@ -202,9 +202,7 @@ Question Period:
 		-Answer: It's more on the student's schedule, as we've got classes to accomodate for, so it's whoever needs to join whenever we can make it work.
 
 ## 2:10
-	Farewells
-	-We all seem very excited for the opportunity, sounds like an awesome project.
-	-The Glohaven team also look forward to supporting and learning along side us all the way. 
-
-## 2:10
-	Meeting Ajourned
+Farewells
+-We all seem very excited for the opportunity, sounds like an awesome project.
+-The Glohaven team also look forward to supporting and learning along side us all the way. 
+-Meeting Ajourned
