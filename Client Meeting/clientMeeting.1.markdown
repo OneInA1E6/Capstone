@@ -299,7 +299,7 @@ The requirement for the project
 ## 1:55
 Question Period:
 	
-	Most of the agreed upon questions from the Liasons were answered in the information period, but a few weren't. Plus after hearing the scenario, a few people 		also chimed in with questions
+	Most of the agreed upon questions from the Liasons were answered in the information period, but a few weren't. Plus after hearing the scenario, a few people also chimed in with questions
 	
 	-Question (Gabriel): "Client-side wise, what kinds of devices will we have to deal with. Is this going to be an app or solely a webapp?"
 		
@@ -343,6 +343,9 @@ that in beforehand would be useful, but it also needs to take into account makes
 
 ## 2:10
 Farewells
+
 -We all seem very excited for the opportunity, sounds like an awesome project.
+
 -The Glohaven team also look forward to supporting and learning along side us all the way. 
+
 -Meeting Ajourned
