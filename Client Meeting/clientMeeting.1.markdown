@@ -1,23 +1,23 @@
-### COSC499 Client Meeting 1
+# COSC499 Client Meeting 1
 
 *Gabriel is the Client Liason for Group A, alongside the other liasons Mashad (Group B, wasn't there for much) and Akshaj (Group C)*
 
 Almost everybody showed up to the meeting of the 12 of us.
 
-# 1:00
+## 1:00
 -waiting for people to trickle in
 -Land Acknowledgement
 	-The Glohaven team all live work and play in the Okanagan,
 	-Focusing on that community aspect is core of Glohaven
 -Before everything, be sure to take risks, we're excited for people to tribute, and look forward to the learning we all get to do
 
-# 1:05
+## 1:05
 -Introductions from the Liasons
 	-Gabriel - Looking forward to working with them and their team on this project
 	-Johnathan - Introduced for B, not much to say
 	-Akshaj - Very excited for this project, sounds like interesting stuff
 	       
-# 1:08
+## 1:08
 -Introduction Glohaven
 	-Michael B.
 		-Project is being watched by a lot of people
@@ -37,7 +37,7 @@ Almost everybody showed up to the meeting of the 12 of us.
 		-Been with Glohaven for 2 years
 		-wont be meeting as much as George, but still involved and available for questions
 
-# 1:12
+## 1:12
 -The Glohaven Story
 	-Aiming to build a building a digital destination management ecosystem to support local community and tourism sectors
 	-Want to empower tourism with the tools and data to function better in this digital world
@@ -59,7 +59,7 @@ Almost everybody showed up to the meeting of the 12 of us.
 		-2014 said that if he made it through, then he'd devote his life to making meaningful and impactful change
 			-does it where he knows he can, in the tourism sector
 
-# 1:23
+## 1:23
 The GEMS goal
 -Hard for community and tourism to be successful if it's not accessable
 	-last few years have had numerous issues plaguing the industry
@@ -79,7 +79,7 @@ The GEMS goal
 			-That's where GEMS, and us in the capstone project, comes in
 
 
-# 1:30
+## 1:30
 Where GEMS comes in
 -When there's emergencies or big events going on, there's usually software involved to try to coordinate everything
 -Issue is that it's not exactly suited to handle such big events
@@ -97,7 +97,7 @@ Where GEMS comes in
 	-idea is to divert consumer traffic away from the giants, to this centralized place
       	-gives each community the tools for buisiness and communications
 
-# 1:35
+## 1:35
 GEMS
 -Idea is to be kind of like a plugin to their main community based hub and project
 -Idea has potential to go beyond emergency management, to big events like the BC Winter Games and other things that need accomodation
@@ -115,7 +115,7 @@ GEMS
 -Project built on the values of collaboration and sustainability
 -All with the creative and inovative minds all around, as it's the minds of the community that give this project the best shot at success
 
-# 1:40
+## 1:40
 Wrap up to the Story
 -During treatment for health, everything tasted like cardboard,
 -One day in August, is handed a peach by in laws
@@ -128,7 +128,7 @@ Wrap up to the Story
 -That's the seed that planted the idea to call it Glohaven
 -Appreciates that we've taken the time to hear about the hopes and dreams for the future.
 
-# 1:45
+## 1:45
 The requirement for the project
 -Over to Adrian and George
 -Made a requirements document: https://docs.google.com/document/d/1QihJwHGf21KwdMD0RD1Cv3IDLi0mGxSd2uo_oKJF6tQ/edit?usp=sharing
@@ -172,7 +172,7 @@ The requirement for the project
 	-Mail hosting recomends Mailtrap.io
 -Final note: feel free to play around, the only hard requirement is Laravel.
 
-# 1:55
+## 1:55
 Question Period:
 	Most of the agreed upon questions from the Liasons were answered in the information period, but a few weren't. Plus after hearing the scenario, a few people 			also chimed in with questions
 	-Question (Gabriel): "Client-side wise, what kinds of devices will we have to deal with. Is this going to be an app or solely a webapp?"
@@ -201,10 +201,10 @@ Question Period:
 	-Question (Gabriel): "With that, what times would likely work the best for future meetings."
 		-Answer: It's more on the student's schedule, as we've got classes to accomodate for, so it's whoever needs to join whenever we can make it work.
 
-# 2:10
+## 2:10
 	Farewells
 	-We all seem very excited for the opportunity, sounds like an awesome project.
 	-The Glohaven team also look forward to supporting and learning along side us all the way. 
 
-# 2:10
+## 2:10
 	Meeting Ajourned
