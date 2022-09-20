@@ -156,8 +156,7 @@ Where GEMS comes in
 
 -The whole tourism industry are looking to create and utilize tools to manage tourism, everything from marketing to destination mangement
 
--some sectors use things like Shopify and Hubspot, but they're not really tailored to the tourism sector
-	only sows frustration
+-some sectors use things like Shopify and Hubspot, but they're not really tailored to the tourism sector only sows frustration
 
 -This all led to conversations to provide digital infrastructure
 	
@@ -306,22 +305,22 @@ Question Period:
 		
 	-Answer: We only have to worry about the web app side of it.
 		
-		-As a bonus, if people are able to create or figure out the routing for and API that could be used by some future app that would be really 			   
-		cool, but for now, just working on the web app side of it
+		-As a bonus, if people are able to create or figure out the routing for and API that could be used by some future app that would be really cool, but for now, just working on the web app side of it
 
 	-Question: "Question about the search system, are we able to use things like tags to help with filtering"
 		
-		-Answer: That's a great idea, and in general if you have any ideas feel free to try them out. All we're looking for is a rudimentary list, like the 			fuzzy finder system in Mac or like Ctrl+P in VSCode, but if you want to try this other ideas, a filtering either search results, or search results 		by options, then that's awesome.
+		-Answer: That's a great idea, and in general if you have any ideas feel free to try them out. All we're looking for is a rudimentary list, like the fuzzy finder system in Mac or like Ctrl+P in VSCode, but if you want to try this other ideas, a filtering either search results, or search results by options, then that's awesome.
 
-	-Question: "Is the site more focused on pre-emergency planning, like pre-fire season, or is it more supposed to be a fluid quick and easy system for 		accomodation creation and booking."
+	-Question: "Is the site more focused on pre-emergency planning, like pre-fire season, or is it more supposed to be a fluid quick and easy system for accomodation creation and booking."
 		
-		-Answer: Aspects of both would be awesome. Municipalities have information that can be gotten from entities like hotels, and so to be able to enter 			that in beforehand would be useful, but it also needs to take into account makeshift accomodations like gym floors and booking for evacuees.
+		-Answer: Aspects of both would be awesome. Municipalities have information that can be gotten from entities like hotels, and so to be able to enter
+that in beforehand would be useful, but it also needs to take into account makeshift accomodations like gym floors and booking for evacuees.
 
 	-Question: "Is there supposed to be logins for Emergency Personel and Evacuees"
 		
 		-Answer: "For now just deal with a single admin sign in, that would be used to create acommodations and connect bookings to groups.
 		
-		-For a bonus round, there's the potential for public facing reservations and creating a temporary account but at this point just an 				administrator login is fine.
+		-For a bonus round, there's the potential for public facing reservations and creating a temporary account but at this point just an administrator login is fine.
 			
 		-That's a great idea for the future when it's not just emergency systems though
 
@@ -335,7 +334,7 @@ Question Period:
 		
 		-Answer:Being remote, Glohaven is accustomed to the online workspace, 
 		
-		-There's a Discord that they have made that can be made that we can post questions. That's probably going to be much easier to get in contact with 		   that way than via email, since they're on discord all day, but only check emails once per day. Plus, they've made a channel dedicated to capstone 			 students.
+		-There's a Discord that they have made that can be made that we can post questions. That's probably going to be much easier to get in contact with that way than via email, since they're on discord all day, but only check emails once per day. Plus, they've made a channel dedicated to capstone students.
 		
 		-The discord in question: https://discord.gg/hCkerEqjJp
 	
