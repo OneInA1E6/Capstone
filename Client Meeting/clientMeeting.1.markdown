@@ -6,33 +6,54 @@ Almost everybody showed up to the meeting of the 12 of us.
 
 ## 1:00
 -waiting for people to trickle in
+
 -Land Acknowledgement
+
 	-The Glohaven team all live work and play in the Okanagan,
+	
 	-Focusing on that community aspect is core of Glohaven
+	
 -Before everything, be sure to take risks, we're excited for people to tribute, and look forward to the learning we all get to do
 
 ## 1:05
 -Introductions from the Liasons
+
 	-Gabriel - Looking forward to working with them and their team on this project
+	
 	-Johnathan - Introduced for B, not much to say
+	
 	-Akshaj - Very excited for this project, sounds like interesting stuff
 	       
 ## 1:08
 -Introduction Glohaven
+
 	-Michael B.
+	
 		-Project is being watched by a lot of people
+		
 		-Want to bring our best
+		
 		-Should be an opportunity for everyone to contribute
+		
 		-Take risks! Don't be afraid to try some wild ideas
+		
 		-Lots of time and opportunities
+		
 		-Look forward to getting to know us all
+		
 	-George
+	
 		-Graduated from OC with Bachelor of Information Systems
+		
 		-understands capstone work, did it when he was in school
+		
 		-hails from Kelowna
+		
 		-main go to guy for the Capstone stuff
+		
 	-Adrien
 		-hails from Vernon
+		
 		-Can't relate to Schooling, self taught
 		-Been with Glohaven for 2 years
 		-wont be meeting as much as George, but still involved and available for questions
