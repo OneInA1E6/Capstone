@@ -149,7 +149,12 @@ The requirement for the project
 	 		-Only really need to worry about national for now, so only Canadian Provinces
 		   	-Regions will have acommodations
 	 	-ACCOMODATIONS: the places where people will be able to stay if they are evacuated or volunteering somewhere. Will be things like hotels, motels, makeshift acommodations, etc 
-			-Makeshift Accommodations are like Gymnasiums with mattresses on the ground.
+		
+		
+		
+		
+		
+		-Makeshift Accommodations are like Gymnasiums with mattresses on the ground.
 			-Emphasis is on hotels though, as they have agreements with local municipality to help out in those kinds of scenarios.
 	 	-GROUPS: The thing that ties it all together, groups of 1 or more people that are in need of a place to stay for an event or emergency
 	 		-When people are evacuated, this is how they're handled
