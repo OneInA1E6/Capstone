@@ -1,6 +1,9 @@
 # COSC499 Client Meeting 2
+
 Date: Monday, September 26th, 2022
+
 Time: 5PM-6PM
+
 Location: UBCO Capstone Discord Channel
 
 *Gabriel is the Client Liason for Group A, alongside the other liasons Mashad (Group B) and Akshaj (Group C)*
