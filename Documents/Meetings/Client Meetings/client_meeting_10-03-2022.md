@@ -1,78 +1,68 @@
-day 3 
+# COSC499 Client Meeting 4
 
-400 mashad and gabriel here 
+Date: Monday, October 3rd, 2022
 
-akshaj and Harkeerat joined as well from group 3 gonna be presenting something
+Time: 4PM-4:30PM
 
-Anything
-mashad says everythings good and 
-	and had a meeting monday
-George asks if we have any questions ???
+Location: UBCO Capstone Discord Channel
 
-Group C made  paper prototypes and wanted to run them by George to see if that was the kind of thing aksthat they were looking for. George says sure, so Harkeerat sho
-ws.
+*Gabriel is the Client Liason for Group A, alongside the other liasons Mashad (Group B) and Akshaj (Group C)*
 
-405 paper prototyping
-only creating a few paper prototypes
-made the main login page and accomodation/ registration forms
-	-login for when RA is logged in taking calls
-		logged in create update source tose things
+Group C had a few things to ask the client regarding paper prototypes so the rest of Group C showed up as well.
 
-		interesting ideas, looks like a reddit thing mixed with a messaging app,    
-		create/edit accomodation page
-			have format for name, contact and a bunch of yes no checkboxes.
-create update other stuff when logged in main capa and having a kind of formand yes no check the box and other stuff updates the same page
+### 4:00
+- Gabriel, Mashad and George join Discord
+- George asked how things were going
+	- Mashad says that things were good, their team had a meeting on Sunday
+	- Gabriel says that things were also going well, update on what we were doing
+- Akshaj along with Harkeerat, and others also popped in over the course of the hour
 
-cool stuff 
-409 asks if that was about what was in mind.
-was that along lines of how you like it????
+### 4:05
+- Akshaj asks George if their group can get feedback on paper prototypes. George agrees.
+- Harkeerat shows their	
+	- cool ideas, kind of like Reddit mixed with a messaging app
+	- only had the Emergency Service person's login and accomodation add/edit page
+		- different checkboxes for yes no queries to accomodations. Really cool idea
+	- asks if those were along the lines of what we're going for. George says it is.
 
-from what hes seen that'll be sufficient 
+### 4:10
+- Person named Todd joins the 
+	- Apparently is Glohaven's CTO, says that he just wants to sit in and listen
 
-410, Todd, the glohaven cto joined just to listeN. Fly on the wall, cool beans.
+## Questions Period
+### 5:38
+ - Question (Gabriel): "Do you guys have any information on Docker? My group's trying to figure out how to run our stack, and was wondering if you had any resources."
 
-410 Question(Gabriel)do you guys have any docker nformation and stuff
-	my team was just trying to decide how to run the stack.
+	- Answer: "There is a lot of things online, and the Docker documentation has a lot of educational sections."
+	- This spun off into another conversation
 
+- George asks what kind of things we are planning on
+	- Gabriel answers mainly Redis and MySQL
+- George says that that's great, but feel free to
+- Todd chimes in and recommends that if GEMS is going to be integrated into the main site, then homogenity is probably the way to go 
+- George explains how it's mainly it's own separate thing, and likely won't be using the same database as the main Glohaven app
+- So the TL;DR is that if we want to try something new like Postgres, or even a non-relational database feel free to
+	- will probably ask at tomorrow's meeting
 
-answer: docker has a bunch of online resources for education. Says he can ask adrian about it as well. What do we want to use it for?i
+### 4:15
+- Question (Gabriel): "Since Monday is a holiday, when did we want to meet next week?"
+	- Answer: "Does Tuesday at 4 work for all of you."
+	- Works for all of us, so next week's meeting is Tuesday at 4 instead of Monday at 4.
 
-primarily redis and mysql,	do we want to use redis and mysql 
-B
-	george brings up that if you guys want to use those, then that's fine, but you guys don't have to if you don't want to. 
-Todd chimes in,
-Tod: if this will be integrated, then itd probably be best to keep it consistent.
+### 4:20
+- George asks if there's anything else to report
+- Liasons talk about whether the IP Agreement was supposed to be made by the teams or the university
+	- Answer is the latter, but a temporary template was provided just in case companies were needing one immediately.
+-Asked George if he thinks we'll need one.
+	- George said it's probably a good idea.
+	- TODO: make IP agreement on Tuesday
 
-George explains how it's its own separate thing. Thinks that it's fine, and if we find something then we can feel free to use it.
+## Closing
+### 4:22 
+- Anything else?
+- Liasons say no, and Group C members also say no.
 
+- Farewells and good wishes as usual.
 
-in case theres users on main platform that are using the other platform as well that will be integrated, Touch base as to if we need same database check with adrian and if thatll pose problems. For the capstone  db doesnt matter too mch.
-
-Will ask the team about if we're wanting to use but will get an answer on redis and maria
-
-415 another question about if we're meeting next week since monday is thanksgiving.
-	-decied on tuesday 400 as 100 wouldn't work for george.
-
-tuesday 400? not 1pm that should work for all of us then. Just for next week, as it's thanksgiving, will be eating turkey and that was it from 
-Anything else to report?
-All liasons say no. If anything comes up we will  ask in discord chat
-akshaj if anything comes up well ask in the discord chat
-all good for my end as well.
-
-One last question about ip agreement, if we will be 
-	Gabe asks the other liasons if it was supposed to be made by us or by the University.
-Says the university will provide one, but the temp is if any companies need it now. Ask george if he needs it. Says it's probably best to have one just in case.
-temporary ip is for company agreement 
-
-will we be needing that  420 ip agreement  so 
-temporary 
-
-probably will be best to get the ip done and yeah. 
-
-Awesome, any more questions ??
-
-That should be good for all of us
-
-look forward to next tuesday 
-
-meeting ajourned.
+### 6:05
+Meeting Ajourned.
