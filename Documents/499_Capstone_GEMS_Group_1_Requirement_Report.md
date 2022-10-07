@@ -8,38 +8,38 @@
 ## Description of the GEMS Software
 
 The Glohaven Emergency Management Solutions (GEMS) will be a web-based application, 
-made to help manage victims, accomodations and entire regions when emergencies occur. This will be a web 
-app with a home page, login, and dashboard where the majority of the functionality of the app will reside
+made to help manage victims, accommodations, and entire regions when emergencies occur. This will be a web 
+app with a home page, login, and dashboard where most of the functionality of the app will reside
 
 The dashboard will contain a variety of features. 
 
-There will be a place to input the information of accomodations like
-their location, how many people they can hold, the ammenities nearby, whether they're pet/child friendly, and many other possiblities.
+There will be a place to input the information of accommodations like
+their location, how many people they can hold, the amenities nearby, whether they're pet/child friendly, and many other possibilities.
 It will be like a place to register hotel rooms, but more general.
 
-Similarly, there will be a place to input group information, like whether they're victims of the disaster, or emergency services personel, their contact information,
+Similarly, there will be a place to input group information, like whether they're victims of the disaster, or emergency services personnel, their contact information,
 how many people there will be in the group, and their individual needs. It's important to note that 
 though this information is about the group, it is an agent that registers this information, so there will be a logical 
 order, or follow through
 
-The biggest and most important feature of the app is the functionality to put these accomodations and groups together based on compatibility.
+The biggest and most important feature of the app is the functionality to put these accommodations and groups together based on compatibility.
 It will be important that this process is streamlined, so it will probably be handled via a search that will list all 
-compatible or near compatible accomodations.
+compatible or near compatible accommodations.
 
-The other features and services will serve to assist one of these three main features, like a search bar that will search for accomodations,
-or a list that lists currently occupied accomodations or other features of this sort. All of this to help make the entire registation and management
+The other features and services will serve to assist one of these three main features, like a search bar that will search for accommodations,
+or a list that lists currently occupied accommodations or other features of this sort. All of this to help make the entire registration and management
 process less stressful for our target user groups.
 
 ### Target User Groups
 The target user group is solely registration agents of municipal/provincial emergency services: those who have to manage the safety and security of people when disaster strikes.
-They will be the ones to handle where these groups come from, and connect them and set them up with the accomodations for their relocation. 
+They will be the ones to handle where these groups come from and connect them and set them up with the accommodations for their relocation. 
 
 As of October, there are no additional user groups being considered. This being said, 
-depending on the progression of the project, there is the possiblity of adding functionality to allow the groups 
-of people to register their own groups to streamline the accomodation process.
-These users would need to register their cohort, give the information regarding physical/accomodation
+depending on the progression of the project, there is the possibility of adding functionality to allow the groups 
+of people to register their own groups to streamline the accommodation process.
+These users would need to register their cohort, give the information regarding physical/accommodation
 needs, and be able to access this registration when dealing 
-with our primary users, the registation Agents.
+with our primary users, the reservation agents.
 As stated before, though, this isn't being considered at this moment.
 
 
@@ -69,7 +69,7 @@ The Tech Stack for this project is relatively flexible. The only hard requiremen
 
 ### Backend
 
-The only hard requirement of the project is that we have to use Laravel, an MVC framework for the PHP scripting language.
+The only hard requirement of the project is that we must use Laravel, an MVC framework for the PHP scripting language.
 
 For consistency with the rest of the section, here are some pros and cons to this backend.
 
@@ -78,7 +78,7 @@ For consistency with the rest of the section, here are some pros and cons to thi
 #### Framework: Laravel
 
 Pros:
-- Very old, established and standardized language
+- Very old, established, and standardized language
 - Well documented both on Stack Overflow and at https://www.php.net
 - Laravel itself has exceptional documentation
 - Tanner and Gabriel have worked with Laravel during their Co-ops
@@ -92,26 +92,26 @@ Pros:
 Cons:
 - Odd syntax
     - $ before variables 
-    - C++-like without the versitility
+    - C++-like without the versatility
     - use of arrows instead of dots
-- Inconsistent type hinting for functions and arguements
+- Inconsistent type hinting for functions and arguments
 - Not as cutting edge as some other backends
 - Andrew and Michael haven’t ever even touched PHP
 - Initial setup is challenging if we're not creating a strictly PHP app (which we're not)
 
-Though there was no choice in this respect, we're still alright with using PHP and Laravel. The versitility that this backend offers is appretiated, and the fact that Gabriel and Tanner are familliar with the framework is an asset. 
+Though there was no choice in this respect, we're still alright with using PHP and Laravel. The versatility that this backend offers is appreciated, and the fact that Gabriel and Tanner are familiar with the framework is an asset. 
 
 ### Frontend
 
 The frontend is where the team had a large degree of freedom. After looking into Laravel we found that there are a few different frontend frameworks that integrate seamlessly with our required backend. 
 
-After looking into Inertia.js (the Javascript package the client recommended using), we found that there were a few different ways we could go. Vue was the recommended frontend, but we also could possibly use React and Svelte. So we looked into each and here are some of the pros and cons we found with each:
+After looking into Inertia.js (the JavaScript package the client recommended using), we found that there were a few different ways we could go. Vue was the recommended frontend, but we also could possibly use React and Svelte. So, we looked into each and here are some of the pros and cons we found with each:
 
 #### Vue
 Pros:
 - Good for modern single page apps
 - Multiple APIs allow for different programming paradigms
-- Documentation is clean, and separates its different versions and apis
+- Documentation is clean, and separates its different versions and APIs
 - Recommended by the Glohaven development team
 - Gabriel and Tanner worked with this in their Co-op
 Cons:
@@ -140,15 +140,15 @@ Cons:
 - Younger life means that it’s not as well documented
 - Does things a bit differently from the standard the other two set
     
-Initially we narrowed our options down to React and Vue, since those are both frameworks that at least one person has worked with. It was a close match but we decided on using Vue, primarily because it’s what the Glohaven team advocates for, plus multiple people in the group have used it in the past.
+Initially we narrowed our options down to React and Vue, since those are both frameworks that at least one person has worked with. It was a close match, but we decided on using Vue, primarily because it’s what the Glohaven team advocates for, plus multiple people in the group have used it in the past.
 
-This being said, it's all relatively arbitrary, as all of them are easy to pick up if you’ve used HTML and Javascript before, and all of them do the same job in a slightly different way.
+This being said, it's all relatively arbitrary, as all of them are easy to pick up if you’ve used HTML and JavaScript before, and all of them do the same job in a slightly different way.
 
 ### Auxiliary
 
-There are many choices for things like containerization and databases that it's all pretty arbitrary, as Laravel handles a majority of the difficult parts.
+There are many choices for things like containerization and databases that it's all relatively arbitrary, as Laravel handles a majority of the difficult parts.
 
-Therefore, for brevity, we're only going to go through the choices that our group decided upon, and leave it at that.
+Therefore, for brevity, we're only going to go through the choices that our group decided upon and leave it at that.
 
 #### Containerization: Docker
 
@@ -169,7 +169,7 @@ Pros:
 - Whole team has used extensively before
 - Integrates seamlessly with Laravel
     - In fact, is the default database for Laravel
-- Open source implementation via MariaDB
+- Open-source implementation via MariaDB
 - Easy to set up in Docker
 
 Cons:
@@ -180,7 +180,7 @@ Cons:
 Pros:
 - Open source and highly extensible
 - Available on all systems
-- Personalizable
+- Heavily customizable
   
 Cons:
 - Personalization could lead to inconsistencies, will likely need QA to set guidelines/recommendations for extensions
@@ -189,14 +189,15 @@ Cons:
 Just a short list of some other technology that we'll have in the tech stack
 - Inertia.js for frontend-backend communication; recommended by Glohaven team
 - Windows Subsystem for Linux for those not running on a UNIX system.
-- Github the prime choice for a remote repository
+- GitHub the prime choice for a remote repository
 - Tailwind makes CSS a breeze
 - To be expanded as time goes on
 
-## Test Explaination
+## Test Explanation
 
 When new code is being added, users must create a PEST test for the code being developed.
-PEST testing is commonly used with the Laravel framework since both use php. 
+
+PEST testing is commonly used with the Laravel framework since both use PHP. 
 Creating a PEST test will require 3 steps to be completed for a feature to fully be tested. 
 
 Prepare your test first (creating models from factories, other setup)
@@ -204,12 +205,18 @@ Act – do the test, execute the code that is being tested
 Assert that the 'Act' step has had the intended consequences
 
 By fully implementing PEST testing users will be able to test their features to ensure no uncaught errors make it to the production stage.
-Github also offers the ability to implement webhooks into repositories to ensure no HTTP errors are received such as HTTP Requests and Responses.
-Implementing these will help limit the amount of errors that are not picked up from PEST testing as well as Manual testing. 
+
+GitHub also offers the ability to implement webhooks into repositories to ensure no HTTP errors are received such as HTTP Requests and Responses.
+
+Implementing these will help limit the number of errors that are not picked up from PEST testing as well as Manual testing. 
+
 Manual testing will also be the final step in guaranteeing no broken code ends up in production. 
+
 By making sure that the features you implemented work correctly by manually trying to see if they work in many different ways, 
 as well as any potential areas you may have changed are correctly functional.
+
 Using these three methods of testing will help limit errors and unwanted bugs in our project.
 
 https://docs.github.com/en/developers/webhooks-and-events/webhooks/testing-webhooks
 https://pestphp.com/docs/installation
+
