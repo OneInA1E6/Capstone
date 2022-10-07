@@ -22,10 +22,13 @@ how many people there will be in the group, and their individual needs. It's imp
 though this information is about the group, it is an agent that registers this information, so there will be a logical 
 order, or follow through
 
-The biggest and most important feature of the app is the functionality to put these accomodations and groups together
-It will be important that this process is streamlined 
+The biggest and most important feature of the app is the functionality to put these accomodations and groups together based on compatibility.
+It will be important that this process is streamlined, so it will probably be handled via a search that will list all 
+compatible or near compatible accomodations.
 
-
+The other features and services will serve to assist one of these three main features, like a search bar that will search for accomodations,
+or a list that lists currently occupied accomodations or other features of this sort. All of this to help make the entire registation and management
+process less stressful for our target user groups.
 
 ### Target User Groups
 The target user group is solely registration agents of municipal/provincial emergency services: those who have to manage the safety and security of people when disaster strikes.
