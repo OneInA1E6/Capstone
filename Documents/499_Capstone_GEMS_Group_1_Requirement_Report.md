@@ -33,8 +33,38 @@ The primary user of GEMS is the
 #### Non-Functional
 
 ## The Tech Stack
+The Tech Stack for this project is relatively flexible. The only hard requirement was that the stack had to include the MVC framework for PHP, Laravel, and they highly recommended using Vue alongside it with Inertia.js. 
 
 ### Backend
+
+The only hard requirement of the project is that we have to use Laravel, an MVC framework for the PHP scripting language.
+
+For consistency with the rest of the section, here are some pros and cons to this backend.
+
+Pros:
+    - Very old, established and standardized language
+    - Well documented both on Stack Overflow and at https://www.php.net
+    - Laravel itself has exceptional documentation
+    - Tanner and Gabriel have worked with Laravel during their Co-ops
+    - Laravel provides many packages for things like
+        - linting
+        - authentication
+        - testing
+        - much more
+    - Laravel handles many of the nuances with regards to databases and security middleware
+
+Cons:
+    - Odd syntax
+        - $ before variables 
+        - C++-like without the versitility
+        - use of arrows instead of dots
+    - Inconsistent type hinting for functions and arguements
+    - Not as cutting edge as some other backends
+    - Andrew and Michael haven’t ever even touched PHP
+    - Initial setup is challenging if we're not creating a strictly PHP app (which we're not)
+
+Though there was no choice in this respect, we're still alright with using PHP and Laravel. The versitility that this backend offers is appretiated, and the fact that Gabriel and Tanner are familliar with the framework is an asset. 
+
 ### Frontend
 
 ### Auxiliary
@@ -78,6 +108,7 @@ Cons:
 - Inertia.js for frontend-backend communication
 - Windows Subsystem for Linux for those not running on a UNIX system.
 - Github the prime choice for a remote repository
+- Tailwind makes CSS a breeze
 - To be expanded as time goes on
 
 ## Test Explaination
