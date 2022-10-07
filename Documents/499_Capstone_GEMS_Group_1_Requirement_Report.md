@@ -1,15 +1,44 @@
 # Glohaven’s Emergency Management Solutions Requirements Report
 
-Group A
+## Group A
 
 
 #### Andrew D, Gabriel M., Michael V., Tanner W.
 
 ## Description of the GEMS Software
 
-## Primary User Group of GEMS
+The Glohaven Emergency Management Solutions (GEMS) will be a web-based application, 
+made to help manage victims, accomodations and entire regions when emergencies occur.
 
-The primary user of GEMS is the 
+### Target User Groups
+The target user group is solely registration agents of municipal/provincial emergency services: those who have to manage the safety and security of people when disaster strikes.
+They will be the ones to handle where these groups come from, and connect them and set them up with the accomodations for their relocation. This will be a web 
+app with a home page, login, and dashboard where the majority of the functionality of the app will reside
+
+The dashboard will contain a variety of features. 
+
+There will be a place to input the information of accomodations like
+their location, how many people they can hold, the ammenities nearby, whether they're pet/child friendly, and many other possiblities.
+It will be like a place to register hotel rooms, but more general.
+
+Similarly, there will be a place to input group information, like whether they're victims of the disaster, or emergency services personel, their contact information,
+how many people there will be in the group, and their individual needs. It's important to note that 
+though this information is about the group, it is an agent that registers this information, so there will be a logical 
+order, or follow through
+
+The biggest and most important feature of the app is the functionality to put these accomodations and groups together, and so this will be handled through
+It will be important that this process is streamlined 
+
+
+
+As of October, there are no additional user groups being considered. This being said, 
+depending on the progression of the project, there is the possiblity of adding functionality to allow the groups 
+of people to register their own groups to streamline the accomodation process.
+These users would need to register their cohort, give the information regarding physical/accomodation
+needs, and be able to access this registration when dealing 
+with our primary users, the registation Agents.
+As stated before, though, this isn't being considered at this moment.
+
 
 ## Diagrams of the System Architecture
 
