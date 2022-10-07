@@ -1,9 +1,7 @@
-<p style="text-align: center;">
-Glohaven’s Emergency Management Solutions Requirements Report
+# Glohaven’s Emergency Management Solutions Requirements Report
 
 Group A
 
-</p>
 
 #### Andrew D, Gabriel M., Michael V., Tanner W.
 
