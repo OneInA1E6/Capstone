@@ -41,6 +41,10 @@ The only hard requirement of the project is that we have to use Laravel, an MVC 
 
 For consistency with the rest of the section, here are some pros and cons to this backend.
 
+#### Language: PHP
+
+#### Framework: Laravel
+
 Pros:
     - Very old, established and standardized language
     - Well documented both on Stack Overflow and at https://www.php.net
@@ -67,10 +71,52 @@ Though there was no choice in this respect, we're still alright with using PHP a
 
 ### Frontend
 
+The frontend is where the team had a large degree of freedom. After looking into Laravel we found that there are a few different frontend frameworks that integrate seamlessly with our required backend. 
+
+After looking into Inertia.js (the Javascript package the client recommended using), we found that there were a few different ways we could go. Vue was the recommended frontend, but we also could possibly use React and Svelte. So we looked into each and here are some of the pros and cons we found with each:
+
+#### Vue
+Pros:
+    - Good for modern single page apps
+    - Multiple APIs allow for different programming paradigms
+    - Documentation is clean, and separates its different versions and apis
+    - Recommended by the Glohaven development team
+    - Gabriel and Tanner worked with this in their Co-op
+Cons:
+    - Two versions actively maintained
+        - Newer version’s documentation is still a work in progress, but older version can be considered bad practice
+    - Multiple APIs mean that inconsistencies can cause friction
+    
+#### React
+Pros:
+    - Oldest, best established of the three
+    - Numerous guides and Stack Overflow questions
+    - Documentation is exceptional
+    - Michael has used it during his Co-op and work experience
+
+Cons:
+    - Documentation doesn’t cover the framework's entire functionality
+
+#### Svelte
+Pros:
+    - Cool name
+    - Newest of the three frameworks, and has lots of buzz about it
+
+Cons:
+    - Nobody has used before
+    - Not as configurable as the other frameworks
+    - Younger life means that it’s not as well documented
+    - Does things a bit differently from the standard the other two set
+    
+Initially we narrowed our options down to React and Vue, since those are both frameworks that at least one person has worked with. It was a close match but we decided on using Vue, primarily because it’s what the Glohaven team advocates for, plus multiple people in the group have used it in the past.
+
+This being said, it's all relatively arbitrary, as all of them are easy to pick up if you’ve used HTML and Javascript before, and all of them do the same job in a slightly different way.
+
 ### Auxiliary
 
-There are so many choices for things like containerization and databases that it's all pretty arbitrary, as Laravel handles a majority of the difficult parts.
-Therefore, we're only going to go through the choices that our group decided upon, and leave it at that.
+There are many choices for things like containerization and databases that it's all pretty arbitrary, as Laravel handles a majority of the difficult parts.
+
+Therefore, for brevity, we're only going to go through the choices that our group decided upon, and leave it at that.
 
 #### Containerization: Docker
 
@@ -79,6 +125,7 @@ Pros:
     - Lightweight: each container only has the files and dependencies for the single app it contains
     - Helpful GUI via Docker Desktop, available on all systems
     - Whole team has used it before
+    - Standard in the web applications domain
 
 Cons:
     - Post initial setup configuration can be more trouble than it's often worth
@@ -103,9 +150,10 @@ Pros:
     - Personalizable
   
 Cons:
-    - Too good
+    - Personalization could lead to inconsistencies, will likely need QA to set guidelines/recommendations for extensions
 #### Other Tech
-- Inertia.js for frontend-backend communication
+Just a short list of some other technology that we'll have in the tech stack
+- Inertia.js for frontend-backend communication; recommended by Glohaven team
 - Windows Subsystem for Linux for those not running on a UNIX system.
 - Github the prime choice for a remote repository
 - Tailwind makes CSS a breeze
