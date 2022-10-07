@@ -34,11 +34,51 @@ The primary user of GEMS is the
 
 ## The Tech Stack
 
+### Backend
 ### Frontend
 
-### Backend
-
 ### Auxiliary
+
+There are so many choices for things like containerization and databases that it's all pretty arbitrary, as Laravel handles a majority of the difficult parts.
+Therefore, we're only going to go through the choices that our group decided upon, and leave it at that.
+
+#### Containerization: Docker
+
+Pros:
+    - Laravel provides out of the box Docker setup and integration via Laravel Sail
+    - Lightweight: each container only has the files and dependencies for the single app it contains
+    - Helpful GUI via Docker Desktop, available on all systems
+    - Whole team has used it before
+
+Cons:
+    - Post initial setup configuration can be more trouble than it's often worth
+    - Modulization can be non-trivial to those familiar with Virtualization
+
+#### Database: MySQL
+
+Pros:
+    - Whole team has used extensively before
+    - Integrates seamlessly with Laravel
+        - In fact, is the default database for Laravel
+    - Open source implementation via MariaDB
+    - Easy to set up in Docker
+
+Cons:
+    - Whole team is kind of tired of using MySQL for the *n*th time
+#### IDE: Visual Studio Code
+
+Pros:
+    - Open source and highly extensible
+    - Available on all systems
+    - Personalizable
+  
+Cons:
+    - Too good
+#### Other Tech
+- Inertia.js for frontend-backend communication
+- Windows Subsystem for Linux for those not running on a UNIX system.
+- Github the prime choice for a remote repository
+- To be expanded as time goes on
 
 ## Test Explaination
 
