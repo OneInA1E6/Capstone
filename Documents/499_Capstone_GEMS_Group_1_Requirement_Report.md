@@ -46,26 +46,26 @@ For consistency with the rest of the section, here are some pros and cons to thi
 #### Framework: Laravel
 
 Pros:
-    - Very old, established and standardized language
-    - Well documented both on Stack Overflow and at https://www.php.net
-    - Laravel itself has exceptional documentation
-    - Tanner and Gabriel have worked with Laravel during their Co-ops
-    - Laravel provides many packages for things like
-        - linting
-        - authentication
-        - testing
-        - much more
-    - Laravel handles many of the nuances with regards to databases and security middleware
+- Very old, established and standardized language
+- Well documented both on Stack Overflow and at https://www.php.net
+- Laravel itself has exceptional documentation
+- Tanner and Gabriel have worked with Laravel during their Co-ops
+- Laravel provides many packages for things like
+    - linting
+    - authentication
+    - testing
+    - much more
+- Laravel handles many of the nuances with regards to databases and security middleware
 
 Cons:
-    - Odd syntax
-        - $ before variables 
-        - C++-like without the versitility
-        - use of arrows instead of dots
-    - Inconsistent type hinting for functions and arguements
-    - Not as cutting edge as some other backends
-    - Andrew and Michael haven’t ever even touched PHP
-    - Initial setup is challenging if we're not creating a strictly PHP app (which we're not)
+- Odd syntax
+    - $ before variables 
+    - C++-like without the versitility
+    - use of arrows instead of dots
+- Inconsistent type hinting for functions and arguements
+- Not as cutting edge as some other backends
+- Andrew and Michael haven’t ever even touched PHP
+- Initial setup is challenging if we're not creating a strictly PHP app (which we're not)
 
 Though there was no choice in this respect, we're still alright with using PHP and Laravel. The versitility that this backend offers is appretiated, and the fact that Gabriel and Tanner are familliar with the framework is an asset. 
 
@@ -77,36 +77,36 @@ After looking into Inertia.js (the Javascript package the client recommended usi
 
 #### Vue
 Pros:
-    - Good for modern single page apps
-    - Multiple APIs allow for different programming paradigms
-    - Documentation is clean, and separates its different versions and apis
-    - Recommended by the Glohaven development team
-    - Gabriel and Tanner worked with this in their Co-op
+- Good for modern single page apps
+- Multiple APIs allow for different programming paradigms
+- Documentation is clean, and separates its different versions and apis
+- Recommended by the Glohaven development team
+- Gabriel and Tanner worked with this in their Co-op
 Cons:
-    - Two versions actively maintained
-        - Newer version’s documentation is still a work in progress, but older version can be considered bad practice
-    - Multiple APIs mean that inconsistencies can cause friction
-    
+- Two versions actively maintained
+    - Newer version’s documentation is still a work in progress, but older version can be considered bad practice
+- Multiple APIs mean that inconsistencies can cause friction
+
 #### React
 Pros:
-    - Oldest, best established of the three
-    - Numerous guides and Stack Overflow questions
-    - Documentation is exceptional
-    - Michael has used it during his Co-op and work experience
+- Oldest, best established of the three
+- Numerous guides and Stack Overflow questions
+- Documentation is exceptional
+- Michael has used it during his Co-op and work experience
 
 Cons:
-    - Documentation doesn’t cover the framework's entire functionality
+- Documentation doesn’t cover the framework's entire functionality
 
 #### Svelte
 Pros:
-    - Cool name
-    - Newest of the three frameworks, and has lots of buzz about it
+- Cool name
+- Newest of the three frameworks, and has lots of buzz about it
 
 Cons:
-    - Nobody has used before
-    - Not as configurable as the other frameworks
-    - Younger life means that it’s not as well documented
-    - Does things a bit differently from the standard the other two set
+- Nobody has used before
+- Not as configurable as the other frameworks
+- Younger life means that it’s not as well documented
+- Does things a bit differently from the standard the other two set
     
 Initially we narrowed our options down to React and Vue, since those are both frameworks that at least one person has worked with. It was a close match but we decided on using Vue, primarily because it’s what the Glohaven team advocates for, plus multiple people in the group have used it in the past.
 
@@ -121,36 +121,38 @@ Therefore, for brevity, we're only going to go through the choices that our grou
 #### Containerization: Docker
 
 Pros:
-    - Laravel provides out of the box Docker setup and integration via Laravel Sail
-    - Lightweight: each container only has the files and dependencies for the single app it contains
-    - Helpful GUI via Docker Desktop, available on all systems
-    - Whole team has used it before
-    - Standard in the web applications domain
+- Laravel provides out of the box Docker setup and integration via Laravel Sail
+- Lightweight: each container only has the files and dependencies for the single app it contains
+- Helpful GUI via Docker Desktop, available on all systems
+- Whole team has used it before
+- Standard in the web applications domain
 
 Cons:
-    - Post initial setup configuration can be more trouble than it's often worth
-    - Modulization can be non-trivial to those familiar with Virtualization
+- Post initial setup configuration can be more trouble than it's often worth
+- Modulization can be non-trivial to those familiar with Virtualization
 
 #### Database: MySQL
 
 Pros:
-    - Whole team has used extensively before
-    - Integrates seamlessly with Laravel
-        - In fact, is the default database for Laravel
-    - Open source implementation via MariaDB
-    - Easy to set up in Docker
+- Whole team has used extensively before
+- Integrates seamlessly with Laravel
+    - In fact, is the default database for Laravel
+- Open source implementation via MariaDB
+- Easy to set up in Docker
 
 Cons:
-    - Whole team is kind of tired of using MySQL for the *n*th time
+- Whole team is kind of tired of using MySQL for the *n*th time
+
 #### IDE: Visual Studio Code
 
 Pros:
-    - Open source and highly extensible
-    - Available on all systems
-    - Personalizable
+- Open source and highly extensible
+- Available on all systems
+- Personalizable
   
 Cons:
-    - Personalization could lead to inconsistencies, will likely need QA to set guidelines/recommendations for extensions
+- Personalization could lead to inconsistencies, will likely need QA to set guidelines/recommendations for extensions
+
 #### Other Tech
 Just a short list of some other technology that we'll have in the tech stack
 - Inertia.js for frontend-backend communication; recommended by Glohaven team
