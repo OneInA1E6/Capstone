@@ -50,19 +50,31 @@ As stated before, though, this isn't being considered at this moment.
 ### Milestone 1
 
 #### Functional
-
+- A secure user login page.
+Needs to be able to take in many different types of data and keep it secure.
+- Needs multiple pages such as accommodations, groups, regions, bookings. 
+- Data saved in one page needs to be linked to other pages, i.e. an accommodation is offered by a group, which is located in a region.
 #### Non-Functional
+- Ease of use, the ease and speed with which an emergency services worker can enter data is very important.
 ### Milestone 2
 
 #### Functional
-
+- An ability to search the database for accommodation with specific features (wheelchair accessible, pets allowed, etc) in (x) radius kilometers from (y)
+- Change values of existing values in the database such as rooms available based on people that have booked.
+- Display data entries as well as create new data entries for all of regions/groups/accommodations
 #### Non-Functional
-
+- The database must be able to handle as many different entries as possible, heavily scalable.
 ### Last one 
 
 #### Functional
+- Public facing page that does not require login
+- Ability for the public to request bookings using the public facing page.
+- Algorithm to place multiple groups of people that want to book in ‘optimal’ accommodations for each?
+- API Routes
+- Heatmap of activity in a given region.
 
 #### Non-Functional
+- The filtering/searching algorithm must be as fast as possible to accommodate placing people with accommodation quickly during an emergency.
 
 ## The Tech Stack
 The Tech Stack for this project is relatively flexible. The only hard requirement was that the stack had to include the MVC framework for PHP, Laravel, and they highly recommended using Vue alongside it with Inertia.js. 
