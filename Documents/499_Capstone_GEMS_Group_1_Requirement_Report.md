@@ -45,6 +45,13 @@ As stated before, though, this isn't being considered at this moment.
 
 ## Diagrams of the System Architecture
 
+## DFD Level 0
+![DFD_lvl_0](https://user-images.githubusercontent.com/61817636/195218956-bcaa6afc-e455-4722-b2e1-29b42ad1d8f8.png)
+
+## DFD Level 1
+![DFD_lvl_1](https://user-images.githubusercontent.com/61817636/195218963-98340eea-ddbd-4b70-a3e3-60e9dd5fd54a.png)
+
+
 ## List of Requirements
 
 ### Milestone 1
