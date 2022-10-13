@@ -1,4 +1,4 @@
-# COSC499 Client Meeting 4
+# COSC499 Client Meeting 3
 
 Date: Monday, October 3rd, 2022
 
@@ -64,5 +64,5 @@ Group C had a few things to ask the client regarding paper prototypes so the res
 
 - Farewells and good wishes as usual.
 
-### 6:05
+### 4:25
 Meeting Ajourned.
