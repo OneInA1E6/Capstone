@@ -54,6 +54,7 @@ Location: UBCO Capstone Discord Channel
     - Will be trying to set up MariaDB this week, then hopefully will be started with the actual project
 
 ## Closing
+### 4:15
 - Any other business?
 - Not for this week, will likely be more next week though.
 - Awesome, have a great week, good luck on any midterms
