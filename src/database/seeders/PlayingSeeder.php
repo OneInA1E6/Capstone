@@ -14,6 +14,8 @@ class PlayingSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Playing::factory()
+            ->count(3)
+            ->create();
     }
 }

@@ -15,8 +15,11 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()
-            ->count(5)
-            ->create();
+        for ($i = 1; $i <= 5; $i++) { 
+        User::factory()->create([
+                    'email' => 'agent'.$i.'@gems.com'
+            ]);
+
+           }
     }
 }
