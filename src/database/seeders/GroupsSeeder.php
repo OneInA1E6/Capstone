@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
-class GroupSeeder extends Seeder
+class GroupsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
