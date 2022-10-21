@@ -1,0 +1,139 @@
+equifood b 
+-good coverage of testing 
+-
+
+equifood c
+-adding many different foods can be time-consuming 
+-will there be a date showing when the food goes bad online? May forget to take a food listing down
+-may be a bit too much given the constraints and timeline to complete by 
+
+Speaking Portal A
+-How are are the going to get the right mouth movements for the correct sound/letter
+
+Speaking Portal B 
+-Communication is important, everyone should be at every meeting etc.
+-what front end do they plan on using 
+-
+
+SpeAking Portal C
+-when a user uploads a 2-d file, how do you ensure that there is a mouth to animate each time 
+- should incorperate more consistent testing (weekly/after each bigger task)
+
+Camp AOC C
+-will there ways to filter by specific wood/amount/category
+-how can you ensure that people do not use this to find specific wood and then 
+ pay outside of tha application to avoid fees etc.
+
+-maybe consider more methods of testing than just unit testing. Github webhooks etc
+
+Camp OAC A
+-will there ways to filter by specific wood/amount/category
+-how can you ensure that people do not use this to find specific wood and then 
+ pay outside of tha application to avoid fees etc.
+
+-JS Unit testing/ Manual testing
+
+Camp OAC B
+
+-will there ways to filter by specific wood/amount/category
+
+Multiple Non-Profits b
+-No testing, Unit testing and even Github webhooks will be sufficient 
+
+multiple non-profits a
+-using different forms of javascript can offer more than just vanilla
+-lots of testing
+
+multiple non-profit c
+-no testing methods declaerd
+
+
+Medical app A
+-lots of testing 
+
+
+glohaven c
+-only 1 admin not multiple accounts
+-MY TIME
+-
+
+GLOHAVEN b 
+- COPIED US 
+- /kick gems b
+-only 1 user group not two
+
+medicare c
+-milestone 3 and 4 basically every feature is optional, should have some sort of general plan idk
+-fjcvjfjf
+-
+
+medical app b
+-pharmacists and admin users group can both upload and delete medicatino etx?
+-what specific type of unit testing/regression testing/vulnrabiltiy tezting are you usinf
+
+
+motive c
+-no clue what the goal of the project is
+-only using JS for front end andback end
+
+
+motive Beez nuts
+-lot of stuff for assettsdfr stopre
+-VR sutff 
+-react/typescript
+-ASP backend
+-weird db PostgreSQL
+-data needs to be copied and reimported if postgreSQL needs to be updated kinda poop
+
+
+
+MOTIVE Ate
+
+-bros got a cool stashe
+-asset store  for VR
+- 
+
+ROSEN c
+
+-DFD's look way too complex
+-which FE and which BE did they puick
+- Dash testing for Data Science, how are you going to ensure that testing tests are successful
+
+rowsen a
+
+-classifying objects in water pipeline? I hope its jsut water in a water pipeline
+-Timeline may be a bit tight. Want to only have ACTIVE LERANING ALGORITHM(and FE from M2) for milestone 
+-heavy to run but runnable on chrome
+-Still confused at what the project is aimed at doing
+-brought up pictures but what about water in water pipleine
+-PYthin JS DASH
+-no dedcaited goof fE 
+-Didnt discuss testing
+
+
+Rosen B
+-LAST AOWERNFEWAOAFn'POEFCNJa'ipfhBQOHE
+- ML CLASSIFICATION FROM user images
+-will classify imageas
+-dfd simpel good
+-what framework they usign 
+- testing wasnt speicifed 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
