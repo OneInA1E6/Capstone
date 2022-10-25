@@ -18,9 +18,9 @@ return new class extends Migration
             $table->id();   //default way to make an id
             //$table->bigIncrements('identity'); 	                // Incrementing ID using a "big integer" equivalent.
             $table->bigInteger('votes'); 	                // BIGINT equivalent to the table
-            $table->binary('data'); 	                    // BLOB equivalent to the table
+            //$table->binary('data'); 	                    // BLOB equivalent to the table
             $table->boolean('confirmed'); 	                // BOOLEAN equivalent to the table
-            $table->char('name', 4); 	                    // CHAR equivalent with a length
+            $table->char('name', 40); 	                    // CHAR equivalent with a length
             $table->date('want_to_be_created_at'); 	                // DATE equivalent to the table
             $table->dateTime('wasnt_actually_created_at'); 	            // DATETIME equivalent to the table
             $table->decimal('amount', 5, 2); 	            // DECIMAL equivalent with a precision and scale
@@ -32,7 +32,7 @@ return new class extends Migration
             $table->longText('description'); 	            // LONGTEXT equivalent to the table
             $table->mediumInteger('numbers'); 	            // MEDIUMINT equivalent to the table
             $table->mediumText('description_but_medium'); 	            // MEDIUMTEXT equivalent to the table
-            $table->morphs('taggable'); 	                // Adds INTEGER taggable_id and STRING taggable_type
+           // $table->morphs('taggable'); 	                // Adds INTEGER taggable_id and STRING taggable_type
             $table->nullableTimestamps(); 	                // Same as timestamps(), except allows NULLs
             $table->smallInteger('votes_but_never'); 	                // SMALLINT equivalent to the table
             $table->tinyInteger('numb'); 	            // TINYINT equivalent to the table
@@ -41,7 +41,9 @@ return new class extends Migration
             $table->string('name_of_my_first_child', 100); 	                // VARCHAR equivalent with a length
             $table->text('description_but_in_text'); 	                // TEXT equivalent to the table
             $table->time('sunrise'); 	                    // TIME equivalent to the table
-            //$table->timestamp('added_on'); 	                // TIMESTAMP equivalent to the table
+
+            $table->timestamp('email_verified_at')->nullable();//$table->timestamp('added_on');
+            $table->string('password');                // TIMESTAMP equivalent to the table
             //$table->timestamps(); 	                        // Adds created_at and updated_at columns
             $table->rememberToken(); 	                    // Adds remember_token as VARCHAR(100) NULL
 
