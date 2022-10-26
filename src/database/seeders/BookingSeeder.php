@@ -4,7 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+<<<<<<< HEAD
 use App\Models\Booking;
+=======
+>>>>>>> main
 
 class BookingSeeder extends Seeder
 {
