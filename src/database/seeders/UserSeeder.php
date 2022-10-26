@@ -16,10 +16,14 @@ class UserSeeder extends Seeder
     public function run()
     {
         for ($i = 1; $i <= 5; $i++) {
-        User::factory()->create([
+            User::factory()->create([
                     'email' => 'agent'.$i.'@gems.com'
             ]);
 
-           }
+        }
+        User::factory() -> create([ 
+            'email' => 'test@test.com',
+            'password' => 'password'
+        ]);
     }
 }
