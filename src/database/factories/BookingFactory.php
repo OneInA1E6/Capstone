@@ -17,7 +17,9 @@ class BookingFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'duration' => faker()->numberBetween(1,20);
+            'groupId' => faker()->numberBetween(1,4);
+
         ];
     }
 }
