@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Accommodation;
 
 class AccommodationSeeder extends Seeder
 {
@@ -14,6 +15,9 @@ class AccommodationSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Accommodation::factory()
+            ->count(3)
+            ->create();
+        
     }
 }
