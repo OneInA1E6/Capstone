@@ -19,7 +19,11 @@ class DatabaseSeeder extends Seeder
         $this->call(GroupSeeder::class);
         $this->call(AccommodationSeeder::class);
         $this->call(RegionSeeder::class);
+<<<<<<< HEAD
+        $this->call(BookingSeeder::class);
+=======
 
+>>>>>>> main
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
