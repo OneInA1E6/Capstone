@@ -4,6 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,8 +30,11 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/accommodations', function () {
-    return Inertia::render('Accommodations');
-})->name('accommodations');
+/*Route::get('/accommodations', function () {
+    return Inertia::render('Accommodations/Index');
+})->middleware(['auth', 'verified'])->name('accommodations');*/
+
+Route::get('/accommodation', [Controllers\AccommodationController::class, 'show'])
+    ->middleware(['auth', 'verified'])->name('accommodation');
 
 require __DIR__.'/auth.php';

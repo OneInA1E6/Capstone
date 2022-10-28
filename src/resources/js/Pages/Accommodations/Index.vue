@@ -1,5 +1,6 @@
 <template>
-    <Head title="Dashboard" />
+    hello test
+    <!-- <Head title="Dashboard" />
 
     <AuthenticatedLayout>
         <template #header>
@@ -17,20 +18,20 @@
                 </div>
             </div>
         </div>
-    </AuthenticatedLayout>
+    </AuthenticatedLayout> -->
 </template>
 
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import SearchBar from '@/Components/SearchBar.vue'
-import { Head } from '@inertiajs/inertia-vue3';
+// import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+// import SearchBar from '@/Components/SearchBar.vue'
+// import { Head } from '@inertiajs/inertia-vue3';
 
-import { ref } from "vue";
-let input = ref("");
-const fruits = ["apple", "banana", "orange"];
-function filteredList() {
-  return fruits.filter((fruit) =>
-    fruit.toLowerCase().includes(input.value.toLowerCase())
-  );
-}
+// import { ref } from "vue";
+// let input = ref("");
+// const fruits = ["apple", "banana", "orange"];
+// function filteredList() {
+//   return fruits.filter((fruit) =>
+//     fruit.toLowerCase().includes(input.value.toLowerCase())
+//   );
+// }
 </script>
