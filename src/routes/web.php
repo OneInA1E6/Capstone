@@ -34,7 +34,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Accommodations/Index');
 })->middleware(['auth', 'verified'])->name('accommodations');*/
 
-Route::get('/accommodation', [Controllers\AccommodationController::class, 'show'])
-    ->middleware(['auth', 'verified'])->name('accommodation');
+Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
+    ->middleware(['auth', 'verified'])->name('accommodations');
 
 require __DIR__.'/auth.php';
