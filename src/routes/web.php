@@ -32,4 +32,9 @@ Route::get('/accommodations', function () {
     return Inertia::render('Accommodations');
 })->name('accommodations');
 
+Route::get('/booking', function () {
+    return Inertia::render('Bookings');
+})->name('Bookings');
+
+
 require __DIR__.'/auth.php';
