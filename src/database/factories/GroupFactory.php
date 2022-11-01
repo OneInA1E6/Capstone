@@ -17,7 +17,7 @@ class GroupFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'size' => random_int(1,100),
         ];
     }
 }
