@@ -33,4 +33,8 @@ Route::get('/dashboard', function () {
 Route::get('/groups', [Controllers\GroupController::class, 'show'])
     ->middleware(['auth', 'verified'])->name('groups');
 
+Route::get('/accommodations', function () {
+    return Inertia::render('Accommodations');
+})->name('accommodations');
+
 require __DIR__.'/auth.php';
