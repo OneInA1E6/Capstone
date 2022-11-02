@@ -16,20 +16,13 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/dashboard', [Controllers\DashboardController::class, 'show'])
-->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
-->middleware(['auth', 'verified'])->name('accommodations');
+Route::get('/accommodations', function () {
+    return Inertia::render('Accommodations');
+})->name('accommodations');
 
 Route::get('/bookings', [Controllers\BookingController::class, 'show'])->middleware(['auth', 'verified'])->name('bookings');
 
