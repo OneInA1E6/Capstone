@@ -37,7 +37,7 @@ const showingNavigationDropdown = ref(false);
                                     Groups
                                 </NavLink>
                                 <NavLink :href="route('bookings')" :active="route().current('bookings')">
-                                    GROUPS
+                                    Bookings
                                 </NavLink>
                             </div>
                         </div>
