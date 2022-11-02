@@ -6,7 +6,7 @@ use App\Models\Booking;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class BookingController extends Controller
+class BookingController extends Controllers
 {
             /**
      * Show the booking profile page.

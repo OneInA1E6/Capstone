@@ -31,7 +31,7 @@ Route::get('/dashboard', [Controllers\DashboardController::class, 'show'])
 Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('accommodations');
 
-Route::get('/bookings', [Controller\BookingController::class, 'show'])->middleware(['auth', 'verified'])->name('bookings');
+Route::get('/bookings', [Controllers\BookingController::class, 'show'])->middleware(['auth', 'verified'])->name('bookings');
 
 
 require __DIR__.'/auth.php';
