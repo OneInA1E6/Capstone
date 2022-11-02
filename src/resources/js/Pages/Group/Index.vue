@@ -1,16 +1,30 @@
 <template>
-    <Layout>
-        I am very cool
-        <pre>
-            {{props.groups}}
-        </pre>
+    <AuthenticatedLayout>
+        <template #header>
+            <h2 class="text-xl font-semibold leading-tight text-gray-800">
+                Groups
+            </h2>
+        </template>
 
-    </Layout>
+        I am very cool
+        <div class="py-12">
+            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
+                    <div class="p-6 bg-white border-b border-gray-200">
+                        <pre>
+                            {{props.groups}}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </AuthenticatedLayout>
 
 </template>
 
 <script setup>
-import Layout from '@/Layouts/AppLayout.vue'
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 
 const props = defineProps({
     groups: Object
