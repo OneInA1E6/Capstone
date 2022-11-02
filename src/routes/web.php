@@ -26,5 +26,5 @@ Route::get('/accommodations', function () {
 
 Route::get('/bookings', [Controllers\BookingController::class, 'show'])->middleware(['auth', 'verified'])->name('bookings');
 
-
+require __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/auth.php';
