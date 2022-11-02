@@ -17,4 +17,12 @@ class AccommodationController extends Controller
         // $groups = Accommodation::all();
         return Inertia::render('Accommodations/Index');
     }
+
+    public function test(Request $request)
+    {
+        // var_dump($numRooms);
+        $numRooms = $request -> query('_value');
+        $testval = Accommodation::where('numRooms', $numRooms)->get();
+        return  $testval;
+    }
 }

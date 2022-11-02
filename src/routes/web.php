@@ -31,4 +31,7 @@ Route::get('/dashboard', [Controllers\DashboardController::class, 'show'])
 Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('accommodations');
 
+Route::get('/accommodations/test', [Controllers\AccommodationController::class, 'test'])
+->middleware(['auth', 'verified'])->name('accommodations.test');
+
 require __DIR__.'/auth.php';

@@ -17,7 +17,7 @@ class DashboardController extends Controller
     public function show()
     {
         $regions = Region::all();
-        $accommodations = Accommodation::all();
+        $accommodations = Accommodation::where('numRooms', 9)->first();
         $groups = Group::all();
         
 
