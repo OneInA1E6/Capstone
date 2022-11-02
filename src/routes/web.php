@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -32,9 +33,7 @@ Route::get('/accommodations', function () {
     return Inertia::render('Accommodations');
 })->name('accommodations');
 
-Route::get('/booking', function () {
-    return Inertia::render('Bookings');
-})->name('Bookings');
+Route::get('/bookings', [Controller\BookingController::class, 'show'])->name('booking');
 
 
 require __DIR__.'/auth.php';
