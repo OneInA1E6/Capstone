@@ -25,15 +25,13 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [Controllers\DashboardController::class, 'show'])
+->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/accommodations', function () {
-    return Inertia::render('Accommodations');
-})->name('accommodations');
+Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
+->middleware(['auth', 'verified'])->name('accommodations');
 
-Route::get('/bookings', [Controller\BookingController::class, 'show'])->name('booking');
+Route::get('/bookings', [Controller\BookingController::class, 'show'])->middleware(['auth', 'verified'])->name('bookings');
 
 
 require __DIR__.'/auth.php';
