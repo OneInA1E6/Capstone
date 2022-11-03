@@ -19,7 +19,7 @@
                             placeholder="Search" 
                             aria-label="Search" 
                             aria-describedby="button-addon2"
-                            v-model="query"
+                            v-model="userInput"
                             >
                             
                         </div>
@@ -27,9 +27,10 @@
                 </div>
 
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <ul id="example-1">
-                        <li v-for="qitem in queryTest" v-bind:key="qitem.id">
-                            {{ qitem.id | 0}}
+                    <h1 v-if="!accommodationsList.length">Please search</h1>
+                    <ul>
+                        <li v-for="acc in accommodationsList" v-bind:key="acc.id">
+                            {{ acc.address }}
                         </li>
                     </ul>
                 </div>
@@ -40,11 +41,9 @@
 
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { ref, watch } from 'vue'
+import dashboardGet from '../../Composables/DashboardGet'
 import { Head } from '@inertiajs/inertia-vue3';
-import axios from 'axios';
-
-
+import { ref, watch } from 'vue'
 
 const props = defineProps({
     regions: Object,
@@ -52,28 +51,12 @@ const props = defineProps({
     groups: Object,
 })
 
-const query = ref('');
-let queryTest = ref([]);
+const userInput = ref('');
+let accommodationsList = ref([]);
 
-watch(queryTest, e => {
-    console.log("testing " + e)
-})
+watch(userInput, _.debounce(() => {
+    console.log(userInput)
+    dashboardGet(userInput).then(data => accommodationsList.value = data.data);
+}, 500))
 
-const items = [
-      { message: 'Foo', id: 0 },
-      { message: 'Bar', id: 1 }
-    ]
-
-const test = async () => {
-    await axios.get(route('accommodations.test', query))
-    .then(res => {
-        queryTest = res.data;
-    })
-    console.log(queryTest)
-}
-
-watch(query, () => {
-    test();
-    console.log(queryTest)
-})
 </script>
