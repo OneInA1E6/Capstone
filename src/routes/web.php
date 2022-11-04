@@ -1,10 +1,8 @@
 <?php
 
-use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
 use App\Http\Controllers;
 
 /*
@@ -27,19 +25,19 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-
+Route::get('/dashboard', [Controllers\DashboardController::class, 'show'])
+->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
-    ->middleware(['auth', 'verified'])->name('accommodations');
+->middleware(['auth', 'verified'])->name('accommodations');
+
+Route::get('/accommodations/test', [Controllers\AccommodationController::class, 'test'])
+->middleware(['auth', 'verified'])->name('accommodations.test');
 
 Route::get('/groups', [Controllers\GroupController::class, 'show'])
-    ->middleware(['auth', 'verified'])->name('groups');
+->middleware(['auth', 'verified'])->name('groups');
 
-
-Route::get('/bookings', [Controllers\BookingController::class, 'show'])->middleware(['auth', 'verified'])->name('bookings');
+Route::get('/bookings', [Controllers\BookingController::class, 'show'])
+->middleware(['auth', 'verified'])->name('bookings');
 
 require __DIR__.'/auth.php';

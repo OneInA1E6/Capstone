@@ -37,7 +37,6 @@
     import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
     import SearchBar from '@/Components/SearchBar.vue'
     import { Head } from '@inertiajs/inertia-vue3';
-
     import { ref } from "vue";
     let input = ref("");
     const fruits = ["apple", "banana", "orange"];
