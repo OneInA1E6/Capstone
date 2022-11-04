@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Group;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
@@ -15,6 +16,6 @@ class GroupSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Group::factory()->count(6)->create();
     }
 }

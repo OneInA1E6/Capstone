@@ -30,11 +30,13 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-/*Route::get('/accommodations', function () {
-    return Inertia::render('Accommodations/Index');
-})->middleware(['auth', 'verified'])->name('accommodations');*/
+
 
 Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
     ->middleware(['auth', 'verified'])->name('accommodations');
+
+Route::get('/groups', [Controllers\GroupController::class, 'show'])
+    ->middleware(['auth', 'verified'])->name('groups');
+
 
 require __DIR__.'/auth.php';
