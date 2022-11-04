@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('contact_firstname');
             $table->string('contact_lastname');
-            $table->string('contact_phone_number',16);
+            $table->string('contact_phone_number',32);
             $table->integer('group_size');
             $table->timestamps();
         });

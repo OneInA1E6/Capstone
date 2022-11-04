@@ -17,7 +17,7 @@ class GroupDetailsFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'has_pets' => false,
         ];
     }
 }
