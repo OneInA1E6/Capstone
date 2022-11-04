@@ -8,16 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Group extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'size',
-    ];
-=======
 
     /**
      * Attribute name.
@@ -48,5 +38,4 @@ class Group extends Model
     }
 
 
->>>>>>> origin
 }

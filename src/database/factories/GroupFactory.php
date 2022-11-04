@@ -17,14 +17,10 @@ class GroupFactory extends Factory
     public function definition()
     {
         return [
-<<<<<<< HEAD
-            'size' => random_int(1,100),
-=======
             'contact_firstname'     => fake()->firstName(),
             'contact_lastname'      => fake()->lastName(),
             'contact_phone_number'  => fake()->phoneNumber(),
             'group_size'            => 1,
->>>>>>> origin
         ];
     }
 }

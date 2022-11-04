@@ -15,14 +15,10 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-<<<<<<< HEAD
-            $table->integer('size'); 
-=======
             $table->string('contact_firstname');
             $table->string('contact_lastname');
             $table->string('contact_phone_number',32);
             $table->integer('group_size');
->>>>>>> origin
             $table->timestamps();
         });
     }

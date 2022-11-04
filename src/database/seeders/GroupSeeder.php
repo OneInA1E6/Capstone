@@ -18,16 +18,10 @@ class GroupSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
-        Group::factory()
-            ->count(3)
-            ->create();
-=======
         Group::factory()->count(6)
             ->create()->each(function($group) {
                 $details = GroupDetails::factory()->make();
                 $group->details()->save($details);
             });
->>>>>>> origin
     }
 }

@@ -18,4 +18,8 @@ class Accommodation extends Model
         'address',
         'numRooms',
     ];
+
+    public static function numRooms() {
+        return 'test numRooms function';
+    }
 }
