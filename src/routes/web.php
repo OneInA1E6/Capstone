@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -36,5 +37,7 @@ Route::get('/groups', [Controllers\GroupController::class, 'show'])
 Route::get('/accommodations', function () {
     return Inertia::render('Accommodations');
 })->name('accommodations');
+
+Route::get('/bookings', [Controllers\BookingController::class, 'show'])->middleware(['auth', 'verified'])->name('bookings');
 
 require __DIR__.'/auth.php';
