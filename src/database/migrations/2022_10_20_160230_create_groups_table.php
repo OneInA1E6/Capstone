@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
+            $table->string('contact_firstname');
+            $table->string('contact_lastname');
+            $table->string('contact_phone_number',16);
+            $table->json('group_members')->nullable();
             $table->timestamps();
         });
     }
