@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('accommodations', function (Blueprint $table) {
             $table->id();
-            $table->char('address', 40); 
+            $table->char('address'); 
             $table->integer('numRooms'); 
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

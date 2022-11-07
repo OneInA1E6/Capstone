@@ -17,7 +17,7 @@ class GroupSeeder extends Seeder
      */
     public function run()
     {
-        Group::factory()->count(6)
+        Group::factory()->count(50)
             ->create()->each(function($group) {
                 $details = GroupDetails::factory()->make();
                 $group->details()->save($details);

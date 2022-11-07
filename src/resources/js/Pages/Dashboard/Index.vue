@@ -10,7 +10,7 @@
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        
+                
                 <div class="flex justify-center">
                     <div class="mb-3 xl:w-96">
                         <div class="input-group relative flex flex-wrap items-stretch w-full mb-4">
@@ -21,19 +21,10 @@
                             aria-describedby="button-addon2"
                             v-model="userInput"
                             >
-                            
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <h1 v-if="!accommodationsList.length">Please search</h1>
-                    <ul>
-                        <li v-for="acc in accommodationsList" v-bind:key="acc.id">
-                            {{ acc.address }}
-                        </li>
-                    </ul>
-                </div>
+                <Table :query="`${userInput}`"/>
             </div>
         </div>
     </AuthenticatedLayout>
@@ -41,7 +32,7 @@
 
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import dashboardGet from '../../Composables/DashboardGet'
+import Table from '../../Components/Dashboard/Table.vue'
 import { Head } from '@inertiajs/inertia-vue3';
 import { ref, watch } from 'vue'
 
@@ -49,14 +40,8 @@ const props = defineProps({
     regions: Object,
     accommodations: Object,
     groups: Object,
+    loading: Boolean,
 })
 
 const userInput = ref('');
-let accommodationsList = ref([]);
-
-watch(userInput, _.debounce(() => {
-    console.log(userInput)
-    dashboardGet(userInput).then(data => accommodationsList.value = data.data);
-}, 500))
-
 </script>
