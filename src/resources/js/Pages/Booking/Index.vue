@@ -6,18 +6,49 @@
             </h2>
         </template>
 
-        gabe is not cool
+        
+        <div class="py-12">
+            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
+                    <div class="p-6 bg-white border-b border-gray-200">
+                        <form @submit.prevent="submit">
+                          <div>
+                              <InputLabel for="groupId" value="Group Id" />
+                              <TextInput id="groupId" type="text" class="mt-1 block w-full" v-model="form.groupId"/>
+                              <InputError class="mt-2" :message="form.groupId" />
+                          </div>
+                          <div>
+                              <InputLabel for="duration" value="Duration of Stay" />
+                              <TextInput id="duration" type="text" class="mt-1 block w-full" v-model="form.duration"/>
+                              <InputError class="mt-2" :message="form.duration" />
+                          </div>
+
+                          <div class="flex justify-end mt-4">
+                              <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                                  Submit
+                              </Button>
+                          </div>
+                        </form>
+                      </div>
+                  </div>
+            </div>
+        </div>
+
+
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
                         <pre>
-                            {{props.booking}}
+                          {{props.booking}}
                         </pre>
-                    </div>
-                </div>
+                      </div>
+                  </div>
             </div>
         </div>
+          
+                      
+
 
     </AuthenticatedLayout>
 
@@ -25,8 +56,21 @@
 
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-
+import InputError from '@/Components/InputError.vue';
+import InputLabel from '@/Components/InputLabel.vue';
+import Button from '@/Components/PrimaryButton.vue';
+import TextInput from '@/Components/TextInput.vue';
+import { useForm } from '@inertiajs/inertia-vue3';
 const props = defineProps({
-    booking: Object
+    booking: Object,
 })
+const form = useForm({
+    groupId: '',
+    duration: '',
+});
+const submit = () => {
+    form.post(route('bookings.confirm'), {
+        onFinish: () => form.reset(),
+    })
+  }
 </script>
