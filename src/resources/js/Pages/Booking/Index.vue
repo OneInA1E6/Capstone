@@ -69,7 +69,7 @@ const form = useForm({
     duration: '',
 });
 const submit = () => {
-    form.post(route('bookings.confirm'), {
+    form.post(route('bookings.create'), {
         onFinish: () => form.reset(),
     })
   }

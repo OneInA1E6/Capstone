@@ -25,19 +25,26 @@ Route::get('/', function () {
     ]);
 });
 
+//DASHBOARD
 Route::get('/dashboard', [Controllers\DashboardController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('dashboard');
 
+//ACCOMODATIONS
 Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('accommodations');
 
 Route::get('/accommodations/test', [Controllers\AccommodationController::class, 'test'])
 ->middleware(['auth', 'verified'])->name('accommodations.test');
 
+//GROUPS
 Route::get('/groups', [Controllers\GroupController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('groups');
 
+//BOOKINGS
 Route::get('/bookings', [Controllers\BookingController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('bookings');
+
+Route::get('/bookings', [Controllers\BookingController::class, 'create'])
+->middleware(['auth', 'verified'])->name('bookings.create');
 
 require __DIR__.'/auth.php';
