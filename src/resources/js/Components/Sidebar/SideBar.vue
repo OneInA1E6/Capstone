@@ -1,7 +1,7 @@
 
 <template>
 
-    <div class="grid min-h-screen grid-rows-5 bg-orange-500 place-items-center">
+    <div class="grid min-h-screen grid-rows-5 bg-[#FA9C1B] place-items-center">
         <!-- header to the navbar -->
         <div class="grid row-span-2 place-items-center">
             <!-- placeholder image for logo -->
@@ -15,22 +15,20 @@
         <div class="row-span-2">
 
             <!-- Navigation items -->
-            <div v-for="routeItem in props.routes" :key="routeItem"
-                class="w-40 p-2 px-6 my-2 text-center bg-gray-300 rounded-full drop-shadow-md">
-
-                <NavLink :href="route(routeItem.str)" :active="route().current(routeItem.str)" :as="button">
+            <div v-for="routeItem in props.routes" :key="routeItem">
+                <NavLink :href="route(routeItem.str)" :active="route().current(routeItem.str)" :as="button"
+                    class="justify-center w-40 h-10 my-2 font-normal bg-gray-300 rounded-full hover:bg-gray-350 drop-shadow-md">
                     {{routeItem.title}}
                 </NavLink>
             </div>
         </div>
         <div>
-            <div class="w-40 p-2 px-6 my-2 text-center bg-gray-300 rounded-full drop-shadow-md">
-                <NavLink :href="route('logout')" method="post">
-                        Log Out
+            <div>
+                <NavLink :href="route('logout')" method="post"
+                class="justify-center w-40 h-10 my-2 font-normal bg-gray-300 rounded-full drop-shadow-md">
+                    Log Out
                 </NavLink>
             </div>
-
-
         </div>
 
     </div>
