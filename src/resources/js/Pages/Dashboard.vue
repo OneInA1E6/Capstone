@@ -1,10 +1,10 @@
 <template>
     <Head title="Dashboard" />
 
-    <AuthenticatedLayout>
+    <AppLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                Dashboard
+                Dashboarddddd
             </h2>
         </template>
 
@@ -18,11 +18,11 @@
                 </div>
             </div>
         </div>
-    </AuthenticatedLayout>
+    </AppLayout>
 </template>
 
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import AppLayout from '@/Layouts/AppLayout.vue';
 import SearchBar from '@/Components/SearchBar.vue'
 import { Head } from '@inertiajs/inertia-vue3';
 

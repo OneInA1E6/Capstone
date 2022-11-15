@@ -1,40 +1,38 @@
-<script setup>
-import { ref } from 'vue';
-import ApplicationLogo from '@/Components/ApplicationLogo.vue';
-import Dropdown from '@/Components/Dropdown.vue';
-import DropdownLink from '@/Components/DropdownLink.vue';
-import NavLink from '@/Components/NavLink.vue';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
-import { Link } from '@inertiajs/inertia-vue3';
-
-const showingNavigationDropdown = ref(false);
-</script>
 
 <template>
-    <div>
-        <div class="min-h-screen bg-gray-100">
+    <div class="grid grid-cols-5">
+          <!-- <div class="min-h-screen bg-gray-100">
             <nav class="bg-white border-b border-gray-100">
-                <!-- Primary Navigation Menu -->
+                  Primary Navigation Menu
                 <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
                         <div class="flex">
-                            <!-- Logo -->
+                              Logo
                             <div class="flex items-center shrink-0">
                                 <Link :href="route('dashboard')">
                                     <ApplicationLogo class="block w-auto h-9" />
                                 </Link>
                             </div>
 
-                            <!-- Navigation Links -->
+                              Navigation Links -
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
+                                </NavLink>
+                                <NavLink :href="route('accommodations')" :active="route().current('accommodations')">
+                                    Accommodations
+                                </NavLink>
+                                <NavLink :href="route('groups')" :active="route().current('groups')">
+                                    Groups
+                                </NavLink>
+                                <NavLink :href="route('bookings')" :active="route().current('bookings')">
+                                    Bookings
                                 </NavLink>
                             </div>
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
-                            <!-- Settings Dropdown -->
+                              Settings Dropdown
                             <div class="relative ml-3">
                                 <Dropdown align="right" width="48">
                                     <template #trigger>
@@ -58,7 +56,7 @@ const showingNavigationDropdown = ref(false);
                             </div>
                         </div>
 
-                        <!-- Hamburger -->
+                          Hamburger
                         <div class="flex items-center -mr-2 sm:hidden">
                             <button @click="showingNavigationDropdown = ! showingNavigationDropdown" class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500">
                                 <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -70,7 +68,7 @@ const showingNavigationDropdown = ref(false);
                     </div>
                 </div>
 
-                <!-- Responsive Navigation Menu -->
+                  Responsive Navigation Menu
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
@@ -78,7 +76,7 @@ const showingNavigationDropdown = ref(false);
                         </ResponsiveNavLink>
                     </div>
 
-                    <!-- Responsive Settings Options -->
+                      Responsive Settings Options -
                     <div class="pt-4 pb-1 border-t border-gray-200">
                         <div class="px-4">
                             <div class="text-base font-medium text-gray-800">{{ $page.props.auth.user.name }}</div>
@@ -92,19 +90,80 @@ const showingNavigationDropdown = ref(false);
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav> -->
 
-            <!-- Page Heading -->
-            <header class="bg-white shadow" v-if="$slots.header">
-                <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <slot name="header" />
-                </div>
-            </header>
 
-            <!-- Page Content -->
-            <main>
-                <slot />
-            </main>
+        <div class="grid min-h-screen grid-rows-5 bg-orange-500 place-items-center">
+            <!-- header to the navbar -->
+            <div class="grid row-span-2 place-items-center">
+                <!-- placeholder image -->
+                <img class="w-3/5" src="https://i.pinimg.com/736x/03/8b/20/038b2098ca63da45822fb4ce1c91bfd9--vida-real-realistic-drawings.jpg" />
+                <h2 class="text-xl font-bold text-center text-white">Emergency Management Solutions</h2>
+                <p> Hey, {{$page.props.auth.user.name }}</p>
+            </div>
+
+            <!-- Then the navigation to different pages -->
+
+            <div class="row-span-3">
+                <!-- Navigation items -->
+
+                <!-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"> -->
+                    <div class="w-32 p-2 px-6 my-2 text-center bg-gray-300 rounded-full">
+                        <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                            Dashboard
+                        </NavLink>
+                    </div>
+                    <div class="w-32 p-2 px-6 my-2 text-center bg-gray-300 rounded-full">
+                        <NavLink :href="route('accommodations')" :active="route().current('accommodations')">
+                                    Accommodations
+                                </NavLink>
+                    </div>
+                    <div class="w-32 p-2 px-6 my-2 text-center bg-gray-300 rounded-full">
+                        <NavLink :href="route('groups')" :active="route().current('groups')">
+                                    Groups
+                                </NavLink>
+                    </div>
+                    <div class="w-32 p-2 px-6 my-2 text-center bg-gray-300 rounded-full">
+                        <NavLink :href="route('bookings')" :active="route().current('bookings')">
+                                    Bookings
+                                </NavLink>
+                    </div>
+                    <div class="w-32 p-2 px-6 my-2 bg-gray-300 rounded-full">
+                        <ResponsiveNavLink :href="route('logout')" method="post">
+                                Log Out
+                        </ResponsiveNavLink>
+                    </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- Main content of the page -->
+        <div class="col-span-4 p-6">
+                  Page Heading
+                <header class="bg-white shadow" v-if="$slots.header">
+                    <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                        <slot name="header" />
+                    </div>
+                </header>
+
+                Page Content
+                <main>
+                    <slot />
+                </main>
         </div>
     </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import Dropdown from '@/Components/Dropdown.vue';
+import DropdownLink from '@/Components/DropdownLink.vue';
+import NavLink from '@/Components/NavLink.vue';
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import { Link } from '@inertiajs/inertia-vue3';
+
+const showingNavigationDropdown = ref(false);
+</script>
