@@ -1,154 +1,19 @@
 
 <template>
-    <div class="grid grid-cols-5">
-          <!-- <div class="min-h-screen bg-gray-100">
-            <nav class="bg-white border-b border-gray-100">
-                  Primary Navigation Menu
-                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-16">
-                        <div class="flex">
-                              Logo
-                            <div class="flex items-center shrink-0">
-                                <Link :href="route('dashboard')">
-                                    <ApplicationLogo class="block w-auto h-9" />
-                                </Link>
-                            </div>
+    <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7">
 
-                              Navigation Links -
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </NavLink>
-                                <NavLink :href="route('accommodations')" :active="route().current('accommodations')">
-                                    Accommodations
-                                </NavLink>
-                                <NavLink :href="route('groups')" :active="route().current('groups')">
-                                    Groups
-                                </NavLink>
-                                <NavLink :href="route('bookings')" :active="route().current('bookings')">
-                                    Bookings
-                                </NavLink>
-                            </div>
-                        </div>
-
-                        <div class="hidden sm:flex sm:items-center sm:ml-6">
-                              Settings Dropdown
-                            <div class="relative ml-3">
-                                <Dropdown align="right" width="48">
-                                    <template #trigger>
-                                        <span class="inline-flex rounded-md">
-                                            <button type="button" class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none">
-                                                {{ $page.props.auth.user.name }}
-
-                                                <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                                </svg>
-                                            </button>
-                                        </span>
-                                    </template>
-
-                                    <template #content>
-                                        <DropdownLink :href="route('logout')" method="post" as="button">
-                                            Log Out
-                                        </DropdownLink>
-                                    </template>
-                                </Dropdown>
-                            </div>
-                        </div>
-
-                          Hamburger
-                        <div class="flex items-center -mr-2 sm:hidden">
-                            <button @click="showingNavigationDropdown = ! showingNavigationDropdown" class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500">
-                                <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                    <path :class="{'hidden': showingNavigationDropdown, 'inline-flex': ! showingNavigationDropdown }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                                    <path :class="{'hidden': ! showingNavigationDropdown, 'inline-flex': showingNavigationDropdown }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                  Responsive Navigation Menu
-                <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
-                    <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
-                        </ResponsiveNavLink>
-                    </div>
-
-                      Responsive Settings Options -
-                    <div class="pt-4 pb-1 border-t border-gray-200">
-                        <div class="px-4">
-                            <div class="text-base font-medium text-gray-800">{{ $page.props.auth.user.name }}</div>
-                            <div class="text-sm font-medium text-gray-500">{{ $page.props.auth.user.email }}</div>
-                        </div>
-
-                        <div class="mt-3 space-y-1">
-                            <ResponsiveNavLink :href="route('logout')" method="post" as="button">
-                                Log Out
-                            </ResponsiveNavLink>
-                        </div>
-                    </div>
-                </div>
-            </nav> -->
-
-
-        <div class="grid min-h-screen grid-rows-5 bg-orange-500 place-items-center">
-            <!-- header to the navbar -->
-            <div class="grid row-span-2 place-items-center">
-                <!-- placeholder image -->
-                <img class="w-3/5" src="https://i.pinimg.com/736x/03/8b/20/038b2098ca63da45822fb4ce1c91bfd9--vida-real-realistic-drawings.jpg" />
-                <h2 class="text-xl font-bold text-center text-white">Emergency Management Solutions</h2>
-                <p> Hey, {{$page.props.auth.user.name }}</p>
-            </div>
-
-            <!-- Then the navigation to different pages -->
-
-            <div class="row-span-3">
-                <!-- Navigation items -->
-
-                <!-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"> -->
-                    <div class="w-32 p-2 px-6 my-2 text-center bg-gray-300 rounded-full">
-                        <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
-                        </NavLink>
-                    </div>
-                    <div class="w-32 p-2 px-6 my-2 text-center bg-gray-300 rounded-full">
-                        <NavLink :href="route('accommodations')" :active="route().current('accommodations')">
-                                    Accommodations
-                                </NavLink>
-                    </div>
-                    <div class="w-32 p-2 px-6 my-2 text-center bg-gray-300 rounded-full">
-                        <NavLink :href="route('groups')" :active="route().current('groups')">
-                                    Groups
-                                </NavLink>
-                    </div>
-                    <div class="w-32 p-2 px-6 my-2 text-center bg-gray-300 rounded-full">
-                        <NavLink :href="route('bookings')" :active="route().current('bookings')">
-                                    Bookings
-                                </NavLink>
-                    </div>
-                    <div class="w-32 p-2 px-6 my-2 bg-gray-300 rounded-full">
-                        <ResponsiveNavLink :href="route('logout')" method="post">
-                                Log Out
-                        </ResponsiveNavLink>
-                    </div>
-
-
-            </div>
-
-        </div>
+        <SideBar :routes="routeList"/>
 
         <!-- Main content of the page -->
-        <div class="col-span-4 p-6">
-                  Page Heading
+        <div class="col-span-2 p-6 md:col-span-4 lg:col-span-6">
+                <!-- Page Heading -->
                 <header class="bg-white shadow" v-if="$slots.header">
                     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         <slot name="header" />
                     </div>
                 </header>
 
-                Page Content
+                <!-- Page Content -->
                 <main>
                     <slot />
                 </main>
@@ -165,5 +30,15 @@ import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/inertia-vue3';
 
+import SideBar from '@/Components/Sidebar/SideBar.vue'
+
 const showingNavigationDropdown = ref(false);
+
+const routeList = [
+        {"str": "dashboard",         "title": "Dashboard"},
+        {"str": "accommodations",   "title": "Accommodations"},
+        {"str": "groups",           "title": "Groups"},
+        {"str": "bookings",         "title": "Bookings"},
+        // {"str": , "title": "Dashboard"},
+    ]
 </script>
