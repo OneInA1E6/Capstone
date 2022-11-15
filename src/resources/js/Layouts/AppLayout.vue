@@ -1,11 +1,12 @@
 
 <template>
-    <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7">
+    <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
 
-        <SideBar :routes="routeList"/>
+        <SideBar :routes="routeList" class="fixed w-1/3 h-screen md:w-1/5 lg:w-1/6"/>
 
+        <div />
         <!-- Main content of the page -->
-        <div class="col-span-2 p-6 md:col-span-4 lg:col-span-6">
+        <div class="col-span-2 p-6 md:col-span-4 lg:col-span-5">
                 <!-- Page Heading -->
                 <header class="bg-white shadow" v-if="$slots.header">
                     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">

@@ -1,5 +1,5 @@
 <template>
-    <AuthenticatedLayout>
+    <AppLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Bookings
@@ -19,12 +19,12 @@
             </div>
         </div>
 
-    </AuthenticatedLayout>
+    </AppLayout>
 
 </template>
 
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import AppLayout from '@/Layouts/AppLayout.vue';
 
 const props = defineProps({
     booking: Object

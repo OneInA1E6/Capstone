@@ -1,8 +1,8 @@
 <template>
-    
+
     <Head title="Dashboard" />
 
-    <AuthenticatedLayout>
+    <AppLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 Accommodations
@@ -30,11 +30,11 @@
         <pre>
             {{props.accommodationsAll}}
         </pre>
-    </AuthenticatedLayout>
+    </AppLayout>
 </template>
 
 <script setup>
-    import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+    import AppLayout from '@/Layouts/AppLayout.vue';
     import SearchBar from '@/Components/SearchBar.vue'
     import { Head } from '@inertiajs/inertia-vue3';
     import { ref } from "vue";
