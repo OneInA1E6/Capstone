@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
 
 class BookingController extends Controller
 {
@@ -25,7 +27,17 @@ class BookingController extends Controller
 
     public function create(Request $request)
     {
-            
+        $newBooking = $request->all();
+       
+        $newBookingDuration = $newBooking['duration'];
+        $newBookingGroupId = $newBooking['groupId'];
+        
+
+        $booking = new Booking;
+        $booking->groupId = $newBookingGroupId;
+        $booking->duration = $newBookingDuration;
+        $booking->save();
+        return redirect()->back();
     }
 
 }
