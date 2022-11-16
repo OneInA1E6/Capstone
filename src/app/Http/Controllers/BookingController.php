@@ -23,13 +23,9 @@ class BookingController extends Controller
         ]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
-            $booking = Booking::all();
-
-        return Inertia::render('Booking/Index', [
-            'booking' => $booking,
-        ]);
+            
     }
 
 }
