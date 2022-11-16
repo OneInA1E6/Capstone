@@ -30,7 +30,7 @@ class DashboardController extends Controller
     public function search(Request $request)
     {
         $query = $request -> query('query');
-        $addressObj = Accommodation::where('address', 'LIKE', '%'.$query.'%')->get();;
+        $addressObj = Accommodation::where('address', 'LIKE', '%'.$query.'%')->paginate(5);
         return $addressObj;
     }
 }

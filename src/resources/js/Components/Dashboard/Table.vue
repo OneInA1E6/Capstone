@@ -1,8 +1,9 @@
 <template>
-    <template v-if="loading">
+    <!-- <template v-if="loading">
         <h1>Loading...</h1>
-    </template>
-    <table v-else class="table p-4 bg-white shadow rounded-lg w-full">
+    </template> -->
+    <div>
+    <table class="table p-4 bg-white shadow rounded-lg w-full">
         <thead>
             <tr>
                 <th class="border-b-2 p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900">
@@ -42,24 +43,34 @@
             </tr>
         </tbody>
     </table>
+    <Pagination :links="pag"/>
+    </div>
+    
 </template>
 
 <script setup>
 import dashboardGet from '../../Composables/DashboardGet'
+import Pagination from '../Pagination.vue'
 import { ref, watch } from 'vue'
+import axios from 'axios';
 
 const props = defineProps({
     query: String,
 })
 
 let accommodationsList = ref([]);
+let pag = ref([]);
 let query = ref(0);
 let loading = ref(false);
 
 watch(props, _.debounce(() => {
     query.value = props.query.length;
     loading.value = true;
-    dashboardGet(props).then(data => accommodationsList.value = data);
+    dashboardGet(props).then(data => {
+        accommodationsList.value = data.data;
+        pag.value = data.links
+        console.log(pag)
+    });
     loading.value = false;
 }, 500))
 
