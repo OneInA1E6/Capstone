@@ -16,7 +16,7 @@ class GroupController extends Controller
      */
     public function show()
     {
-        $groups = Group::all();
+        $groups = Group::with('details')->get();
 
         return Inertia::render('Group/Index', [
             'groups' => $groups,

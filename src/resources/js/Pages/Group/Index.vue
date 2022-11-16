@@ -6,7 +6,16 @@
             </h2>
         </template>
 
-        I am very cool
+        <div class="grid grid-cols-2 py-12 mt-4">
+            <Card v-for="group in props.groups" :key="group.id">
+                <pre>
+                    {{group}}
+                </pre>
+            </Card>
+
+        </div>
+
+        <Card> My cool dudes named jackie</Card>
         <div class="py-12">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
@@ -25,6 +34,7 @@
 
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
+import Card from '@/Components/Card.vue'
 
 const props = defineProps({
     groups: Object
