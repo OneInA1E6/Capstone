@@ -8,9 +8,18 @@
 
         <div class="grid grid-cols-2 py-12 mt-4">
             <Card v-for="group in props.groups" :key="group.id">
-                <pre>
-                    {{group}}
-                </pre>
+                <div class="flex flex-row">
+                    <div class="text-xl font-medium capitalize basis-1/2">
+                        Contact: {{group.contact_firstname}} {{group.contact_lastname}}
+                    </div>
+                    <div class="basis-1/2">
+                        Group Members: {{group.group_size}}
+                    </div>
+
+                    <!-- <pre>
+                        {{group}}
+                    </pre> -->
+                </div>
             </Card>
 
         </div>
