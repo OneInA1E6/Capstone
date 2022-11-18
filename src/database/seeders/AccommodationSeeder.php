@@ -16,8 +16,7 @@ class AccommodationSeeder extends Seeder
     public function run()
     {
         Accommodation::factory()
-            ->count(3)
+            ->count(100)
             ->create();
-        
     }
 }

@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('regions', function (Blueprint $table) {
             $table->id();
+            $table->char('country'); 
+            $table->char('locale'); 
             $table->timestamps();
         });
     }

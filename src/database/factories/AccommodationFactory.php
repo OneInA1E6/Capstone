@@ -17,7 +17,7 @@ class AccommodationFactory extends Factory
     public function definition()
     {
         return [
-            'address' => fake()->name(),
+            'address' => fake()->address(),
             'numRooms' => random_int(1,10),
         ];
     }
