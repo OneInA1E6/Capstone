@@ -9,8 +9,7 @@
         </template>
 
         <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center">
                     <div class="mb-3 xl:w-96">
                         <div class="relative flex flex-wrap items-stretch w-full mb-4 input-group">
@@ -21,25 +20,17 @@
                             aria-describedby="button-addon2"
                             v-model="userInput"
                             >
-
                         </div>
                     </div>
                 </div>
-
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                    <h1 v-if="!accommodationsList.length">Please search</h1>
-                    <ul>
-                        <li v-for="acc in accommodationsList" v-bind:key="acc.id">
-                            {{ acc.address }}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                <Table :query="`${userInput}`"/>
+                        </div>
+                    </div>
     </AppLayout>
 </template>
 
 <script setup>
+import Table from '../../Components/Dashboard/Table.vue'
 import AppLayout from '@/Layouts/AppLayout.vue';
 import dashboardGet from '../../Composables/DashboardGet'
 import { Head } from '@inertiajs/inertia-vue3';
@@ -49,14 +40,8 @@ const props = defineProps({
     regions: Object,
     accommodations: Object,
     groups: Object,
+    loading: Boolean,
 })
 
 const userInput = ref('');
-let accommodationsList = ref([]);
-
-watch(userInput, _.debounce(() => {
-    console.log(userInput)
-    dashboardGet(userInput).then(data => accommodationsList.value = data.data);
-}, 500))
-
 </script>

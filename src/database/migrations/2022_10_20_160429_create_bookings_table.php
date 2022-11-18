@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('booking', function (Blueprint $table) {
             $table->id();
-            $table->integer('groupId');
+            $table->integer('group_id')->nullable();
             $table->integer('duration');
+            $table->integer('accommodation_id')->nullable();
             $table->timestamps();
         });
     }

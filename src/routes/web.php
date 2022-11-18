@@ -29,12 +29,12 @@ Route::get('/', function () {
 Route::get('/dashboard', [Controllers\DashboardController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/dashboard/search', [Controllers\DashboardController::class, 'search'])
+->middleware(['auth', 'verified'])->name('dashboard.search');
+
 //ACCOMODATIONS
 Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('accommodations');
-
-Route::get('/accommodations/test', [Controllers\AccommodationController::class, 'test'])
-->middleware(['auth', 'verified'])->name('accommodations.test');
 
 //GROUPS
 Route::get('/groups', [Controllers\GroupController::class, 'show'])
