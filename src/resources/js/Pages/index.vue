@@ -2,13 +2,13 @@
     <Head title="Glohaven Emergency Management Solutions" />
 
     
-    <div class="w-full h-screen justify-center items-center relative z-0">
-        <img src="..\..\images\fire-burning-down-a-building.jpg">
-    </div>
-    <div class = "bg-white w-1/3 h-4/6 flex absolute inset-0 flex justify-center items-center z-10 top-0 right-0 px-6 py-4 ">
-            <img src="..\..\images\GH-logo.jpg" class="justify-center w-1/2 h-5/12">
-    </div>
-  
+    
+        <span>
+            <img src="..\..\images\fire-burning-down-a-building.jpg" class = "justify-center items-center relative w-screen h-screen flex">
+                <div class = " flex justify-center items-center">
+                    <img src="..\..\images\GH-logo.jpg" class="justify-center object-center absolute top-0 py-10">
+                </div> 
+        </span>
   
   
   
