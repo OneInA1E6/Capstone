@@ -37,5 +37,15 @@ class Group extends Model
         return $this->hasOne('App\Models\GroupDetails');
     }
 
+    /**
+     * each group has a list of details
+     *
+     * @access public
+     * @return
+     */
+    public function booking()
+    {
+        return $this->hasOne('App\Models\Booking');
+    }
 
 }

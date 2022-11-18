@@ -20,11 +20,17 @@ class DashboardController extends Controller
         $accommodations = Accommodation::where('numRooms', 9)->first();
         $groups = Group::all();
         
-
         return Inertia::render('Dashboard/Index', [
             'regions' => $regions,
             'accommodations' => $accommodations,
             'groups' => $groups,
         ]);
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request -> query('query');
+        $addressObj = Accommodation::where('address', 'LIKE', '%'.$query.'%')->paginate(5);
+        return $addressObj;
     }
 }

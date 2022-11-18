@@ -17,7 +17,8 @@ class RegionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'country' => fake()->country(),
+            'locale' => fake()->locale(),
         ];
     }
 }

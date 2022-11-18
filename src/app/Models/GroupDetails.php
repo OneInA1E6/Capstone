@@ -16,7 +16,7 @@ class GroupDetails extends Model
      * @access public
      * @return
      */
-    public function details()
+    public function group()
     {
         return $this->belongsTo('App\Models\Group');
     }
