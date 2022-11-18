@@ -22,4 +22,15 @@ class Region extends Model
     public static function numRooms() {
         return '';
     }
+
+    /**
+     * each group has a list of details
+     *
+     * @access public
+     * @return
+     */
+    public function accommodations()
+    {
+        return $this->hasMany('App\Models\Accommodation');
+    }
 }

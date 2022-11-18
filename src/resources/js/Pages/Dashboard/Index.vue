@@ -26,9 +26,6 @@
                 <Table :query="`${userInput}`"/>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
     </AppLayout>
 </template>
 

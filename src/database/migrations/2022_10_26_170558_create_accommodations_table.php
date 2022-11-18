@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->char('address'); 
             $table->integer('numRooms'); 
+            $table->integer('region_id')->nullable(); 
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
