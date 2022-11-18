@@ -1,6 +1,5 @@
 <template>
 
-    <Head title="Dashboard" />
 
     <AppLayout>
         <template #header>
@@ -13,7 +12,17 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        Accommodations Tables testing 123 Does this work now
+                        <form id="details"> 
+                            <p>Address: 
+                                <input v-model="address" placeholder="edit me" />
+                            </p>
+                            <p>Number of rooms available: 
+                                <input v-model="numRooms" placeholder="edit me" />
+                            </p>
+
+                        </form>
+                        
+                       
                     </div>
                 </div>
             </div>
@@ -35,16 +44,9 @@
 
 <script setup>
     import AppLayout from '@/Layouts/AppLayout.vue';
-    import SearchBar from '@/Components/SearchBar.vue'
-    import { Head } from '@inertiajs/inertia-vue3';
-    import { ref } from "vue";
-    let input = ref("");
-    const fruits = ["apple", "banana", "orange"];
-    function filteredList() {
-        return fruits.filter((fruit) =>
-            fruit.toLowerCase().includes(input.value.toLowerCase())
-    );
-    }
+
+    
+
     const props = defineProps({
         accommodationsAll: Object,
         accNumRooms: Object
