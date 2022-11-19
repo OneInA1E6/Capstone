@@ -12,14 +12,17 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        <form id="details"> 
+                        <form @submit.prevent="submit"> 
                             <p>Address: 
-                                <input v-model="address" placeholder="edit me" />
+                                <input v-model="form.address" placeholder="edit me" />
                             </p>
                             <p>Number of rooms available: 
-                                <input v-model="numRooms" placeholder="edit me" />
+                                <input v-model="form.numRooms" placeholder="edit me" />
                             </p>
 
+                            <Button :disabled="form.processing">
+                                    Submit
+                            </Button>
                         </form>
                         
                        
@@ -44,11 +47,22 @@
 
 <script setup>
     import AppLayout from '@/Layouts/AppLayout.vue';
+    import { useForm } from '@inertiajs/inertia-vue3';
+    import Button from '@/Components/PrimaryButton.vue';
 
-    
+    const form = useForm({
+        address: '',
+        numRooms: '',
+    });
 
     const props = defineProps({
         accommodationsAll: Object,
         accNumRooms: Object
     })
+
+    const submit = () => {
+        form.post(route('accommodations.create'), {
+            onFinish: () => form.reset(),
+        })
+    }
 </script>

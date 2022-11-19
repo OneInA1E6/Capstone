@@ -28,4 +28,19 @@ class AccommodationController extends Controller
         return  $testval;
 
     }
+
+    public function create(Request $request)
+    {
+        $newAcc = $request->all();
+
+        $newAccAddress = $newAcc['address'];
+        $newAccNumRooms = $newAcc['numRooms'];
+
+
+        $accommodation = new Accommodation;
+        $accommodation->address = $newAccAddress;
+        $accommodation->numRooms = $newAccNumRooms;
+        $accommodation->save();
+        return redirect()->back();
+    }
 }
