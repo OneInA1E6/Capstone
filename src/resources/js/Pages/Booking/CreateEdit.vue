@@ -21,6 +21,11 @@
                         <TextInput id="duration" type="text" class="mt-1 block w-full" v-model="form.duration"/>
                         <InputError class="mt-2" :message="form.duration" />
                     </div>
+                    <div>
+                        <InputLabel for="accommodationId" value="Accommodation Id" />
+                        <TextInput id="accommodationId" type="text" class="mt-1 block w-full" v-model="form.accommodationId"/>
+                        <InputError class="mt-2" :message="form.accommodationId" />
+                    </div>
 
                     <div class="flex justify-end mt-4">
                         <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
@@ -50,6 +55,7 @@ const props = defineProps({
 const form = useForm({
     groupId: '',
     duration: '',
+    accommodationId: '',
 });
 const submit = () => {
     form.post(route('bookings.create'), {
