@@ -40,7 +40,26 @@
             </div>
         </div>
         <pre>
-            {{props.accommodationsAll}}
+            <!-- {{props.accommodationsAll}} -->
+            <div class = "flex items-center justify-center">
+                <table class="table-auto border-separate border text-center w-screen">
+                    <thead>
+                        <tr>
+                            <th class="border">ID</th>
+                            <th class="border">Address</th>
+                            <th class="border">Number of rooms available</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr v-for="acc in accommodationsAll" :key="accommodationsAll.id">
+                            <td class="border">{{acc.id}}</td>
+                            <td class="border">{{acc.address}}</td>
+                            <td class="border">{{acc.numRooms}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </pre>
     </AppLayout>
 </template>
