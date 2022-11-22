@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Accommodation;
+use App\Models\Region;
 
 class AccommodationSeeder extends Seeder
 {
@@ -17,6 +18,11 @@ class AccommodationSeeder extends Seeder
     {
         Accommodation::factory()
             ->count(100)
-            ->create();
+            ->create()->each(function($accommodation) {
+                $region = Region::inRandomOrder()->first();
+                // dump($region->id);
+                $accommodation->region($region);
+                $accommodation->save();
+            });
     }
 }

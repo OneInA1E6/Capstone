@@ -19,10 +19,6 @@ class RegionSeeder extends Seeder
         Region::factory()
             ->count(5)
             ->create()->each(function($region) {
-                $accommodation = Accommodation::factory()->make([
-                    'region_id' => $region->id
-                ]);
-                $region->accommodations()->save($accommodation);
-            });;
+            });
     }
 }
