@@ -5,8 +5,8 @@
         <!-- header to the navbar -->
         <div class="grid row-span-2 place-items-center">
             <!-- placeholder image for logo -->
-            <img class="w-3/5" src="..\..\..\images\GEMSLogo.svg" />
-            <h2 class="mb-2 text-xl font-bold text-center text-white">Emergency Management Solutions</h2>
+            <img src="..\..\..\images\GEMSLogo.svg" />
+            <h2 class="mb-2 text-xl font-bold text-center text-white">Glohaven Emergency Management Solutions</h2>
             <p> Hey, {{$page.props.auth.user.name }}</p>
         </div>
 
