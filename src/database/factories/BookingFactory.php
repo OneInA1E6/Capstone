@@ -18,8 +18,7 @@ class BookingFactory extends Factory
     {
         return [
             'duration' => fake()->numberBetween(1,20),
-            'groupId' => fake()->numberBetween(1,4),
-
+            // 'groupId' => fake()->numberBetween(1,4),
         ];
     }
 }

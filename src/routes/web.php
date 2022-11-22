@@ -17,7 +17,7 @@ use App\Http\Controllers;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('index', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
@@ -28,6 +28,9 @@ Route::get('/', function () {
 //DASHBOARD
 Route::get('/dashboard', [Controllers\DashboardController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard/search', [Controllers\DashboardController::class, 'search'])
+->middleware(['auth', 'verified'])->name('dashboard.search');
 
 //ACCOMODATIONS
 Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
