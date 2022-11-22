@@ -6,7 +6,7 @@
             </h2>
         </template>      
         
-        <div class = " items-center justify-center object-center flex absolute p-[420px]">
+        <div>
                     <NavLink :href="route('createBooking')" class="justify-center text-white  flex w-40 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md " :as="button">Create New Booking</NavLink>
         </div>
 
