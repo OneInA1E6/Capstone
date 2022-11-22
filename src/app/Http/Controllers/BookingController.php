@@ -52,9 +52,7 @@ class BookingController extends Controller
 
         $bookings = Booking::all();
 
-        return Inertia::render('Booking/Index', [
-            'booking' => $bookings,
-        ]);
+        return redirect('/bookings');
     }
 
 }
