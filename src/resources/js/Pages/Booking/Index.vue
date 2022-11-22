@@ -4,24 +4,25 @@
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Bookings
             </h2>
-        </template>
-    
-        <div class = "flex items-center justify-center">
-            <table class="table table-striped table-bordered text-center w-screen">
-                        <tr>
-                            <th>Group Id</th>
-                            <th>Duration</th>
-                        </tr>
-                    
-                        <tr v-for="book in booking" :key="booking.groupId">
-                            <td>{{book.groupId}}</td>
-                            <td>{{book.duration}}</td>
-                        </tr>
-
-            </table>
-        </div>
-
+        </template>      
         
+        <div class = "flex items-center justify-center">
+                <table class="table-auto border-separate border text-center w-screen">
+                    <thead>
+                        <tr>
+                            <th class="border">Group Id</th>
+                            <th class="border">Duration</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr v-for="book in booking" :key="booking.groupId">
+                            <td class="border">{{book.groupId}}</td>
+                            <td class="border">{{book.duration}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
 
 
