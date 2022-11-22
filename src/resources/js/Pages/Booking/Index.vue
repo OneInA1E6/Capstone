@@ -5,49 +5,22 @@
                 Bookings
             </h2>
         </template>
+    
+        <div class = "flex items-center justify-center">
+            <table class="table table-striped table-bordered text-center w-screen">
+                        <tr>
+                            <th>Group Id</th>
+                            <th>Duration</th>
+                        </tr>
+                    
+                        <tr v-for="book in booking" :key="booking.groupId">
+                            <td>{{book.groupId}}</td>
+                            <td>{{book.duration}}</td>
+                        </tr>
 
-        gabe is not cool
-
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                    <div class="p-6 bg-white border-b border-gray-200">
-                        <form @submit.prevent="submit">
-                          <div>
-                              <InputLabel for="groupId" value="Group Id" />
-                              <TextInput id="groupId" type="text" class="mt-1 block w-full" v-model="form.groupId"/>
-                              <InputError class="mt-2" :message="form.groupId" />
-                          </div>
-                          <div>
-                              <InputLabel for="duration" value="Duration of Stay" />
-                              <TextInput id="duration" type="text" class="mt-1 block w-full" v-model="form.duration"/>
-                              <InputError class="mt-2" :message="form.duration" />
-                          </div>
-
-                          <div class="flex justify-end mt-4">
-                              <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                                  Submit
-                              </Button>
-                          </div>
-                        </form>
-                      </div>
-                  </div>
-            </div>
+            </table>
         </div>
 
-
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                    <div class="p-6 bg-white border-b border-gray-200">
-                        <pre>
-                            {{props.booking}}
-                          {{props.booking}}
-                        </pre>
-                    </div>
-                </div>
-            </div>
-         </div>
         
 
 
