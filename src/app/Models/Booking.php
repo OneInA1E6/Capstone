@@ -17,7 +17,7 @@ class Booking extends Model
      */
     public function group()
     {
-        return $this->belongsTo('App\Models\Group');
+        return $this->belongsTo(Group::class);
     }
 
         /**
@@ -28,7 +28,7 @@ class Booking extends Model
      */
     public function accommodation()
     {
-        return $this->belongsTo('App\Models\Accommodation');
+        return $this->belongsTo(Accommodation::class);
     }
 
     protected $table = 'booking';

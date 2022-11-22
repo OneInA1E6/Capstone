@@ -17,7 +17,7 @@ class Accommodation extends Model
     protected $fillable = [
         'address',
         'numRooms',
-        'region_id',
+        // 'region_id',
     ];
 
     public static function numRooms() {
@@ -32,7 +32,7 @@ class Accommodation extends Model
      */
     public function region()
     {
-        return $this->belongsTo('App\Models\Region', 'region_id');
+        return $this->belongsTo(Region::class);
     }
 
     /**
@@ -43,6 +43,6 @@ class Accommodation extends Model
      */
     public function bookings()
     {
-        return $this->hasMany('App\Models\Booking');
+        return $this->hasMany(Booking::class);
     }
 }
