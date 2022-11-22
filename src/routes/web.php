@@ -36,8 +36,8 @@ Route::get('/dashboard/search', [Controllers\DashboardController::class, 'search
 Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('accommodations');
 
-Route::get('/accommodations/test', [Controllers\AccommodationController::class, 'test'])
-->middleware(['auth', 'verified'])->name('accommodations.test');
+Route::get('/accommodations/createAccommodation', [Controllers\AccommodationController::class, 'createAccommodation'])
+->middleware(['auth', 'verified'])->name('accommodations.createAccommodation');
 
 Route::post('/accommodations/create', [Controllers\AccommodationController::class, 'create'])
 ->middleware(['auth', 'verified'])->name('accommodations.create');
