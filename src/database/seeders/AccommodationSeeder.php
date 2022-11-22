@@ -17,12 +17,11 @@ class AccommodationSeeder extends Seeder
     public function run()
     {
         Accommodation::factory()
-            ->count(100)
-            ->create()->each(function($accommodation) {
+            ->count(6)
+            ->create()
+            ->each(function($accommodation) {
                 $region = Region::inRandomOrder()->first();
-                // dump($region->id);
-                $accommodation->region($region);
-                $accommodation->save();
+                $region->accommodations()->save($accommodation);
             });
     }
 }
