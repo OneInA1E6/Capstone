@@ -4,49 +4,32 @@
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Bookings
             </h2>
-        </template>
-
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                    <div class="p-6 bg-white border-b border-gray-200">
-                        <form @submit.prevent="submit">
-                          <div>
-                              <InputLabel for="groupId" value="Group Id" />
-                              <TextInput id="groupId" type="text" class="mt-1 block w-full" v-model="form.groupId"/>
-                              <InputError class="mt-2" :message="form.groupId" />
-                          </div>
-                          <div>
-                              <InputLabel for="duration" value="Duration of Stay" />
-                              <TextInput id="duration" type="text" class="mt-1 block w-full" v-model="form.duration"/>
-                              <InputError class="mt-2" :message="form.duration" />
-                          </div>
-
-                          <div class="flex justify-end mt-4">
-                              <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                                  Submit
-                              </Button>
-                          </div>
-                        </form>
-                      </div>
-                  </div>
-            </div>
+        </template>      
+        
+        <div>
+                    <NavLink :href="route('createBooking')" class="justify-center text-white  flex w-40 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md " :as="button">Create New Booking</NavLink>
         </div>
 
+        <div class = "flex items-center justify-center">
+                <table class="table-auto border-separate border text-center w-screen">
+                    <thead>
+                        <tr>
+                            <th class="border">Group Id</th>
+                            <th class="border">Accommodation Id</th>
+                            <th class="border">Duration</th>
+                        </tr>
+                    </thead>
 
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                    <div class="p-6 bg-white border-b border-gray-200">
-                        <pre>
-                            {{props.booking}}
-                          {{props.booking}}
-                        </pre>
-                    </div>
-                </div>
+                    <tbody>
+                        <tr v-for="book in booking" :key="booking.groupId">
+                            <td class="border">{{book.group_id}}</td>
+                            <td class="border">{{book.accommodation_id}}</td>
+                            <td class="border">{{book.duration}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-         </div>
-        
+
 
 
 
@@ -62,6 +45,8 @@ import InputLabel from '@/Components/InputLabel.vue';
 import Button from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
+import NavLink from '@/Components/NavLink.vue';
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 const props = defineProps({
     booking: Object,
 })
