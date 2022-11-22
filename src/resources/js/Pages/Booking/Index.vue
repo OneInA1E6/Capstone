@@ -45,6 +45,8 @@ import InputLabel from '@/Components/InputLabel.vue';
 import Button from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
+import NavLink from '@/Components/NavLink.vue';
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 const props = defineProps({
     booking: Object,
 })
