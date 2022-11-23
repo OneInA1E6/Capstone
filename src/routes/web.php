@@ -39,6 +39,12 @@ Route::get('/accommodations', [Controllers\AccommodationController::class, 'show
 Route::get('/accommodations/createAccommodation', [Controllers\AccommodationController::class, 'createAccommodation'])
 ->middleware(['auth', 'verified'])->name('accommodations.createAccommodation');
 
+Route::get('/accommodations/edit/{accommodation}', [Controllers\AccommodationController::class, 'editAccommodation'])
+->middleware(['auth', 'verified'])->name('accommodations.editAccommodation');
+
+Route::post('/accommodations/edit/{accommodation}', [Controllers\AccommodationController::class, 'edit'])
+->middleware(['auth', 'verified'])->name('accommodations.edit');
+
 Route::post('/accommodations/create', [Controllers\AccommodationController::class, 'create'])
 ->middleware(['auth', 'verified'])->name('accommodations.create');
 
