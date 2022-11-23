@@ -55,4 +55,20 @@ class BookingController extends Controller
         return redirect('/bookings');
     }
 
+
+    public function delete(Request $request)
+    {   
+        $booking = $request->all();
+        $groupId = $booking['group_id'];
+        Booking::where('group_id', $groupId)->firstorfail()->delete();
+     
+    
+        return redirect()->route(route: 'bookings')
+            ->with('message', 'Booking deleted');
+    }
+
+
+
+
+
 }
