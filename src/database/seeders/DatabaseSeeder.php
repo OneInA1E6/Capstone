@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Region;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,12 +16,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
+        // Seed the default Registration Agents
         $this->call(UserSeeder::class);
-        $this->call(GroupSeeder::class);
-        $this->call(AccommodationSeeder::class);
+
+        // Seeds the information that will be used to register groups
         $this->call(RegionSeeder::class);
-        $this->call(BookingSeeder::class);
+        $this->call(AccommodationSeeder::class);
+
+        $this->call(GroupSeeder::class);
+        // $this->call(BookingSeeder::class);
+
+
+
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

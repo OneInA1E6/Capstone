@@ -31,6 +31,6 @@ class Region extends Model
      */
     public function accommodations()
     {
-        return $this->hasMany('App\Models\Accommodation');
+        return $this->hasMany(Accommodation::class);
     }
 }

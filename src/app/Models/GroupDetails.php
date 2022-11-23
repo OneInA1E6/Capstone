@@ -18,7 +18,7 @@ class GroupDetails extends Model
      */
     public function group()
     {
-        return $this->belongsTo('App\Models\Group');
+        return $this->belongsTo(Group::class);
     }
 
 
