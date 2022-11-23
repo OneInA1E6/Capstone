@@ -14,12 +14,12 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show()
+    public function index()
     {
         $regions = Region::all();
         $accommodations = Accommodation::where('numRooms', 9)->first();
         $groups = Group::all();
-        
+
         return Inertia::render('Dashboard/Index', [
             'regions' => $regions,
             'accommodations' => $accommodations,
