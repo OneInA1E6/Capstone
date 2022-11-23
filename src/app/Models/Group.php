@@ -34,7 +34,7 @@ class Group extends Model
      */
     public function details()
     {
-        return $this->hasOne('App\Models\GroupDetails');
+        return $this->hasOne(GroupDetails::class);
     }
 
     /**
@@ -45,7 +45,7 @@ class Group extends Model
      */
     public function booking()
     {
-        return $this->hasOne('App\Models\Booking');
+        return $this->hasOne(Booking::class);
     }
 
 }

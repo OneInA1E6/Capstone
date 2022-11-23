@@ -16,7 +16,7 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show()
+    public function index()
     {
             $booking = Booking::all();
 
@@ -42,7 +42,7 @@ class BookingController extends Controller
         $newBookingDuration = $newBooking['duration'];
         $newBookingGroupId = $newBooking['groupId'];
         $newBookingAccommodationId = $newBooking['accommodationId'];
-        
+
 
         $booking = new Booking;
         $booking->group_id = $newBookingGroupId;

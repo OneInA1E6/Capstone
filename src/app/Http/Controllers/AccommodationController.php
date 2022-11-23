@@ -14,10 +14,65 @@ class AccommodationController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show()
+    public function index()
     {
         $accommodationsAll = Accommodation::all();
         $accNumRooms = Accommodation::numRooms();
         return Inertia::render('Accommodations/Index', ['accommodationsAll' => $accommodationsAll,'accNumRooms' => $accNumRooms]);
+    }
+
+    public function createAccommodation()
+    {
+            // $accommodation = Accommodation::all();
+
+        // return Inertia::render('Accommodations/CreateEdit', [
+        //     'accommodation' => $accommodation,
+        // ]);
+        return Inertia::render('Accommodations/CreateEdit');
+    }
+
+    public function editAccommodation(Accommodation $accommodation)
+    {
+        
+        return Inertia::render('Accommodations/CreateEdit', [
+            'accommodation' => $accommodation, 'edit' => true,
+        ]);
+    }
+
+    public function create(Request $request)
+    {
+        $newAcc = $request->all();
+
+        $newAccAddress = $newAcc['address'];
+        $newAccNumRooms = $newAcc['numRooms'];
+
+
+        $accommodation = new Accommodation;
+        $accommodation->address = $newAccAddress;
+        $accommodation->numRooms = $newAccNumRooms;
+        $accommodation->save();
+
+
+        $accommodations = Accommodation::all();
+        return redirect('/accommodations');
+    }
+
+    public function edit(Request $request)
+    {
+        $newAcc = $request->all();
+
+        $newAccAddress = $newAcc['address'];
+        $newAccNumRooms = $newAcc['numRooms'];
+
+        $accommodation = Accommodation::find($newAcc['id']);
+        $accommodation->address = $newAccAddress;
+        $accommodation->numRooms = $newAccNumRooms;
+        $accommodation->save();
+        
+
+        $accommodations = Accommodation::all();
+        return redirect('/accommodations');
+
+
     }
 }
