@@ -14,7 +14,7 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show()
+    public function index()
     {
         $groups = Group::with('details')->get();
 
