@@ -52,7 +52,8 @@ class BookingController extends Controller
 
         $bookings = Booking::all();
 
-        return redirect('/bookings');
+        return redirect('/bookings')
+            ->with('message', 'Booking Successfully Created');
     }
 
 
@@ -64,7 +65,7 @@ class BookingController extends Controller
      
     
         return redirect()->route(route: 'bookings')
-            ->with('message', 'Booking deleted');
+            ->with('message', 'Booking Successfully Deleted');
     }
 
 
