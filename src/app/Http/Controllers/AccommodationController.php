@@ -28,10 +28,19 @@ class AccommodationController extends Controller
 
     public function createAccommodation()
     {
-            $accommodation = Accommodation::all();
+            // $accommodation = Accommodation::all();
 
+        // return Inertia::render('Accommodations/CreateEdit', [
+        //     'accommodation' => $accommodation,
+        // ]);
+        return Inertia::render('Accommodations/CreateEdit');
+    }
+
+    public function editAccommodation(Accommodation $accommodation)
+    {
+        
         return Inertia::render('Accommodations/CreateEdit', [
-            'accommodation' => $accommodation,
+            'accommodation' => $accommodation, 'edit' => true,
         ]);
     }
 
@@ -49,5 +58,24 @@ class AccommodationController extends Controller
 
         $accommodations = Accommodation::all();
         return redirect('/accommodations');
+    }
+
+    public function edit(Request $request)
+    {
+        $newAcc = $request->all();
+
+        $newAccAddress = $newAcc['address'];
+        $newAccNumRooms = $newAcc['numRooms'];
+
+        $accommodation = Accommodation::find($newAcc['id']);
+        $accommodation->address = $newAccAddress;
+        $accommodation->numRooms = $newAccNumRooms;
+        $accommodation->save();
+        
+
+        $accommodations = Accommodation::all();
+        return redirect('/accommodations');
+
+
     }
 }

@@ -20,6 +20,7 @@
                         <th class="border">ID</th>
                         <th class="border">Address</th>
                         <th class="border">Number of rooms available</th>
+                        <th class="border">Edit</th>
                     </tr>
                 </thead>
 
@@ -28,6 +29,11 @@
                         <td class="border">{{ acc.id }}</td>
                         <td class="border">{{ acc.address }}</td>
                         <td class="border">{{ acc.numRooms }}</td>
+                        <td class="border">
+                            <NavLink :href="route('accommodations.editAccommodation', acc)" 
+                                class="justify-center text-white flex w-20 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "
+                                :as="button">Edit</NavLink>
+                        </td>
                     </tr>
                 </tbody>
             </table>
