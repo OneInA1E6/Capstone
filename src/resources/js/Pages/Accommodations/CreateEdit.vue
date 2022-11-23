@@ -29,11 +29,12 @@
 
                     <div class="flex justify-end mt-4">
                         <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                            Submit
+                            {{props.edit ? 'Update' : 'Submit'}}
                         </Button>
                     </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>
@@ -50,15 +51,24 @@ import Button from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
 const props = defineProps({
-    accommodationsAll: Object,
-    accNumRooms: Object
+    // accommodationsAll: Object,
+    // accNumRooms: Object,
+    accommodation: {
+        type: Object, 
+        default: {}
+    },
+    edit: {
+        type: Boolean, 
+        default: false
+    }
 })
 const form = useForm({
-    address: '',
-    numRooms: '',
+    address: (props.accommodation) ? props.accommodation.address : '',
+    numRooms: (props.accommodation) ? props.accommodation.numRooms : '',
+    id: (props.accommodation) ? props.accommodation.id : null,
 });
 const submit = () => {
-    form.post(route('accommodations.create'), {
+    form.post((props.edit) ? route('accommodations.edit', props.accommodation) : route('accommodations.create'), {
         onFinish: () => form.reset(),
     })
   }
