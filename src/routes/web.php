@@ -62,4 +62,7 @@ Route::get('/createBooking', [Controllers\BookingController::class, 'createBooki
 Route::post('/bookings/create', [Controllers\BookingController::class, 'create'])
 ->middleware(['auth', 'verified'])->name('bookings.create');
 
+Route::post('/bookings/delete', [Controllers\BookingController::class, 'delete'])
+->middleware(['auth', 'verified'])->name('deleteBooking');
+
 require __DIR__.'/auth.php';
