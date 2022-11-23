@@ -14,7 +14,7 @@ class AccommodationController extends Controller
      * @param  int  $id
      * @return \Illuminate\View\View
      */
-    public function show()
+    public function index()
     {
         $accommodationsAll = Accommodation::all();
         $accNumRooms = Accommodation::numRooms();
@@ -42,7 +42,7 @@ class AccommodationController extends Controller
         $accommodation->address = $newAccAddress;
         $accommodation->numRooms = $newAccNumRooms;
         $accommodation->save();
-        
+
 
         $accommodations = Accommodation::all();
         return redirect('/accommodations');
