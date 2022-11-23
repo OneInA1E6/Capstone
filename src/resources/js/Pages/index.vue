@@ -6,7 +6,7 @@
         <span>
             <img src="..\..\images\fire-burning-down-a-building.jpg" class = "justify-center items-center relative w-screen h-screen">
                 <div class = " flex justify-center items-center object-center">
-                    <img src="..\..\images\GH-logo.jpg" class=" w-1/3 h-2/4 justify-center items-center object-center absolute top-0 p-10">
+                    <img src="..\..\images\GEMSLogo.svg" class=" w-2/5 justify-center items-center object-center absolute top-0">
                     
                         <div v-if="canLogin" class = " items-center justify-center object-center absolute top-0 p-[420px] flex ">
                             <NavLink v-if="$page.props.auth.user" :href="route('dashboard')" class="justify-center text-white flex w-40 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md " :as="button">Dashboard</NavLink>
