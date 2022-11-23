@@ -36,6 +36,12 @@ Route::get('/dashboard/search', [Controllers\DashboardController::class, 'search
 Route::get('/accommodations', [Controllers\AccommodationController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('accommodations');
 
+Route::get('/accommodations/createAccommodation', [Controllers\AccommodationController::class, 'createAccommodation'])
+->middleware(['auth', 'verified'])->name('accommodations.createAccommodation');
+
+Route::post('/accommodations/create', [Controllers\AccommodationController::class, 'create'])
+->middleware(['auth', 'verified'])->name('accommodations.create');
+
 //GROUPS
 Route::get('/groups', [Controllers\GroupController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('groups');
@@ -43,6 +49,9 @@ Route::get('/groups', [Controllers\GroupController::class, 'show'])
 //BOOKINGS
 Route::get('/bookings', [Controllers\BookingController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('bookings');
+
+Route::get('/createBooking', [Controllers\BookingController::class, 'createBooking'])
+->middleware(['auth', 'verified'])->name('createBooking');
 
 Route::post('/bookings/create', [Controllers\BookingController::class, 'create'])
 ->middleware(['auth', 'verified'])->name('bookings.create');

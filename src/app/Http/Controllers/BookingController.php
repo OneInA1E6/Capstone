@@ -25,19 +25,34 @@ class BookingController extends Controller
         ]);
     }
 
+    public function createBooking()
+    {
+            $booking = Booking::all();
+
+        return Inertia::render('Booking/CreateEdit', [
+            'booking' => $booking,
+        ]);
+    }
+
+
     public function create(Request $request)
     {
         $newBooking = $request->all();
-       
+
         $newBookingDuration = $newBooking['duration'];
         $newBookingGroupId = $newBooking['groupId'];
+        $newBookingAccommodationId = $newBooking['accommodationId'];
         
 
         $booking = new Booking;
-        $booking->groupId = $newBookingGroupId;
+        $booking->group_id = $newBookingGroupId;
         $booking->duration = $newBookingDuration;
+        $booking->accommodation_id = $newBookingAccommodationId;
         $booking->save();
-        return redirect()->back();
+
+        $bookings = Booking::all();
+
+        return redirect('/bookings');
     }
 
 }
