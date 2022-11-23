@@ -21,6 +21,11 @@ class AccommodationController extends Controller
         return Inertia::render('Accommodations/Index', ['accommodationsAll' => $accommodationsAll,'accNumRooms' => $accNumRooms]);
     }
 
+    public function show(Accommodation $accommodation)
+    {   
+        return Inertia::render('Accommodations/ShowAccommodation', ['accommodationsData' => $accommodation]);
+    }
+
     public function createAccommodation()
     {
             $accommodation = Accommodation::all();
@@ -37,12 +42,10 @@ class AccommodationController extends Controller
         $newAccAddress = $newAcc['address'];
         $newAccNumRooms = $newAcc['numRooms'];
 
-
         $accommodation = new Accommodation;
         $accommodation->address = $newAccAddress;
         $accommodation->numRooms = $newAccNumRooms;
         $accommodation->save();
-
 
         $accommodations = Accommodation::all();
         return redirect('/accommodations');
