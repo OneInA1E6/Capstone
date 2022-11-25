@@ -41,7 +41,7 @@
                         <td class="border"> 
                             <img src="..\..\..\MdiIcons\midIcons.svg" 
                                 class = "mx-auto w-6 h-6 flex cursor-pointer" 
-                                v-on:click="death(acc)">
+                                v-on:click="deleteAccommodation(acc)">
                         </td>
                     </tr>
                 </tbody>
@@ -68,7 +68,7 @@ const props = defineProps({
     accNumRooms: Object,
     accommodation: Object
 })
-    confirm = false
+    // confirm = false
 
 const submit = () => {
     form.post(route('accommodations.create'), {
@@ -76,7 +76,7 @@ const submit = () => {
     })
 }
 
-const death = ($accommodation) => {
+const deleteAccommodation = ($accommodation) => {
     Inertia.post(route('accommodations.delete', $accommodation));
 }
 </script>
