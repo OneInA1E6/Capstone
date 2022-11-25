@@ -41,7 +41,7 @@
                         <td class="border"> 
                             <img src="..\..\..\MdiIcons\midIcons.svg" 
                                 class = "justify-center w-12 h-6 flex" 
-                                v-on:click="death(acc)"> 
+                                v-on:click="death(acc)">
                         </td>
                     </tr>
                 </tbody>
@@ -68,6 +68,7 @@ const props = defineProps({
     accNumRooms: Object,
     accommodation: Object
 })
+    confirm = false
 
 const submit = () => {
     form.post(route('accommodations.create'), {

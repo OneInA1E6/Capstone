@@ -80,7 +80,8 @@ class AccommodationController extends Controller
     public function delete(Request $request) 
     {
         $newAcc = $request->all();
-        Accommodation::find($newAcc['id'])->firstorfail()->delete();
+        $id = $newAcc['id'];
+        Accommodation::where('id', $id)->firstorfail()->delete();
         
         return redirect('/accommodations')
             ->with('message', 'Accommodation Successfully Deleted');
