@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Group;
 use App\Models\GroupDetails;
 use App\Models\Booking;
+use App\Models\Accommodation;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
@@ -24,7 +25,7 @@ class GroupSeeder extends Seeder
                 $group->details()->save($details);
                 $booking = Booking::factory()->make([
                     'group_id' => $group->id,
-                    'accommodation_id' => rand(0,100),
+                    'accommodation_id' => Accommodation::inRandomOrder()->first()->id,
                 ]);
                 $group->booking()->save($booking);
             });

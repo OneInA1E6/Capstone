@@ -15,13 +15,15 @@
         <div v-if="$page.props.flash.message" class="text-blue-600 mb-4 text-right">
             {{$page.props.flash.message}}
         </div>
-
+        
         <div class="flex items-center justify-center">
             <table class="table-auto border-separate border text-center w-screen">
                 <thead>
                     <tr>
                         <th class="border">ID</th>
                         <th class="border">Address</th>
+                        <th class="border">Number of rooms total</th>
+                        <th class="border">Number of bookings</th>
                         <th class="border">Number of rooms available</th>
                         <th class="border">Edit</th>
                         <th class="border">Delete</th>
@@ -33,6 +35,8 @@
                         <td class="border">{{ acc.id }}</td>
                         <td class="border">{{ acc.address }}</td>
                         <td class="border">{{ acc.numRooms }}</td>
+                        <td class="border">{{ acc.bookings_count }}</td>
+                        <td class="border">{{ acc.numRooms - acc.bookings_count}}</td>
                         <td class="border">
                             <NavLink :href="route('accommodations.editAccommodation', acc)" 
                                 class="justify-center text-white flex w-20 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "

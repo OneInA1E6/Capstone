@@ -16,7 +16,8 @@ class AccommodationController extends Controller
      */
     public function index()
     {
-        $accommodationsAll = Accommodation::all();
+        $accommodationsAll = Accommodation::withCount('bookings')->get();
+        
         $accNumRooms = Accommodation::numRooms();
         return Inertia::render('Accommodations/Index', ['accommodationsAll' => $accommodationsAll,'accNumRooms' => $accNumRooms]);
     }

@@ -18,7 +18,7 @@ class AccommodationFactory extends Factory
     {
         return [
             'address' => fake()->address(),
-            'numRooms' => random_int(1,10),
+            'numRooms' => random_int(20,100),
         ];
     }
 }
