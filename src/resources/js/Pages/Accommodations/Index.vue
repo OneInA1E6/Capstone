@@ -40,7 +40,7 @@
                         </td>
                         <td class="border"> 
                             <img src="..\..\..\MdiIcons\midIcons.svg" 
-                                class = "justify-center w-12 h-6 flex" 
+                                class = "mx-auto w-6 h-6 flex cursor-pointer" 
                                 v-on:click="death(acc)">
                         </td>
                     </tr>
