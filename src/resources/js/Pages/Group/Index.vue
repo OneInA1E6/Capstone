@@ -27,10 +27,10 @@
                         <div class="basis-1/2">
                             Group Members: {{group.group_size}}
                         </div>
-                        <div class="grid w-32 h-full grid-cols-3 m-2 space-x-1 text-xl place-items-center ">
-                            <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="viewGroup(group.id)">
+                        <div class="grid w-32 h-full grid-cols-2 m-2 space-x-1 text-xl place-items-center ">
+                            <!-- <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="viewGroup(group.id)">
                                 <EyeIcon/>
-                            </div>
+                            </div> -->
                             <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="editGroup(group.id)">
                                 <CogIcon/>
                             </div>
@@ -39,9 +39,6 @@
                             </div>
                         </div>
 
-                        <!-- <pre>
-                            {{group}}
-                        </pre> -->
                     </div>
                 </Card>
 
@@ -69,9 +66,9 @@ const props = defineProps({
     groups: Object
 })
 
-const viewGroup = (group) => {
-        Inertia.get(route('groups.show', group))
-}
+// const viewGroup = (group) => {
+//         Inertia.get(route('groups.show', group))
+// }
 const editGroup = (group) => {
         Inertia.get(route('groups.edit', group))
 }

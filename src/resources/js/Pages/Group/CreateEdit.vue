@@ -66,7 +66,7 @@
                                     {{contact.type+': ' + contact.info}}
                                 </div>
 
-                                <Button class="py-4 text-sm" type='button' @click="addMember(newMember)">
+                                <Button class="py-4 text-sm" type='button' @click="removeContact(contact)">
                                     Remove
                                 </Button>
 
@@ -155,12 +155,31 @@ const addMember = (memberName) => {
     }
 };
 
+const removeMember = (memberName) => {
+    if(memberName){
+        form.details.members.push({'name': memberName});
+        newMember.value='';
+    }
+};
+
 const addContact = (contactType, info) => {
     if(info){
         form.details.alternativeContactInfo.push({'type':contactType, 'info':info});
         newContactType.value='';
         newContactInfo.value='';
     }
+};
+const removeContact = (obj) => {
+    console.log(form.details.alternativeContactInfo)
+    console.log(
+        form.details.alternativeContactInfo.indexOf(obj)
+        );
+
+
+        form.details.alternativeContactInfo.splice(
+            form.details.alternativeContactInfo.indexOf(obj), 1
+        );
+
 };
 
 const submit = () => {

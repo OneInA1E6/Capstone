@@ -70,7 +70,6 @@ class GroupController extends Controller
         $group->details()->delete();
         $group->delete();
 
-      //  return back()->with('message', "Group deleted.");
       return redirect()->route('groups')->with('message', 'Group Deleted');
     }
 
