@@ -35,7 +35,7 @@
                             <td class="border">{{book.group_id}}</td>
                             <td class="border">{{book.accommodation_id}}</td>
                             <td class="border">{{book.duration}}</td>
-                            <td class="border"> <img src="..\..\..\MdiIcons\mdiIcons.svg" class = "w-6 h-6 flex justify-center" v-on:click="death(book)"> </td>
+                            <td class="border"> <img src="..\..\..\mdiIcons\mdiIcons.svg" class = "w-6 h-6 flex justify-center" v-on:click="death(book)"> </td>
                         </tr>
                     </tbody>
                 </table>
