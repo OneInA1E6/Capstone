@@ -1,12 +1,13 @@
 
 <template>
-
     <div class="grid min-h-screen grid-rows-5 bg-[#FA9C1B] place-items-center">
         <!-- header to the navbar -->
         <div class="grid row-span-2 place-items-center">
             <!-- placeholder image for logo -->
-            <img src="..\..\..\images\GEMSLogo.svg" />
-            <h2 class="mb-2 text-xl font-bold text-center text-white">Glohaven Emergency Management Solutions</h2>
+            <Link href="/dashboard">
+                <ApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
+            </Link>
+            <h2 class="mb-2 text-xl font-bold text-center text-white -mt-14">Glohaven Emergency Management Solutions</h2>
             <p> Hey, {{$page.props.auth.user.name }}</p>
         </div>
 
@@ -41,7 +42,7 @@ import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
-import { Link } from '@inertiajs/inertia-vue3';
+import { Link, Inertia } from '@inertiajs/inertia-vue3';
 
 const props = defineProps({
     routes: Array

@@ -21,6 +21,11 @@ class AccommodationController extends Controller
         return Inertia::render('Accommodations/Index', ['accommodationsAll' => $accommodationsAll,'accNumRooms' => $accNumRooms]);
     }
 
+    public function show(Accommodation $accommodation)
+    {   
+        return Inertia::render('Accommodations/ShowAccommodation', ['accommodationsData' => $accommodation]);
+    }
+
     public function createAccommodation()
     {
             // $accommodation = Accommodation::all();
@@ -46,15 +51,14 @@ class AccommodationController extends Controller
         $newAccAddress = $newAcc['address'];
         $newAccNumRooms = $newAcc['numRooms'];
 
-
         $accommodation = new Accommodation;
         $accommodation->address = $newAccAddress;
         $accommodation->numRooms = $newAccNumRooms;
         $accommodation->save();
 
-
         $accommodations = Accommodation::all();
-        return redirect('/accommodations');
+        return redirect('/accommodations')
+            ->with('message', 'Accommodation Successfully Created');
     }
 
     public function edit(Request $request)
@@ -71,8 +75,18 @@ class AccommodationController extends Controller
         
 
         $accommodations = Accommodation::all();
-        return redirect('/accommodations');
+        return redirect('/accommodations')
+            ->with('message', 'Accommodation Successfully Edited');
 
+    }
 
+    public function delete(Request $request) 
+    {
+        $newAcc = $request->all();
+        $id = $newAcc['id'];
+        Accommodation::where('id', $id)->firstorfail()->delete();
+        
+        return redirect('/accommodations')
+            ->with('message', 'Accommodation Successfully Deleted');
     }
 }

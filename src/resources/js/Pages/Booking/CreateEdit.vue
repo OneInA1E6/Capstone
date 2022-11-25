@@ -12,9 +12,9 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <form @submit.prevent="submit">
                     <div>
-                        <InputLabel for="groupId" value="Group Id" />
-                        <TextInput id="groupId" type="text" class="mt-1 block w-full" v-model="form.groupId"/>
-                        <InputError class="mt-2" :message="form.groupId" />
+                        <InputLabel for="group_id" value="Group ID" />
+                        <TextInput id="group_id" type="text" class="mt-1 block w-full" v-model="form.group_id"/>
+                        <InputError class="mt-2" :message="form.group_id" />
                     </div>
                     <div>
                         <InputLabel for="duration" value="Duration of Stay" />
@@ -22,14 +22,14 @@
                         <InputError class="mt-2" :message="form.duration" />
                     </div>
                     <div>
-                        <InputLabel for="accommodationId" value="Accommodation Id" />
-                        <TextInput id="accommodationId" type="text" class="mt-1 block w-full" v-model="form.accommodationId"/>
-                        <InputError class="mt-2" :message="form.accommodationId" />
+                        <InputLabel for="accommodation_id" value="Accommodation ID" />
+                        <TextInput id="accommodation_Id" type="text" class="mt-1 block w-full" v-model="form.accommodation_id"/>
+                        <InputError class="mt-2" :message="form.accommodation_id" />
                     </div>
 
                     <div class="flex justify-end mt-4">
                         <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                            Submit
+                            {{props.edit ? 'Update' : 'Submit'}}
                         </Button>
                     </div>
                     </form>
@@ -50,17 +50,27 @@ import Button from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
 const props = defineProps({
-    booking: Object,
+    booking: {
+        Object,
+        default: {}
+    },
+    edit: {
+        type: Boolean, 
+        default: false
+    }
+
 })
+
 const form = useForm({
-    groupId: '',
-    duration: '',
-    accommodationId: '',
+    id: (props.booking) ? props.booking.id : null,
+    group_id: (props.booking) ? props.booking.group_id : '',
+    duration: (props.booking) ? props.booking.duration :'',
+    accommodation_id: (props.booking) ? props.booking.accommodation_id :'',
 });
 const submit = () => {
-    form.post(route('bookings.create'), {
+        form.post((props.edit) ? route('bookings.edit', props.booking) : route('bookings.create'), {
         onFinish: () => form.reset(),
     })
-  }
+}
 </script>
 

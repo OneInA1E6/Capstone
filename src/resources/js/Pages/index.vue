@@ -1,8 +1,5 @@
 <template>
     <Head title="Glohaven Emergency Management Solutions" />
-
-
-
         <span>
             <img src="..\..\images\fire-burning-down-a-building.jpg" class = "relative items-center justify-center w-screen h-screen">
                 <div class = "flex items-center justify-center object-center ">
@@ -18,15 +15,6 @@
                         </div>
                     </div>
         </span>
-
-
-
-
-
-
-
-
-
 </template>
 
 <script setup>

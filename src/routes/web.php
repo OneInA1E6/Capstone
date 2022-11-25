@@ -48,6 +48,12 @@ Route::post('/accommodations/edit/{accommodation}', [Controllers\AccommodationCo
 Route::post('/accommodations/create', [Controllers\AccommodationController::class, 'create'])
 ->middleware(['auth', 'verified'])->name('accommodations.create');
 
+Route::post('/accommodations/delete', [Controllers\AccommodationController::class, 'delete'])
+->middleware(['auth', 'verified'])->name('accommodations.delete');
+
+Route::get('/accommodations/{accommodation}', [Controllers\AccommodationController::class, 'show'])
+->middleware(['auth', 'verified'])->name('accommodations.show');
+
 //GROUPS
 Route::get('/groups', [Controllers\GroupController::class, 'index'])
 ->middleware(['auth', 'verified'])->name('groups');
@@ -88,5 +94,11 @@ Route::post('/bookings/create', [Controllers\BookingController::class, 'create']
 
 Route::post('/bookings/delete', [Controllers\BookingController::class, 'delete'])
 ->middleware(['auth', 'verified'])->name('deleteBooking');
+
+Route::get('/bookings/edit/{booking}', [Controllers\BookingController::class, 'editBooking'])
+->middleware(['auth', 'verified'])->name('bookings.editBooking');
+
+Route::post('/bookings/edit/{booking}', [Controllers\BookingController::class, 'edit'])
+->middleware(['auth', 'verified'])->name('bookings.edit');
 
 require __DIR__.'/auth.php';
