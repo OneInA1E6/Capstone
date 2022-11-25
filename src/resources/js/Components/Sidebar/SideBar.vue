@@ -17,7 +17,7 @@
 
             <!-- Navigation items -->
             <div v-for="routeItem in props.routes" :key="routeItem">
-                <NavLink :href="route(routeItem.str)" :active="route().current(routeItem.str)" :as="button"
+                <NavLink :href="route(routeItem.str)" :active="route().current(routeItem.str)" asType="button"
                     class="justify-center w-40 h-10 my-2 font-normal bg-gray-300 rounded-full hover:bg-gray-350 drop-shadow-md">
                     {{routeItem.title}}
                 </NavLink>

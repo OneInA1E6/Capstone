@@ -58,6 +58,30 @@ Route::get('/accommodations/{accommodation}', [Controllers\AccommodationControll
 Route::get('/groups', [Controllers\GroupController::class, 'index'])
 ->middleware(['auth', 'verified'])->name('groups');
 
+
+Route::get('/groups/create', [Controllers\GroupController::class, 'create'])
+->middleware(['auth', 'verified'])->name('groups.create');
+
+Route::post('/groups/create', [Controllers\GroupController::class, 'store'])
+->middleware(['auth', 'verified'])->name('groups.store');
+
+// Route::get('/groups/{group}', [Controllers\GroupController::class, 'show'])
+// ->middleware(['auth', 'verified'])->name('groups.show');
+
+
+Route::get('/groups/edit/{group}', [Controllers\GroupController::class, 'edit'])
+->middleware(['auth', 'verified'])->name('groups.edit');
+
+Route::post('/groups/edit/{group}', [Controllers\GroupController::class, 'update'])
+->middleware(['auth', 'verified'])->name('groups.update');
+
+Route::get('/groups/{group}', [Controllers\GroupController::class, 'show'])
+->middleware(['auth', 'verified'])->name('groups.show');
+
+Route::delete('/groups/{group}/delete', [Controllers\GroupController::class, 'destroy'])
+->middleware(['auth', 'verified'])
+->name('groups.delete');
+
 //BOOKINGS
 Route::get('/bookings', [Controllers\BookingController::class, 'index'])
 ->middleware(['auth', 'verified'])->name('bookings');
