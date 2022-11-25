@@ -18,8 +18,8 @@
                     Create New Group
                 </NavLink>
             </div>
-            <div class="grid grid-cols-2 py-12 mt-4">
-                <Card v-for="group in props.groups" :key="group.id" class="w-full h-auto m-2">
+            <div class="grid grid-cols-2 py-12 mt-4 space-y-2 ">
+                <Card v-for="group in props.groups" :key="group.id" class="w-11/12 h-auto py-1 ">
                     <div class="flex flex-row">
                         <div class="text-xl font-medium capitalize basis-1/2">
                             Contact: {{group.contact_firstname}} {{group.contact_lastname}}
@@ -27,19 +27,16 @@
                         <div class="basis-1/2">
                             Group Members: {{group.group_size}}
                         </div>
-                        <div class="m-2 space-x-1 text-xl bg-slate-100">
-
-                            <td class="border m-15 hover:cursor-pointer" v-on:click="deleteGroup(group.id)">
-                                <DeleteIcon />
-                            </td>
-                            <td class="border">
+                        <div class="grid w-32 h-full grid-cols-3 m-2 space-x-1 text-xl place-items-center ">
+                            <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="deleteGroup(group.id)">
                                 <EyeIcon/>
-                            </td>
-                            <td class="border">
+                            </div>
+                            <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="deleteGroup(group.id)">
                                 <CogIcon/>
-                            <MenuIcon/>
-
-                            </td>
+                            </div>
+                            <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="deleteGroup(group.id)">
+                                <DeleteIcon/>
+                            </div>
                         </div>
 
                         <!-- <pre>
@@ -73,10 +70,9 @@ const props = defineProps({
 })
 
 const deleteGroup = (group) => {
-    console.log('rerekjrekjrkejkjrje' + group)
         Inertia.delete(route('groups.delete', group), {
             preserveScroll: true
-        }
+            }
         )
 }
 </script>
