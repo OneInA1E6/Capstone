@@ -40,8 +40,8 @@ class BookingController extends Controller
         $newBooking = $request->all();
 
         $newBookingDuration = $newBooking['duration'];
-        $newBookingGroupId = $newBooking['groupId'];
-        $newBookingAccommodationId = $newBooking['accommodationId'];
+        $newBookingGroupId = $newBooking['group_id'];
+        $newBookingAccommodationId = $newBooking['accommodation_id'];
 
 
         $booking = new Booking;
@@ -66,6 +66,33 @@ class BookingController extends Controller
     
         return redirect()->route(route: 'bookings')
             ->with('message', 'Booking Successfully Deleted');
+    }
+    public function editBooking(Booking $booking)
+    {
+        
+        return Inertia::render('Booking/CreateEdit', [
+            'booking' => $booking, 'edit' => true,
+        ]);
+    }
+    public function edit(Request $request)
+    {
+        $newBook = $request->all();   
+
+        $newBookGroupId = $newBook['group_id'];
+        $newBookDuration = $newBook['duration'];
+        $newBookAccommodationId = $newBook['accommodation_id'];
+
+        $book = Booking::find($newBook['id']);
+        $book->group_id = $newBookGroupId;
+        $book->duration = $newBookDuration;
+        $book->accommodation_id = $newBookAccommodationId;
+        $book->save();
+        
+
+        $booking = Booking::all();
+        return redirect('/bookings');
+
+
     }
 
 
