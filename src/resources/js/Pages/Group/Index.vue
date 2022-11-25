@@ -28,10 +28,10 @@
                             Group Members: {{group.group_size}}
                         </div>
                         <div class="grid w-32 h-full grid-cols-3 m-2 space-x-1 text-xl place-items-center ">
-                            <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="deleteGroup(group.id)">
+                            <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="viewGroup(group.id)">
                                 <EyeIcon/>
                             </div>
-                            <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="deleteGroup(group.id)">
+                            <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="editGroup(group.id)">
                                 <CogIcon/>
                             </div>
                             <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="deleteGroup(group.id)">
@@ -69,6 +69,12 @@ const props = defineProps({
     groups: Object
 })
 
+const viewGroup = (group) => {
+        Inertia.get(route('groups.show', group))
+}
+const editGroup = (group) => {
+        Inertia.get(route('groups.edit', group))
+}
 const deleteGroup = (group) => {
         Inertia.delete(route('groups.delete', group), {
             preserveScroll: true

@@ -82,8 +82,36 @@ class GroupController extends Controller
      */
     public function edit(Group $group)
     {
+        $details = GroupDetails::where('group_id', $group->id)->firstOrFail();
+
         return Inertia::render('Group/CreateEdit', [
             'group' => $group,
+            'details' => $details,
+            'edit' => true
         ]);
+    }
+
+
+    public function update(Request $request)
+    {
+        $newGroup = $request->all();
+        $newGroupDetails = $newGroup['details'];
+
+        $group = new Group();
+        $group->contact_firstname = $newGroup['contactFirstName'];
+        $group->contact_lastname = $newGroup['contactLastName'];
+        $group->contact_phone_number = $newGroup['contactPhoneNumber'];
+        $group->group_size = 1+count($newGroupDetails['members']);
+        $group->save();
+
+        $groupDetails = new GroupDetails();
+        $groupDetails->has_pets = $newGroupDetails['hasPets'];
+        $groupDetails->group_members = json_encode($newGroupDetails['members']);
+        $groupDetails->alternative_contact_information = json_encode($newGroupDetails['alternativeContactInfo']);
+
+        $group->details()->save($groupDetails);
+        $groupDetails->save();
+
+        return redirect()->route('groups')->with('message', 'Group Created');
     }
 }

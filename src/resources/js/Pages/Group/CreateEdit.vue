@@ -12,7 +12,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <form @submit.prevent="submit">
                         <pre>
-                            {{form}}
+                            {{props}}
                         </pre>
 
                         <span class="grid grid-cols-2">
@@ -39,7 +39,7 @@
                         <div class="grid grid-cols-2 m-4 space-x-4 space-y-2 ">
                             <span v-for="member in form.details.members" :key="member" class="grid grid-cols-4 bg-gray-200">
                                 <div class="col-span-3">
-                                    {{member}}
+                                    {{member['name']}}
                                 </div>
                                 <Button class="py-4 text-sm" type='button' @click="removeMember(member)">
                                     Remove
@@ -99,7 +99,7 @@
 
                     <div class="flex justify-end mt-4">
                         <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                            Submit
+                            {{props.edit ? 'Update': 'Submit'}}
                         </Button>
                     </div>
                     </form>
@@ -122,16 +122,27 @@ import { useForm } from '@inertiajs/inertia-vue3';
 import {ref} from 'vue';
 
 const props = defineProps({
-    group: {type: Object, default: {}}
+    group: {
+        type: Object,
+        default: {}
+    },
+    details: {
+        type: Object,
+        default: {}
+    },
+    edit: {
+        type: Boolean,
+        default:false,
+    }
 })
 const form = useForm({
-    'contactFirstName': '',
-    'contactLastName':  '',
-    'contactPhoneNumber':      '',
+    'contactFirstName': (props.edit) ? props.group.contact_firstname :'',
+    'contactLastName':  (props.edit) ?props.group.contact_lastname  :'',
+    'contactPhoneNumber':      (props.edit) ? props.group.contact_phone_number :'',
     'details': {
-        'members':[],
-        'alternativeContactInfo': [],
-        'hasPets': false,
+        'members':(props.edit) ? JSON.parse(props.details.group_members) : [],
+        'alternativeContactInfo': (props.edit) ? JSON.parse(props.details.alternative_contact_information) :[],
+        'hasPets': (props.edit) ? props.details.has_pets===1 : false,
     }
 
 });
@@ -142,7 +153,7 @@ const newContactInfo = ref('');
 
 const addMember = (memberName) => {
     if(memberName){
-        form.details.members.push(memberName);
+        form.details.members.push({'name': memberName});
         newMember.value='';
     }
 };
@@ -156,7 +167,7 @@ const addContact = (contactType, info) => {
 };
 
 const submit = () => {
-    form.post(route('groups.store'), {
+    form.post((props.edit) ? route('groups.update', props.group) : route('groups.store'), {
         onFinish: () => form.reset(),
     })
   }
