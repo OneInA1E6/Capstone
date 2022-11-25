@@ -56,7 +56,6 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
-import Button from '@/Components/PrimaryButton.vue';
 import NavLink from '@/Components/NavLink.vue';
 import { Inertia } from '@inertiajs/inertia';
 
