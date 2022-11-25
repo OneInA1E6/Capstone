@@ -65,8 +65,8 @@ Route::get('/groups/create', [Controllers\GroupController::class, 'create'])
 Route::post('/groups/create', [Controllers\GroupController::class, 'store'])
 ->middleware(['auth', 'verified'])->name('groups.store');
 
-Route::get('/groups/{group}', [Controllers\GroupController::class, 'show'])
-->middleware(['auth', 'verified'])->name('groups.show');
+// Route::get('/groups/{group}', [Controllers\GroupController::class, 'show'])
+// ->middleware(['auth', 'verified'])->name('groups.show');
 
 
 Route::get('/groups/edit/{group}', [Controllers\GroupController::class, 'edit'])

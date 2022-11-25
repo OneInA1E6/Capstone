@@ -11,9 +11,6 @@
             <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <form @submit.prevent="submit">
-                        <pre>
-                            {{props}}
-                        </pre>
 
                         <span class="grid grid-cols-2">
                         <div>
@@ -137,11 +134,11 @@ const props = defineProps({
 })
 const form = useForm({
     'contactFirstName': (props.edit) ? props.group.contact_firstname :'',
-    'contactLastName':  (props.edit) ?props.group.contact_lastname  :'',
+    'contactLastName':  (props.edit) ? props.group.contact_lastname  :'',
     'contactPhoneNumber':      (props.edit) ? props.group.contact_phone_number :'',
     'details': {
-        'members':(props.edit) ? JSON.parse(props.details.group_members) : [],
-        'alternativeContactInfo': (props.edit) ? JSON.parse(props.details.alternative_contact_information) :[],
+        'members':(props.edit) ? (JSON.parse(props.details.group_members) ?? []) : [],
+        'alternativeContactInfo': (props.edit) ? (JSON.parse(props.details.alternative_contact_information) ??[]) :[],
         'hasPets': (props.edit) ? props.details.has_pets===1 : false,
     }
 

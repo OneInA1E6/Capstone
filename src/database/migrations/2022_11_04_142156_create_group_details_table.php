@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('group_details', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('group_id')->constrained();
             $table->boolean('has_pets');
             $table->json('group_members')->nullable();

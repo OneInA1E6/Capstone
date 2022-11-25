@@ -42,25 +42,25 @@ class GroupController extends Controller
         return Inertia::render('Group/CreateEdit', []);
     }
 
-    public function store(Request $request)
+    public function update(Request $request, Group $group)
     {
-        $newGroup = $request->all();
-        $newGroupDetails = $newGroup['details'];
+        $editGroup = $request->all();
+        $editGroupDetails = $editGroup['details'];
 
-        $group = new Group();
-        $group->contact_firstname = $newGroup['contactFirstName'];
-        $group->contact_lastname = $newGroup['contactLastName'];
-        $group->contact_phone_number = $newGroup['contactPhoneNumber'];
-        $group->group_size = 1+count($newGroupDetails['members']);
+        // $group = Group::where('id',  1)->firstOrFail();
+        $group->contact_firstname = $editGroup['contactFirstName'];
+        $group->contact_lastname = $editGroup['contactLastName'];
+        $group->contact_phone_number = $editGroup['contactPhoneNumber'];
+        $group->group_size = 1+count($editGroupDetails['members']);
         $group->save();
 
-        $groupDetails = new GroupDetails();
-        $groupDetails->has_pets = $newGroupDetails['hasPets'];
-        $groupDetails->group_members = json_encode($newGroupDetails['members']);
-        $groupDetails->alternative_contact_information = json_encode($newGroupDetails['alternativeContactInfo']);
+        $groupDetails = GroupDetails::where('group_id', $group->id)->first();
+        $groupDetails->has_pets = $editGroupDetails['hasPets'];
+        $groupDetails->group_members = json_encode($editGroupDetails['members']);
+        $groupDetails->alternative_contact_information = json_encode($editGroupDetails['alternativeContactInfo']);
 
         $group->details()->save($groupDetails);
-        $groupDetails->save();
+        $group->save();
 
         return redirect()->route('groups')->with('message', 'Group Created');
     }
@@ -92,7 +92,7 @@ class GroupController extends Controller
     }
 
 
-    public function update(Request $request)
+    public function store(Request $request)
     {
         $newGroup = $request->all();
         $newGroupDetails = $newGroup['details'];
