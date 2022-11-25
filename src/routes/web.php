@@ -51,8 +51,9 @@ Route::post('/accommodations/create', [Controllers\AccommodationController::clas
 //GROUPS
 Route::get('/groups', [Controllers\GroupController::class, 'index'])
 ->middleware(['auth', 'verified'])->name('groups');
-Route::get('/groups/{id}', [Controllers\GroupController::class, 'show'])
-->middleware(['auth', 'verified'])->name('groups');
+
+Route::get('/groups/{group}', [Controllers\GroupController::class, 'show'])
+->middleware(['auth', 'verified'])->name('groups.show');
 
 //BOOKINGS
 Route::get('/bookings', [Controllers\BookingController::class, 'index'])

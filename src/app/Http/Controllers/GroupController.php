@@ -8,10 +8,9 @@ use Inertia\Inertia;
 
 class GroupController extends Controller
 {
-        /**
-     * Show the profile for a given user.
+    /**
+     * Show the list of all the groups
      *
-     * @param  int  $id
      * @return \Illuminate\View\View
      */
     public function index()
@@ -20,6 +19,19 @@ class GroupController extends Controller
 
         return Inertia::render('Group/Index', [
             'groups' => $groups,
+        ]);
+    }
+
+     /**
+     * Show the profile for a given user.
+     *
+     * @param  Group $group
+     * @return \Illuminate\View\View
+     */
+    public function show(Group $group)
+    {
+        return Inertia::render('Group/ShowGroup', [
+            'group' => $group,
         ]);
     }
 }
