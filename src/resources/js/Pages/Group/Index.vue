@@ -27,16 +27,18 @@
                         <div class="basis-1/2">
                             Group Members: {{group.group_size}}
                         </div>
-                        <div>
+                        <div class="m-2 space-x-1 text-xl bg-slate-100">
 
-                            <td class="border">
-                                <img src="..\..\..\mdiIcons\mdiIcons.svg" class = "flex justify-center w-6 h-6" v-on:click="deleteGroup(group.id)">
+                            <td class="border m-15 hover:cursor-pointer" v-on:click="deleteGroup(group.id)">
+                                <DeleteIcon />
                             </td>
                             <td class="border">
-                                <img src="..\..\..\mdiIcons\mdiIcons.svg" class = "flex justify-center w-6 h-6" v-on:click="deleteGroup(group.id)">
+                                <EyeIcon/>
                             </td>
                             <td class="border">
-                                <img src="..\..\..\mdiIcons\mdiIcons.svg" class = "flex justify-center w-6 h-6" v-on:click="deleteGroup(group.id)">
+                                <CogIcon/>
+                            <MenuIcon/>
+
                             </td>
                         </div>
 
@@ -59,6 +61,11 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Card from '@/Components/Card.vue'
 import NavLink from '@/Components/NavLink.vue';
+
+import EyeIcon from 'vue-material-design-icons/Eye.vue';
+import CogIcon from 'vue-material-design-icons/Cog.vue';
+import DeleteIcon from 'vue-material-design-icons/Delete.vue';
+
 import { Inertia } from '@inertiajs/inertia';
 
 const props = defineProps({
