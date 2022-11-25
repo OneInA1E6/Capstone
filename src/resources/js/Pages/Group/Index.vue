@@ -3,38 +3,45 @@
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Groups
+
+                <!-- <pre>
+                    {{props.groups[0]}}
+                </pre> -->
             </h2>
         </template>
 
-        <div class="grid grid-cols-2 py-12 mt-4">
-            <Card v-for="group in props.groups" :key="group.id">
-                <div class="flex flex-row">
-                    <div class="text-xl font-medium capitalize basis-1/2">
-                        Contact: {{group.contact_firstname}} {{group.contact_lastname}}
-                    </div>
-                    <div class="basis-1/2">
-                        Group Members: {{group.group_size}}
-                    </div>
-
-                    <!-- <pre>
-                        {{group}}
-                    </pre> -->
-                </div>
-            </Card>
-
-        </div>
-
-        <Card> My cool dudes named jackie</Card>
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                    <div class="p-6 bg-white border-b border-gray-200">
-                        <pre>
-                            {{props.groups}}
-                        </pre>
-                    </div>
-                </div>
+        <div>
+            <div>
+                <!-- <NavLink :href="route('groups.create')"
+                    class="flex justify-center h-10 my-2 font-normal text-white bg-orange-300 rounded-full w-55 hover:bg-orange-350 drop-shadow-md "
+                    :as="button">Create New Group
+                </NavLink> -->
             </div>
+            <div class="grid grid-cols-2 py-12 mt-4">
+                <Card v-for="group in props.groups" :key="group.id" class="w-full h-auto">
+                    <div class="flex flex-row">
+                        <div class="text-xl font-medium capitalize basis-1/2">
+                            Contact: {{group.contact_firstname}} {{group.contact_lastname}}
+                        </div>
+                        <div class="basis-1/2">
+                            Group Members: {{group.group_size}}
+                        </div>
+                        <div>
+
+                            <td class="border">
+                                <img src="..\..\..\MdiIcons\mdiIcons.svg" class = "flex justify-center w-6 h-6" v-on:click="deleteGroup(group.id)">
+                            </td>
+                        </div>
+
+                        <!-- <pre>
+                            {{group}}
+                        </pre> -->
+                    </div>
+                </Card>
+
+            </div>
+
+
         </div>
 
     </AppLayout>
@@ -44,8 +51,18 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Card from '@/Components/Card.vue'
+import axios from 'axios';
+import { Inertia } from '@inertiajs/inertia';
 
 const props = defineProps({
     groups: Object
 })
+
+const deleteGroup = (group) => {
+    console.log('rerekjrekjrkejkjrje' + group)
+        Inertia.delete(route('groups.delete', group), {
+            preserveScroll: true
+        }
+        )
+}
 </script>

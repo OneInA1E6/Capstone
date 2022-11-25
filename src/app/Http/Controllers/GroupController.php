@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Group;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 use Inertia\Inertia;
 
 class GroupController extends Controller
@@ -33,5 +34,15 @@ class GroupController extends Controller
         return Inertia::render('Group/ShowGroup', [
             'group' => $group,
         ]);
+    }
+
+
+    public function destroy(Group $group)
+    {
+        $group->details()->delete();
+        $group->delete();
+
+      //  return back()->with('message', "Group deleted.");
+      return redirect()->route('groups')->with('message', 'Group Deleted');
     }
 }

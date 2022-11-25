@@ -55,6 +55,10 @@ Route::get('/groups', [Controllers\GroupController::class, 'index'])
 Route::get('/groups/{group}', [Controllers\GroupController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('groups.show');
 
+Route::delete('/groups/{group}/delete', [Controllers\GroupController::class, 'destroy'])
+->middleware(['auth', 'verified'])
+->name('groups.delete');
+
 //BOOKINGS
 Route::get('/bookings', [Controllers\BookingController::class, 'index'])
 ->middleware(['auth', 'verified'])->name('bookings');
