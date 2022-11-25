@@ -49,7 +49,7 @@ Route::post('/accommodations/create', [Controllers\AccommodationController::clas
 ->middleware(['auth', 'verified'])->name('accommodations.create');
 
 Route::get('/accommodations/{accommodation}', [Controllers\AccommodationController::class, 'show'])
-->middleware(['auth', 'verified']);
+->middleware(['auth', 'verified'])->name('accommodations.show');
 
 //GROUPS
 Route::get('/groups', [Controllers\GroupController::class, 'index'])

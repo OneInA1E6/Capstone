@@ -29,7 +29,7 @@
                     {{ acc.id }}
                 </td>
                 <td class="border-b-2 p-4 dark:border-dark-5">
-                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" :href="`/accommodations/` + acc.id">{{ acc.address }}</a>
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" :href="route('accommodations.show', acc.id)">{{ acc.address }}</a>
                 </td>
                 <td class="border-b-2 p-4 dark:border-dark-5">
                     {{ acc.numRooms }}
