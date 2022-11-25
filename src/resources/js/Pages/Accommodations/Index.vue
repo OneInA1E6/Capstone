@@ -12,6 +12,9 @@
                 class="justify-center text-white  flex w-55 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "
                 :as="button">Create New Accommodation</NavLink>
         </div>
+        <div v-if="$page.props.flash.message" class="text-blue-600 mb-4 text-right">
+            {{$page.props.flash.message}}
+        </div>
 
         <div class="flex items-center justify-center">
             <table class="table-auto border-separate border text-center w-screen">
@@ -21,6 +24,7 @@
                         <th class="border">Address</th>
                         <th class="border">Number of rooms available</th>
                         <th class="border">Edit</th>
+                        <th class="border">Delete</th>
                     </tr>
                 </thead>
 
@@ -33,6 +37,11 @@
                             <NavLink :href="route('accommodations.editAccommodation', acc)" 
                                 class="justify-center text-white flex w-20 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "
                                 :as="button">Edit</NavLink>
+                        </td>
+                        <td class="border"> 
+                            <img src="..\..\..\MdiIcons\midIcons.svg" 
+                                class = "mx-auto w-6 h-6 flex cursor-pointer" 
+                                v-on:click="deleteAccommodation(acc)">
                         </td>
                     </tr>
                 </tbody>
@@ -47,6 +56,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
 import Button from '@/Components/PrimaryButton.vue';
 import NavLink from '@/Components/NavLink.vue';
+import { Inertia } from '@inertiajs/inertia';
 
 const form = useForm({
     address: '',
@@ -55,12 +65,18 @@ const form = useForm({
 
 const props = defineProps({
     accommodationsAll: Object,
-    accNumRooms: Object
+    accNumRooms: Object,
+    accommodation: Object
 })
+    // confirm = false
 
 const submit = () => {
     form.post(route('accommodations.create'), {
         onFinish: () => form.reset(),
     })
+}
+
+const deleteAccommodation = ($accommodation) => {
+    Inertia.post(route('accommodations.delete', $accommodation));
 }
 </script>
