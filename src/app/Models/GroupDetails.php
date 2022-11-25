@@ -31,7 +31,6 @@ class GroupDetails extends Model
         'has_pets',
         'group_members',
         'alternative_contact_information',
-
     ];
 
     /**

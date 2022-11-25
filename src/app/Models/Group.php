@@ -37,9 +37,6 @@ class Group extends Model
         'contact_phone_number'
     ];
 
-
-
-
     /**
      * each group has a list of details
      *
