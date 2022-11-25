@@ -29,7 +29,7 @@
                     {{ acc.id }}
                 </td>
                 <td class="border-b-2 p-4 dark:border-dark-5">
-                    {{ acc.address }}
+                    <a class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" :href="route('accommodations.show', acc.id)">{{ acc.address }}</a>
                 </td>
                 <td class="border-b-2 p-4 dark:border-dark-5">
                     {{ acc.numRooms }}
@@ -49,26 +49,18 @@
 
 <script setup>
 import dashboardGet from '../../Composables/DashboardGet'
-import Pagination from '../Pagination.vue'
 import { ref, watch } from 'vue'
-import axios from 'axios';
 
 const props = defineProps({
     query: String,
 })
 
 let accommodationsList = ref([]);
-let pag = ref([]);
-let query = ref(0);
 let loading = ref(false);
 
 watch(props, _.debounce(() => {
-    query.value = props.query.length;
-    loading.value = true;
     dashboardGet(props).then(data => {
         accommodationsList.value = data.data;
-        pag.value = data.links
-        console.log(pag)
     });
     loading.value = false;
 }, 500))
