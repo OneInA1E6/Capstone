@@ -28,9 +28,10 @@ class GroupDetails extends Model
      * @var array
      */
     protected $fillable = [
-        'contact_firstname',
-        'contact_lastname',
-        'contact_phone_number'
+        'has_pets',
+        'group_members',
+        'alternative_contact_information',
+
     ];
 
     /**

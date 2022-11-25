@@ -12,10 +12,11 @@
 
         <div>
             <div>
-                <!-- <NavLink :href="route('groups.create')"
+                <NavLink :href="route('groups.create')"
                     class="flex justify-center h-10 my-2 font-normal text-white bg-orange-300 rounded-full w-55 hover:bg-orange-350 drop-shadow-md "
-                    :as="button">Create New Group
-                </NavLink> -->
+                    :as="button">
+                    Create New Group
+                </NavLink>
             </div>
             <div class="grid grid-cols-2 py-12 mt-4">
                 <Card v-for="group in props.groups" :key="group.id" class="w-full h-auto">
@@ -51,7 +52,7 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Card from '@/Components/Card.vue'
-import axios from 'axios';
+import NavLink from '@/Components/NavLink.vue';
 import { Inertia } from '@inertiajs/inertia';
 
 const props = defineProps({
