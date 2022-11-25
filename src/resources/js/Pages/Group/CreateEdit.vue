@@ -155,11 +155,10 @@ const addMember = (memberName) => {
     }
 };
 
-const removeMember = (memberName) => {
-    if(memberName){
-        form.details.members.push({'name': memberName});
-        newMember.value='';
-    }
+const removeMember = (member) => {
+    form.details.members.splice(
+            form.details.members.indexOf(member), 1
+        );
 };
 
 const addContact = (contactType, info) => {
@@ -170,16 +169,9 @@ const addContact = (contactType, info) => {
     }
 };
 const removeContact = (obj) => {
-    console.log(form.details.alternativeContactInfo)
-    console.log(
-        form.details.alternativeContactInfo.indexOf(obj)
-        );
-
-
         form.details.alternativeContactInfo.splice(
             form.details.alternativeContactInfo.indexOf(obj), 1
         );
-
 };
 
 const submit = () => {
