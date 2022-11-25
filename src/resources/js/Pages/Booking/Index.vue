@@ -27,6 +27,7 @@
                             <th class="border">Accommodation Id</th>
                             <th class="border">Duration</th>
                             <th class="border">Delete</th>
+                            <th class="border">Edit</th>
                         </tr>
                     </thead>
 
@@ -35,7 +36,12 @@
                             <td class="border">{{book.group_id}}</td>
                             <td class="border">{{book.accommodation_id}}</td>
                             <td class="border">{{book.duration}}</td>
-                            <td class="border"> <img src="..\..\..\MdiIcons\midIcons.svg" class = "w-6 h-6 flex justify-center" v-on:click="death(book)"> </td>
+                            <td class="border"> <img src="..\..\..\MdiIcons\midIcons.svg" class = "mx-auto w-6 h-6 flex cursor-pointer"  v-on:click="deleteBooking(book)"> </td>
+                            <td class="border">
+                            <NavLink :href="route('bookings.editBooking', book)" 
+                                class="justify-center text-white flex w-20 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "
+                                :as="button">Edit</NavLink>
+                        </td>
                         </tr>
                     </tbody>
                 </table>
@@ -71,7 +77,7 @@ const submit = () => {
     })
   }
 
-const death = ($booking) => {
+const deleteBooking = ($booking) => {
         Inertia.post(route('deleteBooking', $booking))
 }
 </script>
