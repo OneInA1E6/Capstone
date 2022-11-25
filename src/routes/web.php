@@ -63,13 +63,11 @@ Route::get('/groups/{group}', [Controllers\GroupController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('groups.show');
 
 
-// Route::get('/groups/edit/{group}', [Controllers\GroupController::class, 'edit'])
-// ->middleware(['auth', 'verified'])->name('groups.edit');
+Route::get('/groups/edit/{group}', [Controllers\GroupController::class, 'edit'])
+->middleware(['auth', 'verified'])->name('groups.edit');
 
 // Route::post('/groups/edit/{group}', [Controllers\GroupController::class, 'update'])
 // ->middleware(['auth', 'verified'])->name('groups.update');
-
-
 
 Route::get('/groups/{group}', [Controllers\GroupController::class, 'show'])
 ->middleware(['auth', 'verified'])->name('groups.show');

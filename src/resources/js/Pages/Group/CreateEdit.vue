@@ -95,8 +95,6 @@
                     <div>
                         <InputLabel for="details.hasPets" value="Has Pets" />
                         <input type="checkbox" v-model="form.details.hasPets" id="details.hasPets" >
-                        <!-- <BoxInput id="details.hasPets" class="block w-full mt-1" v-model="form.details.hasPets"/>
-                        <InputError class="mt-2" :message="form.details.hasPets" /> -->
                     </div>
 
                     <div class="flex justify-end mt-4">
@@ -120,7 +118,6 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import Button from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import BoxInput from '@/Components/BoxInput.vue';
 import { useForm } from '@inertiajs/inertia-vue3';
 import {ref} from 'vue';
 

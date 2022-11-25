@@ -19,7 +19,7 @@
                 </NavLink>
             </div>
             <div class="grid grid-cols-2 py-12 mt-4">
-                <Card v-for="group in props.groups" :key="group.id" class="w-full h-auto">
+                <Card v-for="group in props.groups" :key="group.id" class="w-full h-auto m-2">
                     <div class="flex flex-row">
                         <div class="text-xl font-medium capitalize basis-1/2">
                             Contact: {{group.contact_firstname}} {{group.contact_lastname}}
@@ -30,7 +30,13 @@
                         <div>
 
                             <td class="border">
-                                <img src="..\..\..\MdiIcons\mdiIcons.svg" class = "flex justify-center w-6 h-6" v-on:click="deleteGroup(group.id)">
+                                <img src="..\..\..\mdiIcons\mdiIcons.svg" class = "flex justify-center w-6 h-6" v-on:click="deleteGroup(group.id)">
+                            </td>
+                            <td class="border">
+                                <img src="..\..\..\mdiIcons\mdiIcons.svg" class = "flex justify-center w-6 h-6" v-on:click="deleteGroup(group.id)">
+                            </td>
+                            <td class="border">
+                                <img src="..\..\..\mdiIcons\mdiIcons.svg" class = "flex justify-center w-6 h-6" v-on:click="deleteGroup(group.id)">
                             </td>
                         </div>
 
