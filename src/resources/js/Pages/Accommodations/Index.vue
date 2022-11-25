@@ -10,7 +10,7 @@
         <div>
             <NavLink :href="route('accommodations.createAccommodation')"
                 class="justify-center text-white  flex w-55 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "
-                :as="button">Create New Accommodation</NavLink>
+                 asType="button">Create New Accommodation</NavLink>
         </div>
 
         <div class="flex items-center justify-center">
@@ -30,9 +30,9 @@
                         <td class="border">{{ acc.address }}</td>
                         <td class="border">{{ acc.numRooms }}</td>
                         <td class="border">
-                            <NavLink :href="route('accommodations.editAccommodation', acc)" 
+                            <NavLink :href="route('accommodations.editAccommodation', acc)"
                                 class="justify-center text-white flex w-20 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "
-                                :as="button">Edit</NavLink>
+                                 asType="button">Edit</NavLink>
                         </td>
                     </tr>
                 </tbody>

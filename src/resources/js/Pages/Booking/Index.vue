@@ -9,7 +9,7 @@
 
 
         <div>
-                <NavLink :href="route('createBooking')" class="justify-center text-white  flex w-40 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md " :as="button">Create New Booking</NavLink>
+                <NavLink :href="route('createBooking')" class="justify-center text-white  flex w-40 h-10 my-2 font-normal bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "  asType="button">Create New Booking</NavLink>
         </div>
         <div v-if="$page.props.flash.message" class="text-blue-600 mb-4 text-right">
             {{$page.props.flash.message}}

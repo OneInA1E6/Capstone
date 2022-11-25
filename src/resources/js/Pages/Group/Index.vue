@@ -14,7 +14,7 @@
             <div>
                 <NavLink :href="route('groups.create')"
                     class="flex justify-center h-10 my-2 font-normal text-white bg-orange-300 rounded-full w-55 hover:bg-orange-350 drop-shadow-md "
-                    :as="button">
+                     asType="button">
                     Create New Group
                 </NavLink>
             </div>
