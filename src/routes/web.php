@@ -48,6 +48,9 @@ Route::post('/accommodations/edit/{accommodation}', [Controllers\AccommodationCo
 Route::post('/accommodations/create', [Controllers\AccommodationController::class, 'create'])
 ->middleware(['auth', 'verified'])->name('accommodations.create');
 
+Route::post('/accommodations/delete', [Controllers\AccommodationController::class, 'delete'])
+->middleware(['auth', 'verified'])->name('accommodations.delete');
+
 //GROUPS
 Route::get('/groups', [Controllers\GroupController::class, 'index'])
 ->middleware(['auth', 'verified'])->name('groups');

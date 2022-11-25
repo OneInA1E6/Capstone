@@ -54,7 +54,8 @@ class AccommodationController extends Controller
 
 
         $accommodations = Accommodation::all();
-        return redirect('/accommodations');
+        return redirect('/accommodations')
+            ->with('message', 'Accommodation Successfully Created');
     }
 
     public function edit(Request $request)
@@ -71,8 +72,17 @@ class AccommodationController extends Controller
         
 
         $accommodations = Accommodation::all();
-        return redirect('/accommodations');
+        return redirect('/accommodations')
+            ->with('message', 'Accommodation Successfully Edited');
 
+    }
 
+    public function delete(Request $request) 
+    {
+        $newAcc = $request->all();
+        Accommodation::find($newAcc['id'])->firstorfail()->delete();
+        
+        return redirect('/accommodations')
+            ->with('message', 'Accommodation Successfully Deleted');
     }
 }
