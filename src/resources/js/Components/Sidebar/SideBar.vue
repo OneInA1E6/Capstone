@@ -4,8 +4,10 @@
         <!-- header to the navbar -->
         <div class="grid row-span-2 place-items-center">
             <!-- placeholder image for logo -->
-            <img src="..\..\..\images\GEMSLogo.svg"/>
-            <h2 class="mb-2 text-xl font-bold text-center text-white">Glohaven Emergency Management Solutions</h2>
+            <Link href="/dashboard">
+                <ApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
+            </Link>
+            <h2 class="mb-2 text-xl font-bold text-center text-white -mt-14">Glohaven Emergency Management Solutions</h2>
             <p> Hey, {{$page.props.auth.user.name }}</p>
         </div>
 
