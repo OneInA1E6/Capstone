@@ -17,7 +17,7 @@ class AccommodationSeeder extends Seeder
     public function run()
     {
         Accommodation::factory()
-            ->count(6)
+            ->count(15)
             ->create()
             ->each(function($accommodation) {
                 $region = Region::inRandomOrder()->first();

@@ -16,9 +16,9 @@ class AccommodationController extends Controller
      */
     public function index()
     {
-        $accommodationsAll = Accommodation::all();
-        $accNumRooms = Accommodation::numRooms();
-        return Inertia::render('Accommodations/Index', ['accommodationsAll' => $accommodationsAll,'accNumRooms' => $accNumRooms]);
+        $accommodationsAll = Accommodation::withCount('bookings')->get();
+        
+        return Inertia::render('Accommodations/Index', ['accommodationsAll' => $accommodationsAll]);
     }
 
     public function show(Accommodation $accommodation)
