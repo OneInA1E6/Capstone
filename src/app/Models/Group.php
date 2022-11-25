@@ -26,6 +26,17 @@ class Group extends Model
         'plural' => 'Groups',
     ];
 
+   /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'contact_firstname',
+        'contact_lastname',
+        'contact_phone_number'
+    ];
+
     /**
      * each group has a list of details
      *
