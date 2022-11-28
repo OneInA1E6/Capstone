@@ -14,7 +14,7 @@
             {{$page.props.flash.message}}
         </div>
         
-        <div class="flex items-center justify-center">
+        <!-- <div class="flex items-center justify-center">
             <table class="w-screen text-center border border-separate table-auto">
                 <thead>
                     <tr>
@@ -48,15 +48,22 @@
                     </tr>
                 </tbody>
             </table>
+        </div> -->
+
+        <div class="grid grid-cols-2 gap-4" >
+            <template v-for="acc in accommodationsAll" :key="accommodationsAll.id">
+                <Card :accommodation="acc"/>
+            </template>
         </div>
 
     </AppLayout>
 </template>
 
 <script setup>
+import Card from '../../Components/Accommodations/Card.vue'
 import AppLayout from '@/Layouts/AppLayout.vue';
-import { useForm } from '@inertiajs/inertia-vue3';
 import NavLink from '@/Components/NavLink.vue';
+import { useForm } from '@inertiajs/inertia-vue3';
 import { Inertia } from '@inertiajs/inertia';
 
 const form = useForm({
@@ -66,10 +73,7 @@ const form = useForm({
 
 const props = defineProps({
     accommodationsAll: Object,
-    accNumRooms: Object,
-    accommodation: Object
 })
-    // confirm = false
 
 const submit = () => {
     form.post(route('accommodations.create'), {
