@@ -9,8 +9,7 @@
           <NavLink :href="route('accommodations.editAccommodation', accommodation)"
           class="flex justify-center w-20 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md"
            asType="button">Edit</NavLink>
-            <NavLink class="flex justify-center w-20 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md ml-5" 
-            v-on:click="deleteAccommodation(props.accommodation)" asType="button">Delete</NavLink>
+            <NavLink class="flex justify-center w-20 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md ml-5" v-on:click="deleteAccommodation(acc)" asType="button">Delete</NavLink>
         </div>
       </div>
 </template>

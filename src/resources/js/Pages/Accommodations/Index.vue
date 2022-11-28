@@ -50,7 +50,7 @@
             </table>
         </div> -->
 
-        <div class="grid grid-cols-2 gap-4" >
+        <div class="grid grid-cols-3 gap-3" >
             <template v-for="acc in accommodationsAll" :key="accommodationsAll.id">
                 <Card :accommodation="acc"/>
             </template>
