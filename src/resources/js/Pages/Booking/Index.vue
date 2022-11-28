@@ -6,20 +6,14 @@
             </h2>
         </template>
 
-
-
         <div>
-                <NavLink :href="route('createBooking')" class="flex justify-center w-40 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "  asType="button">Create New Booking</NavLink>
+            <NavLink :href="route('createBooking')" class="flex justify-center w-40 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "  asType="button">Create New Booking</NavLink>
         </div>
         <div v-if="$page.props.flash.message" class="mb-4 text-right text-blue-600">
             {{$page.props.flash.message}}
         </div>
 
-
-
-
-
-        <div class = "flex items-center justify-center">
+        <!-- <div class = "flex items-center justify-center">
                 <table class="w-screen text-center border border-separate table-auto">
                     <thead>
                         <tr>
@@ -45,39 +39,24 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> -->
 
-
-
-
-
+        <div class="grid grid-cols-4 py-12 mt-4 space-y-2 ">
+            <template v-for="book in booking" :key="book.id" class="w-11/12 h-auto py-1 ">
+                <Card :booking="book"/>
+            </template>
+        </div>
     </AppLayout>
-
 </template>
 
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import { useForm } from '@inertiajs/inertia-vue3';
 import NavLink from '@/Components/NavLink.vue';
-import { Inertia } from '@inertiajs/inertia';
+import Card from '@/Components/Bookings/Card.vue'
 
 const props = defineProps({
     booking: Object,
 
 })
     confirm = false
-
-const form = useForm({
-    groupId: '',
-    duration: '',
-});
-const submit = () => {
-    form.post(route('bookings.create'), {
-        onFinish: () => form.reset(),
-    })
-  }
-
-const deleteBooking = ($booking) => {
-        Inertia.post(route('deleteBooking', $booking))
-}
 </script>
