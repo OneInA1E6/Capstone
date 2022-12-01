@@ -6,31 +6,29 @@
             </h2>
         </template>
 
-    <div class="overflow-hidden bg-white shadow sm:rounded-lg">
-        <form @submit.prevent="submit">
-            <div class="border-t border-gray-200">
-                <dl>
-                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">Address</dt>
-                    <TextInput id="address" type="text" class="mt-1 block w-full" v-model="form.address"/>
+        <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+            <form @submit.prevent="submit">
+                <div class="border-t border-gray-200">
+                    <dl>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Address</dt>
+                        <TextInput id="address" type="text" class="mt-1 block w-full" v-model="form.address"/>
+                    </div>
+                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Number of Rooms Available</dt>
+                        <TextInput id="numRooms" type="text" class="mt-1 block w-full" v-model="form.numRooms"/>
+                    </div>
+                    </dl>
                 </div>
-                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">Number of Rooms Available</dt>
-                    <TextInput id="numRooms" type="text" class="mt-1 block w-full" v-model="form.numRooms"/>
-                </div>
-                </dl>
-            </div>
 
-            <div class="flex justify-end mt-4">
-                <Button class="m-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    {{props.edit ? 'Update' : 'Submit'}}
-                </Button>
-            </div>
-        </form>
-    </div>
-    
+                <div class="flex justify-end mt-4">
+                    <Button class="m-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                        {{props.edit ? 'Update' : 'Submit'}}
+                    </Button>
+                </div>
+            </form>
+        </div>
     </AppLayout>
-
 </template>
 
 <script setup>

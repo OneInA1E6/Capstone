@@ -65,7 +65,7 @@
                                 <TextInput id="altContactInfo" type="text" class="block w-full mt-1" v-model="newContactInfo"/>
                             </div>
 
-                            <Button class="col-span-2" type='button' @click="addContact(newContactType, newContactInfo)">
+                            <Button class="col-span-2 justify-center" type='button' @click="addContact(newContactType, newContactInfo)">
                                 Add
                             </Button>
                         </div>
