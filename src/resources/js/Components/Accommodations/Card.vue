@@ -6,16 +6,21 @@
           <p class="text-gray-700 text-base">Number of Available Rooms: {{props.accommodation.numRooms}}</p>
           <p class="text-gray-700 text-base">Number of Bookings: {{props.accommodation.bookings_count}}</p>
           <p class="text-gray-700 text-base">Rooms Available: {{props.accommodation.numRooms - props.accommodation.bookings_count}}</p>
-          <NavLink :href="route('accommodations.editAccommodation', accommodation)"
-          class="flex justify-center w-20 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md"
-           asType="button">Edit</NavLink>
-           <NavLink class="flex justify-center w-20 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md ml-5" v-on:click="deleteAccommodation(acc)" asType="button">Delete</NavLink>
+          <div class="flex justify-between my-5 ">
+            <NavLink :href="route('accommodations.editAccommodation', accommodation)"
+            class="flex justify-center w-20 h-10 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md"
+             asType="button">Edit</NavLink>
+             <NavLink class="flex justify-center w-10 h-10 py-0 font-normal text-white bg-red-400 rounded-full hover:bg-orange-350 drop-shadow-md" 
+             v-on:click="deleteAccommodation(acc)" 
+             asType="button"><DeleteIcon/></NavLink>
+          </div>
         </div>
       </div>
 </template>
 
 <script setup>
 import NavLink from '@/Components/NavLink.vue';
+import DeleteIcon from 'vue-material-design-icons/Delete.vue';
 import { Inertia } from '@inertiajs/inertia';
 
 const props = defineProps({
