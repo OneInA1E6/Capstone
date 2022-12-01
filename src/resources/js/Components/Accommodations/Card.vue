@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center">
-        <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+        <div class="block p-6 rounded-lg shadow-lg bg-white min-w-full">
           <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">{{props.accommodation.address}}</h5>
           <p class="text-gray-700 text-base">id: {{props.accommodation.id}}</p>
           <p class="text-gray-700 text-base">Number of Available Rooms: {{props.accommodation.numRooms}}</p>

@@ -14,7 +14,7 @@
                     Create New Group
                 </NavLink>
             </div>
-            <div class="grid grid-cols-4 py-12 mt-4 space-y-2 ">
+            <div class="grid grid-cols-3 gap-3">
                 <template v-for="group in props.groups" :key="group.id" class="w-11/12 h-auto py-1 ">
                     <Card :group="group"/>
                 </template>

@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center">
-        <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+        <div class="block p-6 rounded-lg shadow-lg bg-white min-w-full">
             <p class="text-gray-700 text-base">Contact: {{group.contact_firstname}} {{group.contact_lastname}}</p>
             <p class="text-gray-700 text-base">Group Members: {{group.group_size}}</p>
             <p class="text-gray-700 text-base">Group ID: {{group.id}}</p>

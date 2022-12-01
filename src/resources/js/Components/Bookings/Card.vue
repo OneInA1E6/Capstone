@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center">
-        <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+        <div class="block p-6 rounded-lg shadow-lg bg-white max-w-full">
             <p class="text-gray-700 text-base">Booking ID: {{booking.id}}</p>
             <p class="text-gray-700 text-base">Accommodation ID: {{booking.accommodation_id}}</p>
             <p class="text-gray-700 text-base">Stay Duration: {{booking.duration}}</p>
