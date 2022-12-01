@@ -9,10 +9,10 @@
                 <!-- <div class="border m-15 bg-slate-100 hover:cursor-pointer" v-on:click="viewGroup(group.id)">
                     <EyeIcon/>
                 </div> -->
-                <NavLink class="flex justify-center w-20 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md" v-on:click="editGroup(group.id)">
+                <NavLink class="flex justify-center w-20 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md" v-on:click="editGroup(group.id)" asType="button">
                     Edit
                 </NavLink>
-                <NavLink class="flex justify-center w-10 h-10 my-2 bg-red-400 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md ml-5" v-on:click="deleteGroup(group.id)">
+                <NavLink class="flex justify-center w-10 h-10 my-2 bg-red-400 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md ml-5" v-on:click="deleteGroup(group.id)" asType="button">
                     <DeleteIcon/>
                 </NavLink>
             </div>
