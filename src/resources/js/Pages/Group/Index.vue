@@ -3,17 +3,13 @@
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Groups
-
-                <!-- <pre>
-                    {{props.groups[0]}}
-                </pre> -->
             </h2>
         </template>
 
         <div>
             <div>
                 <NavLink :href="route('groups.create')"
-                    class="flex justify-center h-10 my-2 font-normal text-white bg-orange-300 rounded-full w-55 hover:bg-orange-350 drop-shadow-md "
+                    class="flex justify-center h-10 my-2 px-8 bg-green-400 font-normal text-white bg-orange-300 rounded-full w-55 hover:bg-orange-350 drop-shadow-md "
                      asType="button">
                     Create New Group
                 </NavLink>

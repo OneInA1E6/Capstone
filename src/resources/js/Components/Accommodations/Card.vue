@@ -6,7 +6,7 @@
           <p class="text-gray-700 text-base">Number of Available Rooms: {{props.accommodation.numRooms}}</p>
           <p class="text-gray-700 text-base">Number of Bookings: {{props.accommodation.bookings_count}}</p>
           <p class="text-gray-700 text-base">Rooms Available: {{props.accommodation.numRooms - props.accommodation.bookings_count}}</p>
-          <div class="flex justify-between my-5 ">
+          <div class="flex justify-between mt-5">
             <NavLink :href="route('accommodations.editAccommodation', accommodation)"
             class="flex justify-center w-20 h-10 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md"
              asType="button">Edit</NavLink>

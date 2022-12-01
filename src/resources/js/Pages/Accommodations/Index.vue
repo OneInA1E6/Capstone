@@ -13,49 +13,12 @@
         <div v-if="$page.props.flash.message" class="mb-4 text-right text-blue-600">
             {{$page.props.flash.message}}
         </div>
-        
-        <!-- <div class="flex items-center justify-center">
-            <table class="w-screen text-center border border-separate table-auto">
-                <thead>
-                    <tr>
-                        <th class="border">ID</th>
-                        <th class="border">Address</th>
-                        <th class="border">Number of rooms total</th>
-                        <th class="border">Number of bookings</th>
-                        <th class="border">Number of rooms available</th>
-                        <th class="border">Edit</th>
-                        <th class="border">Delete</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr v-for="acc in accommodationsAll" :key="accommodationsAll.id">
-                        <td class="border">{{ acc.id }}</td>
-                        <td class="border">{{ acc.address }}</td>
-                        <td class="border">{{ acc.numRooms }}</td>
-                        <td class="border">{{ acc.bookings_count }}</td>
-                        <td class="border">{{ acc.numRooms - acc.bookings_count}}</td>
-                        <td class="border">
-                            <NavLink :href="route('accommodations.editAccommodation', acc)"
-                                class="flex justify-center w-20 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md "
-                                 asType="button">Edit</NavLink>
-                        </td>
-                        <td class="border">
-                            <img src="..\..\..\mdiIcons\mdiIcons.svg"
-                                class = "flex w-6 h-6 mx-auto cursor-pointer"
-                                v-on:click="deleteAccommodation(acc)">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> -->
 
         <div class="grid grid-cols-3 gap-3" >
             <template v-for="acc in accommodationsAll" :key="accommodationsAll.id">
                 <Card :accommodation="acc"/>
             </template>
         </div>
-
     </AppLayout>
 </template>
 
