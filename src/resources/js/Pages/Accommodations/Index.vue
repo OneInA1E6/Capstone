@@ -7,7 +7,7 @@
         </template>
         <div>
             <NavLink :href="route('accommodations.createAccommodation')"
-                class="flex justify-center h-10 my-2 px-8 bg-green-400 font-normal text-white bg-orange-300 rounded-full w-55 hover:bg-orange-350 drop-shadow-md "
+                class="flex justify-center h-10 px-8 my-2 font-normal text-white bg-orange-300 bg-green-400 rounded-full w-55 hover:bg-orange-350 drop-shadow-md "
                  asType="button">Create New Accommodation</NavLink>
         </div>
         <div v-if="$page.props.flash.message" class="mb-4 text-right text-blue-600">
@@ -15,7 +15,7 @@
         </div>
 
         <div class="grid grid-cols-2 gap-3" >
-            <template v-for="acc in accommodationsAll" :key="accommodationsAll.id">
+            <template v-for="acc in accommodationsAll" :key="acc">
                 <Card :accommodation="acc"/>
             </template>
         </div>
