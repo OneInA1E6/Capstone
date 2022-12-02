@@ -33,15 +33,15 @@ class GroupSeeder extends Seeder
                 $members=[];
 
                 for($i=0; $i<$numPeople; $i++){
-                    array_push($members, fake()->firstName());
+                    array_push($members, ['name'=> fake()->firstName()]);
                 }
 
                 $info=[];
                 if(fake()->boolean()){
-                    array_push($info, fake()->email());
+                    array_push($info, ['type'=>'Email', 'info'=>fake()->email()]);
                 }
                 if(fake()->boolean()){
-                    array_push($info, fake()->phoneNumber());
+                    array_push($info, ['type' => 'Phone Number', 'info' =>fake()->phoneNumber()]);
                 }
 
                 $details = GroupDetails::factory()->make([
@@ -69,10 +69,10 @@ class GroupSeeder extends Seeder
 
                 $info=[];
                 if(fake()->boolean()){
-                    array_push($info, fake()->email());
+                    array_push($info, ['type'=>'Email', 'info'=>fake()->email()]);
                 }
                 if(fake()->boolean()){
-                    array_push($info, fake()->phoneNumber());
+                    array_push($info, ['type' => 'Phone Number', 'info' =>fake()->phoneNumber()]);
                 }
 
                 $details = GroupDetails::factory()->make([
@@ -99,15 +99,15 @@ class GroupSeeder extends Seeder
                 $members=[];
 
                 for($i=0; $i<$numPeople; $i++){
-                    array_push($members, fake()->firstName());
+                    array_push($members, ['name'=> fake()->firstName()]);
                 }
 
                 $info=[];
                 if(fake()->boolean()){
-                    array_push($info, fake()->email());
+                    array_push($info, ['type'=>'Email', 'info'=>fake()->email()]);
                 }
                 if(fake()->boolean()){
-                    array_push($info, fake()->phoneNumber());
+                    array_push($info, ['type' => 'Phone Number', 'info' =>fake()->phoneNumber()]);
                 }
 
                 $details = GroupDetails::factory()->make([
