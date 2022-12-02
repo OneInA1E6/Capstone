@@ -17,12 +17,12 @@ class AccommodationController extends Controller
     public function index()
     {
         $accommodationsAll = Accommodation::withCount('bookings')->get();
-        
+
         return Inertia::render('Accommodations/Index', ['accommodationsAll' => $accommodationsAll]);
     }
 
     public function show(Accommodation $accommodation)
-    {   
+    {
         return Inertia::render('Accommodations/ShowAccommodation', ['accommodationsData' => $accommodation]);
     }
 
@@ -38,7 +38,7 @@ class AccommodationController extends Controller
 
     public function editAccommodation(Accommodation $accommodation)
     {
-        
+
         return Inertia::render('Accommodations/CreateEdit', [
             'accommodation' => $accommodation, 'edit' => true,
         ]);
@@ -72,7 +72,7 @@ class AccommodationController extends Controller
         $accommodation->address = $newAccAddress;
         $accommodation->numRooms = $newAccNumRooms;
         $accommodation->save();
-        
+
 
         $accommodations = Accommodation::all();
         return redirect('/accommodations')
@@ -80,13 +80,11 @@ class AccommodationController extends Controller
 
     }
 
-    public function delete(Request $request) 
+    public function delete(Accommodation $accommodation )
     {
-        $newAcc = $request->all();
-        $id = $newAcc['id'];
-        Accommodation::where('id', $id)->firstorfail()->delete();
-        
-        return redirect('/accommodations')
+        $accommodation->delete();
+
+        return redirect('accommodations')
             ->with('message', 'Accommodation Successfully Deleted');
     }
 }
