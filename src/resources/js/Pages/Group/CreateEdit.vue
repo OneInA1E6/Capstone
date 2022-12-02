@@ -6,105 +6,105 @@
             </h2>
         </template>
 
-    <div class="py-12">
-        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <form @submit.prevent="submit">
-
-                        <span class="grid grid-cols-2">
+    <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+        <form @submit.prevent="submit">
+            <div class="border-t border-gray-200">
+                <dl>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-6">
                         <div>
                             <InputLabel for="contactFirstName" value="Primary Contact First Name" />
                             <TextInput id="contactFirstName" type="text" class="block w-full mt-1" v-model="form.contactFirstName"/>
-                            <!-- <InputError class="mt-2" :message="form.contactFirstName" /> -->
                         </div>
                         <div>
                             <InputLabel for="contactLastName" value="Primary Contact Last Name" />
                             <TextInput id="contactLastName" type="text" class="block w-full mt-1" v-model="form.contactLastName"/>
-                            <!-- <InputError class="mt-2" :message="form.contactLastName" /> -->
                         </div>
-                    </span>
-                    <div>
-                        <InputLabel for="contactPhoneNumber" value="Contact Phone Number" />
+              
+                </div>
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">Contact Phone Number</dt>
                         <TextInput id="contactPhoneNumber" type="text" class="block w-full mt-1" v-model="form.contactPhoneNumber"/>
-                        <!-- <InputError class="mt-2" :message="form.contactPhoneNumber" /> -->
-                    </div>
-
-                    <InputLabel for="otherMembers" value="Other Group Members" />
-                    <div id="otherMembers" class="w-full bg-slate-50">
-
-                        <div class="grid grid-cols-2 m-4 space-x-4 space-y-2 ">
-                            <span v-for="member in form.details.members" :key="member" class="grid grid-cols-4 bg-gray-200">
-                                <div class="col-span-3">
-                                    {{member['name']}}
-                                </div>
-                                <Button class="py-4 text-sm" type='button' @click="removeMember(member)">
-                                    Remove
-                                </Button>
-                            </span>
-                        </div>
-
-                        <div>
-                            <InputLabel for="newMember" value="Add Group Member" />
-                            <div class="grid grid-cols-9 ">
-                                <TextInput id="newMember" type="text" class="block w-full col-span-7 mt-1" v-model="newMember"/>
-                                <Button class="col-span-2" type='button' @click="addMember(newMember)">
-                                    Add Member
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <InputLabel for="otherContact" value="Other Contact Methods" />
-                    <div id="otherContact" class="w-full bg-slate-50">
-
-                        <div>
-                            <InputLabel for="altContact" value="Add Group Member" />
-                            <div v-for="contact in form.details.alternativeContactInfo" :key="contact"
-                                class="grid w-full h-auto grid-cols-4">
-                                <div class="col-span-3">
-                                    {{contact.type+': ' + contact.info}}
-                                </div>
-
-                                <Button class="py-4 text-sm" type='button' @click="removeContact(contact)">
-                                    Remove
-                                </Button>
-
-                            </div>
-
-                            <div id="altContact" class="grid grid-cols-8 ">
-
-                                <InputLabel for="altContactType" value="Contact Type (Email, Cell, etc.):" class="col-span-3"/>
-
-                                <InputLabel for="altContactInfo" value="Contact Info" class="col-span-3"/>
-                                <div class="col-span-2"/>
-
-                                <TextInput id="altContactType" type="text" class="block w-full col-span-3 mt-1" v-model="newContactType"/>
-                                <TextInput id="altContactInfo" type="text" class="block w-full col-span-3 mt-1" v-model="newContactInfo"/>
-                                <Button class="col-span-2" type='button' @click="addContact(newContactType, newContactInfo)">
-                                    Add
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div>
-                        <InputLabel for="details.hasPets" value="Has Pets" />
-                        <input type="checkbox" v-model="form.details.hasPets" id="details.hasPets" >
-                    </div>
-
-                    <div class="flex justify-end mt-4">
-                        <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                            {{props.edit ? 'Update': 'Submit'}}
+                </div>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Add Group Member</dt>
+                    <div class="grid grid-cols-9 sm:gap-3">
+                        <TextInput id="newMember" type="text" class="block w-full col-span-7 mt-1" v-model="newMember" placeholder="John Smith..."/>
+                        <Button class="col-span-2" type='button' @click="addMember(newMember)">
+                            Add Member
                         </Button>
                     </div>
-                    </form>
                 </div>
-            </div>
-        </div>
-    </div>
 
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Other Group Members</dt>
+                </div>
+                
+                <div id="otherMembers" class="w-full bg-white">
+                    <div class="grid grid-cols-2 m-4">
+                        <span v-for="member in form.details.members" :key="member" class="grid grid-cols-4 sm:gap-3 m-2">
+                            <div class="col-span-3 bg-gray-200 p-2 rounded-md">
+                                {{member['name']}}
+                            </div>
+                            <Button class="text-sm" type='button' @click="removeMember(member)">
+                                Remove
+                            </Button>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="otherContact" class="w-full bg-slate-50">
+                    <div>
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-6">
+                            <div>
+                                <InputLabel for="altContactType" value="Contact Type (Email, Cell, etc.):" class="block w-full mt-1"/>
+                                <TextInput id="altContactType" type="text" class="block w-full mt-1" v-model="newContactType"/>
+
+                            </div>
+                            <div>
+                                <InputLabel for="altContactInfo" value="Contact Info" class="block w-full mt-1"/>
+                                <TextInput id="altContactInfo" type="text" class="block w-full mt-1" v-model="newContactInfo"/>
+                            </div>
+
+                            <Button class="col-span-2 justify-center" type='button' @click="addContact(newContactType, newContactInfo)">
+                                Add
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Other Contact Members</dt>
+                </div>
+                <div id="otherContacts" class="w-full bg-gray-50">
+                    <div class="grid grid-cols-2 m-4">
+                        <span v-for="contact in form.details.alternativeContactInfo" :key="contact"
+                        class="grid grid-cols-4 sm:gap-3 m-4">
+                        <div class="col-span-3 bg-gray-200 p-3 rounded-md">
+                            {{contact.type+': ' + contact.info}}
+                        </div>
+    
+                        <Button class="py-4 text-sm" type='button' @click="removeContact(contact)">
+                            Remove
+                        </Button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Has Pets</dt>
+                    <input type="checkbox" v-model="form.details.hasPets" id="details.hasPets">
+                </div>
+                <div class="flex justify-end m-4">
+                    <Button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                        {{props.edit ? 'Update': 'Submit'}}
+                    </Button>
+                </div>
+
+
+                </dl>
+            </div>
+        </form>
+    </div>
     </AppLayout>
 
 </template>
