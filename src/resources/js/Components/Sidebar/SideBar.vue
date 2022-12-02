@@ -18,7 +18,8 @@
             <!-- Navigation items -->
             <div v-for="routeItem in props.routes" :key="routeItem">
                 <NavLink :href="route(routeItem.str)" :active="route().current(routeItem.str)" asType="button"
-                    class="justify-center w-40 h-10 my-2 font-normal bg-gray-300 rounded-full hover:bg-gray-350 drop-shadow-md">
+                    class="flex justify-center w-40 h-10 m-5 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md">
+                    <!-- font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md  -->
                     {{routeItem.title}}
                 </NavLink>
             </div>
@@ -26,7 +27,7 @@
         <div>
             <div>
                 <NavLink :href="route('logout')" method="post"
-                class="justify-center w-40 h-10 my-2 font-normal bg-gray-300 rounded-full drop-shadow-md">
+                class="lex justify-center w-40 h-10 m-5 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md" asType="button">
                     Log Out
                 </NavLink>
             </div>
