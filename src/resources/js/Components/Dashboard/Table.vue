@@ -12,12 +12,6 @@
                     <th class="border-b-2 p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900">
                         # of Rooms
                     </th>
-                    <th class="border-b-2 p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900">
-                        Date Created
-                    </th>
-                    <th class="border-b-2 p-4 dark:border-dark-5 whitespace-nowrap font-normal text-gray-900">
-                        Date Updated
-                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -30,12 +24,6 @@
                     </td>
                     <td class="border-b-2 p-4 dark:border-dark-5">
                         {{ acc.numRooms }}
-                    </td>
-                    <td class="border-b-2 p-4 dark:border-dark-5">
-                        {{ acc.created_at }}
-                    </td>
-                    <td class="border-b-2 p-4 dark:border-dark-5">
-                        {{ acc.updated_at }}
                     </td>
                 </tr>
             </tbody>
