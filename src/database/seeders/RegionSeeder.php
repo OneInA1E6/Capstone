@@ -16,9 +16,11 @@ class RegionSeeder extends Seeder
      */
     public function run()
     {
-        Region::factory()
-            ->count(5)
-            ->create()->each(function($region) {
-            });
+        Region::factory()->create(['country' => 'British Columbia', 'locale' => 'BC']);
+        Region::factory()->create(['country' => 'Alberta', 'locale' => 'AB']);
+        Region::factory()->create(['country' => 'Saskatchewan', 'locale' => 'SK']);
+        Region::factory()->create(['country' => 'Manitoba', 'locale' => 'MB']);
+        Region::factory()->create(['country' => 'Yukon Territory', 'locale' => 'YT']);
+        Region::factory()->create(['country' => 'Northwest Territories', 'locale' => 'NT']);
     }
 }

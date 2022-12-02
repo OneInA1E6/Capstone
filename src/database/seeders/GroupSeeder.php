@@ -19,15 +19,106 @@ class GroupSeeder extends Seeder
      */
     public function run()
     {
-        Group::factory()->count(50)
+        Group::factory()->count(6)
             ->create()->each(function($group) {
-                $details = GroupDetails::factory()->make();
-                $group->details()->save($details);
+                $acc =Accommodation::inRandomOrder()->first();
+                $numPeople = random_int(1, $acc->numRooms/4);
+
                 $booking = Booking::factory()->make([
                     'group_id' => $group->id,
-                    'accommodation_id' => Accommodation::inRandomOrder()->first()->id,
+                    'accommodation_id' => $acc->id,
                 ]);
                 $group->booking()->save($booking);
+
+                $members=[];
+
+                for($i=0; $i<$numPeople; $i++){
+                    array_push($members, ['name'=> fake()->firstName()]);
+                }
+
+                $info=[];
+                if(fake()->boolean()){
+                    array_push($info, ['type'=>'Email', 'info'=>fake()->email()]);
+                }
+                if(fake()->boolean()){
+                    array_push($info, ['type' => 'Phone Number', 'info' =>fake()->phoneNumber()]);
+                }
+
+                $details = GroupDetails::factory()->make([
+                    'group_members' => json_encode($members),
+                    'has_pets'      =>fake()->boolean(),
+                    'alternative_contact_information' => json_encode($info) ?? null,
+                ]);
+                $group->details()->save($details);
+                $group->group_size = 1+count($members);
+                $group->save();
+
+            });
+
+            Group::factory()->count(1)
+            ->create()->each(function($group) {
+                $acc =Accommodation::inRandomOrder()->first();
+
+                $booking = Booking::factory()->make([
+                    'group_id' => $group->id,
+                    'accommodation_id' => $acc->id,
+                ]);
+                $group->booking()->save($booking);
+
+                $members=[];
+
+                $info=[];
+                if(fake()->boolean()){
+                    array_push($info, ['type'=>'Email', 'info'=>fake()->email()]);
+                }
+                if(fake()->boolean()){
+                    array_push($info, ['type' => 'Phone Number', 'info' =>fake()->phoneNumber()]);
+                }
+
+                $details = GroupDetails::factory()->make([
+                    'group_members' => json_encode($members),
+                    'has_pets'      =>fake()->boolean(),
+                    'alternative_contact_information' => json_encode($info) ?? null,
+                ]);
+                $group->details()->save($details);
+                $group->save();
+
+            });
+
+            Group::factory()->count(8)
+            ->create()->each(function($group) {
+                $acc =Accommodation::inRandomOrder()->first();
+                $numPeople = random_int(1, $acc->numRooms/4);
+
+                $booking = Booking::factory()->make([
+                    'group_id' => $group->id,
+                    'accommodation_id' => $acc->id,
+                ]);
+                $group->booking()->save($booking);
+
+                $members=[];
+
+                for($i=0; $i<$numPeople; $i++){
+                    array_push($members, ['name'=> fake()->firstName()]);
+                }
+
+                $info=[];
+                if(fake()->boolean()){
+                    array_push($info, ['type'=>'Email', 'info'=>fake()->email()]);
+                }
+                if(fake()->boolean()){
+                    array_push($info, ['type' => 'Phone Number', 'info' =>fake()->phoneNumber()]);
+                }
+
+                $details = GroupDetails::factory()->make([
+                    'group_members' => json_encode($members),
+                    'has_pets'      =>fake()->boolean(),
+                    'alternative_contact_information' => json_encode($info) ?? null,
+                ]);
+                $group->details()->save($details);
+                $group->group_size = 1+count($members);
+                $group->save();
+
             });
     }
 }
