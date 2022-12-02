@@ -1,7 +1,4 @@
 <template>
-    <!-- <template v-if="loading">
-        <h1>Loading...</h1>
-    </template> -->
     <div>
         <table class="table p-4 bg-white shadow rounded-lg w-full">
             <thead>
@@ -52,7 +49,8 @@ import dashboardGet from '../../Composables/DashboardGet'
 import { ref, watch } from 'vue'
 
 const props = defineProps({
-    query: String,
+    query_address: String,
+    query_numRooms: Number,
 })
 
 let accommodationsList = ref([]);
@@ -60,6 +58,7 @@ let loading = ref(false);
 
 watch(props, _.debounce(() => {
     dashboardGet(props).then(data => {
+        console.log(data)
         accommodationsList.value = data.data;
     });
     loading.value = false;

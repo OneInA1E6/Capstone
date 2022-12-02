@@ -11,19 +11,29 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center">
-                    <div class="mb-3 xl:w-96">
-                        <div class="relative flex flex-wrap items-stretch w-full mb-4 input-group">
-                        <input type="search"
-                            class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            placeholder="Search"
-                            aria-label="Search"
-                            aria-describedby="button-addon2"
-                            v-model="userInput"
-                            >
+                    <div class="sm:grid sm:grid-cols-2 sm:gap-4 sm:px-6">
+                        <div>
+                            <InputLabel for="contactFirstName" value="Primary Contact First Name" />
+                            <input type="search"
+                                class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                placeholder="Search address"
+                                aria-label="Search"
+                                v-model="query_address"
+                                >
                         </div>
+                        <div>
+                            <InputLabel for="contactLastName" value="Primary Contact Last Name" />
+                            <input type="search"
+                                class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                placeholder="Search number of rooms"
+                                aria-label="Search"
+                                v-model="query_numRooms"
+                                >
+                        </div>
+              
                     </div>
                 </div>
-                <Table :query="`${userInput}`"/>
+                <Table :query_address="`${query_address}`" :query_numRooms="`${query_numRooms}`"/>
             </div>
         </div>
     </AppLayout>
@@ -43,5 +53,6 @@ const props = defineProps({
     loading: Boolean,
 })
 
-const userInput = ref('');
+const query_address = ref('');
+const query_numRooms = ref(null);
 </script>

@@ -29,8 +29,9 @@ class DashboardController extends Controller
 
     public function search(Request $request)
     {
-        $query = $request -> query('query');
-        $addressObj = Accommodation::where('address', 'LIKE', '%'.$query.'%')->paginate(5);
+        $query_address = $request -> query('query_address');
+        $query_numRooms = $request -> query('query_numRooms');
+        $addressObj = Accommodation::where('address', 'LIKE', '%'.$query_address.'%')->where('numRooms', 'LIKE', '%'.$query_numRooms.'%')->paginate(5);
         return $addressObj;
     }
 }
