@@ -22,7 +22,7 @@
 
 -   alerts for deletion/creation. Flash messages 
 
--   Link contact ifno to extra gropup members
+-   Link contact ifformation to extra gropup members
 
 -   Display if infor is needed (requirements for forms etc).
 
