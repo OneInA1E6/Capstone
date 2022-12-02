@@ -34,7 +34,8 @@ class Group extends Model
     protected $fillable = [
         'contact_firstname',
         'contact_lastname',
-        'contact_phone_number'
+        'contact_phone_number',
+        'group_size'
     ];
 
     /**
