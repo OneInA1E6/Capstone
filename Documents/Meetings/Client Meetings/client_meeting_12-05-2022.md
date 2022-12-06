@@ -36,56 +36,28 @@ Location: UBCO Capstone Discord Channel
 ### 4:06
 
 - No questions from Group B
-- Just a question about when Group C can meet with George to show off their progress.
-    - Says that any day this wee 
+- No project questions from Group C
+- Question (Akshaj): Just a question about our plans for Group C to show off the project so far
+                     What time would work the best for you George? If it's this week, then what time?
+  - Answer: Depends on what works for your group. Any day except for from 2 to 4 on Wednesday, and not in the evenings
 
-- no questions from 
-  - Just wondering about when
-
-- Question (Gabriel): Is there a consistent color scheme or palate that we should be taking inspiration from or should we just do what Group B is doing
-  - There is a consistent 
-
-also 2-4 on wednesday
-
-next week we'll take a few weeks break
-
-9th of january, and 
-
-next week last 
--mashad says 9th doesnt work if we wanna do 10th
-
-first meeting bsck
-
-touch base mondays after that
-
-if we wanna reach out about stuff he'll let you know and otherwise talke next week
-
-other than that, well talk next week
-
-- Gabriel (Group A)
-  - A lot of work has been done in the last week to get prepared for the peer review coming up soon.
-  - Just puting some of the finishing touches on the frontend, and doing what we can to make last minute improvements
-  - We're able to create update and delete all of the different models that we've been working on, which is a great feeling.
-  - Hoping to get some good feedback on friday.
-
-- Mashad (Group B)
-  - Putting some final touches on their frontend and backend
-  - they have also been focussing on the peer review that's coming up, but they've made some great progress.
-
-## Client Update
-### 4:06
-- Not much to report, nothing big happening for Gems as of late, and so no worries there.
-- Mashad asks if there were any updates last week either, since he had to leave early
-  - George reports that there weren't, just that the images were available if he hadn't seen
-- it's a relatively quiet time right now, so there likely won't be many changes in this season
+- Question (Gabriel): Is there a consistent color scheme or palate that we should be taking inspiration from or should we just do what Group B is doing and take colors from the main website
+  - Answer: There is a consistent theming that I will ask the other team members about. For now using the color picker is absolutely fine
   
-  
-### 4:08
-- George asks if there are any other things/questions
-- Gabriel says that though there's no client peer testing, Group A could probably give some sort of demo in the next few weeks
-  - George says that'd be great
-- Anything else? 
-- Everybody says no
-- George says to have a great week, look forward to the examples we may have in the coming weeks
+- Question (Gabriel): Group A was also wanting to give a demonstration, but this week probably won't work for our team members. If we were to have something next week, would there be any times that work best?
+    - Answer: Pretty much the same as the answer for Akshaj, any time not in the meetings is fine, except on Wednesday, I won't be free from 1:30 to 4. Talk to your group and get back to me.
 
+- Question (Gabriel): Last question, what is the plan for the coming weeks since it will be exam season and winter break for us students?
+    - Answer: We don't expect you guys to make much progress over winter break, so if we have our last meeting next week, then take a break until school starts up again in January.
+        - works for all of the liasons, Just want to know when our first meeting would be then
+    - Monday the 9th doesn't work for Mashad as he doesn't so 4:00 on Tuesday January 10th is chosen
+        - From then on it should just be the Mondays exept for the holiday week in February, but we'll touch base
+    - if anything is ever needed over the holidays, then feel free to reach out though.
+
+## Client Update + Wrap up
+- George says there's nothing new on his end
+- so if  there's nothing else then we can call it for today.
+- Everybody agrees.
+- George says to have a good week. Talk to you next week.
+  
 Meeting Ajourned
