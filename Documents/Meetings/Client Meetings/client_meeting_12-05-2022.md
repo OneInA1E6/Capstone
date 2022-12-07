@@ -45,7 +45,7 @@ Location: UBCO Capstone Discord Channel
   - Answer: There is a consistent theming that I will ask the other team members about. For now using the color picker is absolutely fine
   
 - Question (Gabriel): Group A was also wanting to give a demonstration, but this week probably won't work for our team members. If we were to have something next week, would there be any times that work best?
-    - Answer: Pretty much the same as the answer for Akshaj, any time not in the meetings is fine, except on Wednesday, I won't be free from 1:30 to 4. Talk to your group and get back to me.
+    - Answer: Pretty much the same as the answer for Akshaj, any time I'm not in meetings is fine, except next Wednesday, I won't be free from 1:30 to 4. Talk to your group and get back to me.
 
 - Question (Gabriel): Last question, what is the plan for the coming weeks since it will be exam season and winter break for us students?
     - Answer: We don't expect you guys to make much progress over winter break, so if we have our last meeting next week, then take a break until school starts up again in January.
