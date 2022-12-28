@@ -1,4 +1,4 @@
-# COSC499 Client Meeting 13
+# COSC499 Client Meeting 13 / Project Showcase
 
 Date: Monday, December 12th, 2022
 
@@ -61,3 +61,111 @@ Location: UBCO Capstone Discord Channel
 - George says to have a good week. Talk to you next week.
   
 Meeting Ajourned
+
+hello my name is gaberiel
+
+and I'm cool
+number of available rooms 
+
+and number 
+
+total
+
+number of bookable rooms or ooccpied rooms
+
+taking into acount hotels
+
+university and s
+
+might just have cots
+
+just occupancy
+
+type of room
+
+beds 
+
+have a way to diferentiate pet friendly or accessable rooms
+
+adding count of specific
+
+waht happesn aif in that region are not pet friendly are you conna send to other region
+
+worry just on having the accomodations available  that's  the problem we find the anser to
+
+
+enter submints form bad
+w
+dadshboard great so far
+
+might be nice is just bookings
+
+do we hae a plan
+
+for now just government of bc or canada and region rcountry to region but not worry much about region is only bc problems only see bc accomidaoton
+
+
+
+filter agent
+only want or  assign to admin to settings and somebody sets agents egions
+
+i don't see the regions to know that they will 
+
+aoddy about regions filtering by agents
+
+incorperate regions 
+
+main contact infor 
+
+adding contact info right to card
+
+plan for 
+
+differentiating between civilians and emergency groups
+
+
+
+and adding ems flag 
+and so can filter and do that stuff
+
+good for bookings and
+
+their main feature  but fuzziest 
+
+gonna try to talk to mike
+
+
+biggest most ????
+
+for now is looking good
+
+really clean 
+likeing left side dashboard
+
+different buttons
+
+maybe more but
+
+
+make it so tabs are looking 
+
+great base 
+
+it's there more than a concept
+
+it looks and feels like in a propper
+
+looks great 
+
+sooner questions answrered sooner than later
+
+another thing to update
+
+
+
+if change ui maybe not
+
+bookings is wip
+
+
+
