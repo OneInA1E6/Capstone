@@ -13,7 +13,7 @@ Location: UBCO Capstone Discord Channel
 - Greetings and what not.
 - George is looking forward to the demonstration
 
-### 3:301--4:00
+### 3:31-4:00
 - PHP updated recently and the auto update to 8.2 ruined the artisan commands.
 - Spent 30 minutes fixing that 
     - Had to downgrade to PHP8.1, wasn't too hard but wasn't obvious.
