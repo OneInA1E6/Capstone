@@ -17,13 +17,39 @@ class UserSeeder extends Seeder
     {
         for ($i = 1; $i <= 5; $i++) {
             User::factory()->create([
-                    'email' => 'agent'.$i.'@gems.com'
+                    'email' => 'agent'.$i.'@gems.com',
+                    'recently_changed' => [[
+                        'Type' => 'Accommodation',
+                        'Name' => 'Hotel 1',
+                        'URL' => 'google.com',
+                    ],[
+                        'Type' => 'Group',
+                        'Name' => 'Group 1',
+                        'URL' => 'google.com',
+                    ],[
+                        'Type' => 'Booking',
+                        'Name' => 'Booking 1',
+                        'URL' => 'google.com',
+                    ]]
             ]);
-
         }
+        
         User::factory() -> create([ 
             'email' => 'test@test.com',
-            'password' => bcrypt('password')
+            'password' => bcrypt('password'),
+            'recently_changed' => [[
+                'Type' => 'Accommodation',
+                'Name' => 'Hotel 1',
+                'URL' => 'google.com',
+            ],[
+                'Type' => 'Group',
+                'Name' => 'Group 1',
+                'URL' => 'google.com',
+            ],[
+                'Type' => 'Booking',
+                'Name' => 'Booking 1',
+                'URL' => 'google.com',
+            ]]
         ]);
     }
 }
