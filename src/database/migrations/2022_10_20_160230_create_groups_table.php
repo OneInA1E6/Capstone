@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('contact_lastname');
             $table->string('contact_phone_number',32);
             $table->integer('group_size');
+            $table->boolean('isBooked');
             $table->timestamps();
         });
     }

@@ -102,6 +102,7 @@ class GroupController extends Controller
         $group->contact_lastname = $newGroup['contactLastName'];
         $group->contact_phone_number = $newGroup['contactPhoneNumber'];
         $group->group_size = 1+count($newGroupDetails['members']);
+        $group->isBooked = false;
         $group->save();
 
         $groupDetails = new GroupDetails();

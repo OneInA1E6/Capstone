@@ -28,6 +28,7 @@ class GroupSeeder extends Seeder
                     'group_id' => $group->id,
                     'accommodation_id' => $acc->id,
                 ]);
+                $group->isBooked = true;
                 $group->booking()->save($booking);
 
                 $members=[];
@@ -63,6 +64,7 @@ class GroupSeeder extends Seeder
                     'group_id' => $group->id,
                     'accommodation_id' => $acc->id,
                 ]);
+                $group->isBooked = true;
                 $group->booking()->save($booking);
 
                 $members=[];
@@ -94,6 +96,7 @@ class GroupSeeder extends Seeder
                     'group_id' => $group->id,
                     'accommodation_id' => $acc->id,
                 ]);
+                $group->isBooked = true;
                 $group->booking()->save($booking);
 
                 $members=[];
