@@ -12,8 +12,6 @@
                 <NavLink class="flex justify-center w-20 h-10 my-2 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md" v-on:click="editGroup(group.id)" asType="button">
                     Edit
                 </NavLink>
-
-                <NavLink v-if="group"
                 <NavLink class="flex justify-center w-10 h-10 my-2 bg-red-400 font-normal text-white bg-orange-300 rounded-full hover:bg-orange-350 drop-shadow-md ml-5" v-on:click="deleteGroup(group.id)" asType="button">
                     <DeleteIcon/>
                 </NavLink>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Booking;
+use App\Models\Group;
+use App\Http\Controllers\GroupController;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\DB;
@@ -44,13 +46,19 @@ class BookingController extends Controller
         $newBookingAccommodationId = $newBooking['accommodation_id'];
 
 
+
         $booking = new Booking;
         $booking->group_id = $newBookingGroupId;
         $booking->duration = $newBookingDuration;
         $booking->accommodation_id = $newBookingAccommodationId;
         $booking->save();
-
         $bookings = Booking::all();
+
+        $group = Group::where('id', $newBookingGroupId)->firstorfail();
+ 
+        $updatedgroup = (new GroupController) -> updateBookingStatus($group);
+        
+
 
         return redirect('/bookings')
             ->with('message', 'Booking Successfully Created');

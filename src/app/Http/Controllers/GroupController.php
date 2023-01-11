@@ -115,4 +115,10 @@ class GroupController extends Controller
 
         return redirect()->route('groups')->with('message', 'Group Created');
     }
+    public function updateBookingStatus(Group $group){
+                
+        $group->isBooked = true;
+        $group->save();
+
+    }
 }
