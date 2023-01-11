@@ -35,7 +35,8 @@ class Group extends Model
         'contact_firstname',
         'contact_lastname',
         'contact_phone_number',
-        'group_size'
+        'group_size', 
+        'isBooked',
     ];
 
     /**

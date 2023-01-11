@@ -21,6 +21,7 @@ class GroupFactory extends Factory
             'contact_lastname'      => fake()->lastName(),
             'contact_phone_number'  => fake()->phoneNumber(),
             'group_size'            => 1,
+            'isBooked'              => false,
         ];
     }
 }
